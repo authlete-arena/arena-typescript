@@ -1,0 +1,17 @@
+# GetSsfTransmitterTransmitterIdStreamStreamIdResult
+
+## Example Usage
+
+```typescript
+import { GetSsfTransmitterTransmitterIdStreamStreamIdResult } from "authlete-arena/models/operations";
+
+let value: GetSsfTransmitterTransmitterIdStreamStreamIdResult = {};
+```
+
+## Fields
+
+| Field                                                                                                                                                  | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `status`                                                                                                                                               | [operations.GetSsfTransmitterTransmitterIdStreamStreamIdStatus](../../models/operations/get-ssf-transmitter-transmitter-id-stream-stream-id-status.md) | :heavy_minus_sign:                                                                                                                                     | N/A                                                                                                                                                    |
+| `code`                                                                                                                                                 | *any*                                                                                                                                                  | :heavy_minus_sign:                                                                                                                                     | N/A                                                                                                                                                    |
+| `message`                                                                                                                                              | *any*                                                                                                                                                  | :heavy_minus_sign:                                                                                                                                     | N/A                                                                                                                                                    |

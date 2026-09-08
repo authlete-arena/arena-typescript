@@ -1,0 +1,20 @@
+# GetSsfTransmitterTransmitterIdStreamStreamIdEventListResponseBody
+
+Stream events were retrieved successfully.
+
+## Example Usage
+
+```typescript
+import { GetSsfTransmitterTransmitterIdStreamStreamIdEventListResponseBody } from "authlete-arena/models/operations";
+
+let value: GetSsfTransmitterTransmitterIdStreamStreamIdEventListResponseBody =
+  {};
+```
+
+## Fields
+
+| Field                                                                                                                                                                      | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `result`                                                                                                                                                                   | [operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventListResult](../../models/operations/get-ssf-transmitter-transmitter-id-stream-stream-id-event-list-result.md) | :heavy_minus_sign:                                                                                                                                                         | N/A                                                                                                                                                                        |
+| `events`                                                                                                                                                                   | [operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventListEvent](../../models/operations/get-ssf-transmitter-transmitter-id-stream-stream-id-event-list-event.md)[] | :heavy_minus_sign:                                                                                                                                                         | N/A                                                                                                                                                                        |
+| `nextCursor`                                                                                                                                                               | *any*                                                                                                                                                                      | :heavy_minus_sign:                                                                                                                                                         | N/A                                                                                                                                                                        |

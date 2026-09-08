@@ -1,0 +1,37 @@
+speakeasyVersion: 1.796.4
+sources:
+    Arena Core Server:
+        sourceNamespace: arena-core-server
+        sourceRevisionDigest: sha256:fa0431b8d17d204ae3e277103d31c20f88a6ee91df4e56591709554a16f172e8
+        sourceBlobDigest: sha256:e1be1173e20a0bb320da65cd3b97e1891113271820406967a9ddc0a7dcd5a843
+        tags:
+            - latest
+            - latest
+targets:
+    arena:
+        source: Arena Core Server
+        sourceNamespace: arena-core-server
+        sourceRevisionDigest: sha256:fa0431b8d17d204ae3e277103d31c20f88a6ee91df4e56591709554a16f172e8
+        sourceBlobDigest: sha256:e1be1173e20a0bb320da65cd3b97e1891113271820406967a9ddc0a7dcd5a843
+        codeSamplesNamespace: arena-core-server-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:b5f4b3f77e4a6e995d3faba755a3dbdd7b5ae47758314fa64140f712ccea16e0
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Arena Core Server:
+            inputs:
+                - location: ../openapi.yaml
+            output: .speakeasy/out.openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/authlete/sdk-workspace/arena-core-server
+    targets:
+        arena:
+            target: typescript
+            source: Arena Core Server
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/authlete/sdk-workspace/arena-core-server-typescript-code-samples
+                labelOverride:
+                    fixedValue: Typescript (SDK)
+                blocking: false

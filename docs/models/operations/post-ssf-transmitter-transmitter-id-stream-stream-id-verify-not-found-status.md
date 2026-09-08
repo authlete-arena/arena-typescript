@@ -1,0 +1,18 @@
+# PostSsfTransmitterTransmitterIdStreamStreamIdVerifyNotFoundStatus
+
+## Example Usage
+
+```typescript
+import { PostSsfTransmitterTransmitterIdStreamStreamIdVerifyNotFoundStatus } from "authlete-arena/models/operations";
+
+let value: PostSsfTransmitterTransmitterIdStreamStreamIdVerifyNotFoundStatus =
+  "success";
+
+// Open enum: unrecognized values are captured as Unrecognized<string>
+```
+
+## Values
+
+```typescript
+"success" | "failure" | "bad_request" | "unauthorized" | "forbidden" | "not_found" | "conflict" | "server_error" | "service_unavailable" | Unrecognized<string>
+```

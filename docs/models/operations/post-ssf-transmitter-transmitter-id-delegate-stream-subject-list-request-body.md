@@ -1,0 +1,28 @@
+# PostSsfTransmitterTransmitterIdDelegateStreamSubjectListRequestBody
+
+The message body of requests to delegate APIs.
+
+
+## Example Usage
+
+```typescript
+import { PostSsfTransmitterTransmitterIdDelegateStreamSubjectListRequestBody } from "authlete-arena/models/operations";
+
+let value: PostSsfTransmitterTransmitterIdDelegateStreamSubjectListRequestBody =
+  {
+    options: {
+      pretty: true,
+    },
+    request: {
+      method: "<value>",
+      uri: "https://oily-alert.com/",
+    },
+  };
+```
+
+## Fields
+
+| Field                                                                                                                                                                                                     | Type                                                                                                                                                                                                      | Required                                                                                                                                                                                                  | Description                                                                                                                                                                                               |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `options`                                                                                                                                                                                                 | [operations.PostSsfTransmitterTransmitterIdDelegateStreamSubjectListOptions](../../models/operations/post-ssf-transmitter-transmitter-id-delegate-stream-subject-list-options.md)                         | :heavy_minus_sign:                                                                                                                                                                                        | N/A                                                                                                                                                                                                       |
+| `request`                                                                                                                                                                                                 | [operations.PostSsfTransmitterTransmitterIdDelegateStreamSubjectListRequestRequestBody](../../models/operations/post-ssf-transmitter-transmitter-id-delegate-stream-subject-list-request-request-body.md) | :heavy_check_mark:                                                                                                                                                                                        | The original HTTP request that the internet-facing endpoint has received.<br/>                                                                                                                            |
