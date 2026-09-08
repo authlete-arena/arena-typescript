@@ -11,7 +11,7 @@ targets:
     arena:
         source: arena-api
         codeSamplesNamespace: arena-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:d50664b2df29d28ee1c81a669ffc4815fa60783d1b5f2307d7a3693b8ce9096d
+        codeSamplesRevisionDigest: sha256:faaa31f5eaee980c82bf255e173101cf65bbb80b108351eff92e84bcc945346b
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -26,6 +26,9 @@ workflow:
         arena:
             target: typescript
             source: arena-api
+            publish:
+                npm:
+                    token: $npm_token
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/authlete/sdk-workspace/arena-api-typescript-code-samples

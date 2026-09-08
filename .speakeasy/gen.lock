@@ -5,12 +5,13 @@ management:
   docVersion: latest
   speakeasyVersion: 1.796.4
   generationVersion: 2.935.1
-  releaseVersion: 0.1.2
-  configChecksum: e16e176139ee9bf8c5172ddb4371c96c
+  releaseVersion: 0.1.3
+  configChecksum: 6c2bce8b44c33a07ba52f2d464c5493c
+  published: true
 persistentEdits:
-  generation_id: e5fd74dd-cd25-4471-9aa2-a5ec1258c873
-  pristine_commit_hash: 4002f44cdfe04c227790efd434bdf2dedf51b05a
-  pristine_tree_hash: cd024ff93cd80ca3bdf5ab2604d0ae60ca1e37d8
+  generation_id: f0fee401-ed58-46ad-80f1-4b596fb4d922
+  pristine_commit_hash: b0db7a6789fa9cdcb771ffbb943d7476c06e0f15
+  pristine_tree_hash: 65acb4f2c93044263c670577d98c5c9a3b71a6b6
 features:
   typescript:
     acceptHeaders: 2.81.2
@@ -1987,12 +1988,12 @@ trackedFiles:
     pristine_git_object: be43d4057caec2070c2dcfd9c55ed785cab799e8
   jsr.json:
     id: 7f6ab7767282
-    last_write_checksum: sha1:51aa62c63235a345f6ea45cab28d6f4eb332bb61
-    pristine_git_object: 71fd9415c2fd9ec35486540a29f4ca8cf444f772
+    last_write_checksum: sha1:aae93aecceb97cfe11ec1dd0c41a14f2e77ed5b5
+    pristine_git_object: 9f26352e81657a5120d3e0cc15a140a90d0fb8c4
   package.json:
     id: 7030d0b2f71b
-    last_write_checksum: sha1:83748270ae48dc7a6be3e1444facce09cac302fc
-    pristine_git_object: 08db07995310ae47f1d14b63ace4b7557970069a
+    last_write_checksum: sha1:8c4173026cfedce2c03752cf5d6a8187787286fa
+    pristine_git_object: 17dc5d3a3be1a7b9bb56ccb2dd68d3020453b6e6
   src/core.ts:
     id: f431fdbcd144
     last_write_checksum: sha1:256e3ca30579ced5bb3c262878083ab065863bc2
@@ -2159,8 +2160,8 @@ trackedFiles:
     pristine_git_object: 44be0eae8246521b230e8e711a88eff738fc015d
   src/lib/config.ts:
     id: 320761608fb3
-    last_write_checksum: sha1:9ba430fa13f3e595d21fee93ab05663616c67188
-    pristine_git_object: ed4460c4d4b34c26579fe5cb3c848b2795325cd0
+    last_write_checksum: sha1:3fdefcf90b75597e0bca7fdedc00c9357df6c65f
+    pristine_git_object: 70e1c53bb6a632f10932d5727177be55b5c70d6d
   src/lib/encodings.ts:
     id: 3bd8ead98afd
     last_write_checksum: sha1:4481b2a380f8a16856ef92c66fb370299f56d135

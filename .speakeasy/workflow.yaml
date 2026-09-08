@@ -11,6 +11,9 @@ targets:
     arena:
         target: typescript
         source: arena-api
+        publish:
+            npm:
+                token: $npm_token
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/authlete/sdk-workspace/arena-api-typescript-code-samples
