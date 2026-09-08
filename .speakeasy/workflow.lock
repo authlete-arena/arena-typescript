@@ -11,7 +11,7 @@ targets:
     arena:
         source: arena-api
         codeSamplesNamespace: arena-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:faaa31f5eaee980c82bf255e173101cf65bbb80b108351eff92e84bcc945346b
+        codeSamplesRevisionDigest: sha256:959de959fbbe625abeb42627237b6d8d5370d1d9c075117b2b1acd3eb8c6a50c
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
