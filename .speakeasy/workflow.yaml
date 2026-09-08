@@ -4,6 +4,8 @@ sources:
     Arena Core Server:
         inputs:
             - location: ../openapi.yaml
+        overlays:
+            - location: ./overlays/method-naming.yaml
         output: .speakeasy/out.openapi.yaml
         registry:
             location: registry.speakeasyapi.dev/authlete/sdk-workspace/arena-core-server

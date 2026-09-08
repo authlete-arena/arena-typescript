@@ -1,0 +1,270 @@
+overlay: 1.0.0
+info:
+  title: Arena SDK — method naming & namespaces
+  version: 1.0.0
+  # This overlay improves the discoverability and readability of the generated
+  # TypeScript SDK. The source OpenAPI document defines no `operationId` and no
+  # `tags`, so Speakeasy falls back to deriving method names from the HTTP verb
+  # plus the full path (e.g. `postSsfTransmitterTransmitterIdDelegateStreamSubjectAdd`)
+  # and places every operation on a single flat client.
+  #
+  # Each action below applies two Speakeasy extensions to an operation:
+  #   * x-speakeasy-group         -> the SDK namespace (dot notation = nesting)
+  #   * x-speakeasy-name-override -> the method name within that namespace
+  #
+  # Namespace depth is capped at 3 levels (receiver chain `arena.<a>.<b>` at
+  # most). Anything deeper — e.g. `arena.delegate.streams.subjects.add()` — is
+  # noise: the identifiers below `streams` are parameters (stream_id), not a
+  # hierarchy the caller navigates. The delegate plane is therefore organized
+  # into flat, concern-based sub-namespaces rather than deep nesting.
+  #
+  # Resulting surface:
+  #   arena.metadata.*            server discovery documents
+  #   arena.health.*              Kubernetes probes
+  #   arena.transmitters.*        transmitter lifecycle (Arena-native)
+  #   arena.streams.*             stream management (Arena-native)
+  #   arena.events.*              event management (Arena-native)
+  #   arena.delegate.jwks()       SSF JWK Set document (proxied; jwks_uri)
+  #   arena.delegate.wellKnown.*  SSF .well-known metadata documents (proxied)
+  #   arena.delegate.streams.*    SSF stream configuration lifecycle (proxied)
+  #   arena.delegate.status.*     SSF stream status (proxied)
+  #   arena.delegate.subjects.*   SSF stream subjects (proxied)
+  #
+  # This mirrors Arena's own package taxonomy (api/ssf/transmitter/delegate):
+  # jwks is standalone, well-known documents are grouped, and status/subject are
+  # distinct concerns — lifted to delegate siblings (rather than nested under
+  # streams as in the URL) to keep the receiver chain within 3 levels.
+
+actions:
+  # ────────────────────────────────────────────────────────────────
+  # metadata — server discovery documents
+  # ────────────────────────────────────────────────────────────────
+  - target: "$.paths['/.well-known/oauth-protected-resource'].get"
+    description: metadata.getProtectedResource
+    update:
+      x-speakeasy-group: metadata
+      x-speakeasy-name-override: getProtectedResource
+
+  - target: "$.paths['/jwks'].get"
+    description: metadata.getJwks
+    update:
+      x-speakeasy-group: metadata
+      x-speakeasy-name-override: getJwks
+
+  - target: "$.paths['/openapi'].get"
+    description: metadata.getOpenApiDocument
+    update:
+      x-speakeasy-group: metadata
+      x-speakeasy-name-override: getOpenApiDocument
+
+  # ────────────────────────────────────────────────────────────────
+  # health — Kubernetes probes
+  # ────────────────────────────────────────────────────────────────
+  - target: "$.paths['/probe/database'].get"
+    description: health.database
+    update:
+      x-speakeasy-group: health
+      x-speakeasy-name-override: database
+
+  - target: "$.paths['/probe/liveness'].get"
+    description: health.liveness
+    update:
+      x-speakeasy-group: health
+      x-speakeasy-name-override: liveness
+
+  - target: "$.paths['/probe/readiness'].get"
+    description: health.readiness
+    update:
+      x-speakeasy-group: health
+      x-speakeasy-name-override: readiness
+
+  - target: "$.paths['/probe/startup'].get"
+    description: health.startup
+    update:
+      x-speakeasy-group: health
+      x-speakeasy-name-override: startup
+
+  # ────────────────────────────────────────────────────────────────
+  # transmitters — transmitter lifecycle (Arena-native)
+  # ────────────────────────────────────────────────────────────────
+  - target: "$.paths['/ssf/transmitter'].post"
+    description: transmitters.create
+    update:
+      x-speakeasy-group: transmitters
+      x-speakeasy-name-override: create
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}'].get"
+    description: transmitters.get
+    update:
+      x-speakeasy-group: transmitters
+      x-speakeasy-name-override: get
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}'].put"
+    description: transmitters.update
+    update:
+      x-speakeasy-group: transmitters
+      x-speakeasy-name-override: update
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}'].patch"
+    description: transmitters.patch
+    update:
+      x-speakeasy-group: transmitters
+      x-speakeasy-name-override: patch
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}'].delete"
+    description: transmitters.delete
+    update:
+      x-speakeasy-group: transmitters
+      x-speakeasy-name-override: delete
+
+  # ────────────────────────────────────────────────────────────────
+  # streams — stream management (Arena-native)
+  # ────────────────────────────────────────────────────────────────
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/stream/list'].get"
+    description: streams.list
+    update:
+      x-speakeasy-group: streams
+      x-speakeasy-name-override: list
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/stream/{stream_id}'].get"
+    description: streams.get
+    update:
+      x-speakeasy-group: streams
+      x-speakeasy-name-override: get
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/stream/{stream_id}'].delete"
+    description: streams.delete
+    update:
+      x-speakeasy-group: streams
+      x-speakeasy-name-override: delete
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/stream/{stream_id}/verify'].post"
+    description: streams.verify
+    update:
+      x-speakeasy-group: streams
+      x-speakeasy-name-override: verify
+
+  # ────────────────────────────────────────────────────────────────
+  # events — event management (Arena-native)
+  # ────────────────────────────────────────────────────────────────
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/event/register'].post"
+    description: events.register
+    update:
+      x-speakeasy-group: events
+      x-speakeasy-name-override: register
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/stream/{stream_id}/event/list'].get"
+    description: events.list
+    update:
+      x-speakeasy-group: events
+      x-speakeasy-name-override: list
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/stream/{stream_id}/event/{event_jti}'].get"
+    description: events.get
+    update:
+      x-speakeasy-group: events
+      x-speakeasy-name-override: get
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/stream/{stream_id}/event/{event_jti}'].delete"
+    description: events.delete
+    update:
+      x-speakeasy-group: events
+      x-speakeasy-name-override: delete
+
+  # ────────────────────────────────────────────────────────────────
+  # delegate — SSF-protocol endpoints proxied through Arena
+  # ────────────────────────────────────────────────────────────────
+  # delegate.jwks — SSF JWK Set document (standalone, per jwks_uri)
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/jwks'].post"
+    description: delegate.jwks
+    update:
+      x-speakeasy-group: delegate
+      x-speakeasy-name-override: jwks
+
+  # delegate.wellKnown — SSF .well-known metadata documents
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/well-known/oauth-protected-resource'].post"
+    description: delegate.wellKnown.protectedResource
+    update:
+      x-speakeasy-group: delegate.wellKnown
+      x-speakeasy-name-override: protectedResource
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/well-known/ssf-configuration'].post"
+    description: delegate.wellKnown.ssfConfiguration
+    update:
+      x-speakeasy-group: delegate.wellKnown
+      x-speakeasy-name-override: ssfConfiguration
+
+  # delegate.streams — SSF stream configuration endpoints
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/stream/create'].post"
+    description: delegate.streams.create
+    update:
+      x-speakeasy-group: delegate.streams
+      x-speakeasy-name-override: create
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/stream/read'].post"
+    description: delegate.streams.get
+    update:
+      x-speakeasy-group: delegate.streams
+      x-speakeasy-name-override: get
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/stream/update'].post"
+    description: delegate.streams.update
+    update:
+      x-speakeasy-group: delegate.streams
+      x-speakeasy-name-override: update
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/stream/replace'].post"
+    description: delegate.streams.replace
+    update:
+      x-speakeasy-group: delegate.streams
+      x-speakeasy-name-override: replace
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/stream/delete'].post"
+    description: delegate.streams.delete
+    update:
+      x-speakeasy-group: delegate.streams
+      x-speakeasy-name-override: delete
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/stream/verify'].post"
+    description: delegate.streams.verify
+    update:
+      x-speakeasy-group: delegate.streams
+      x-speakeasy-name-override: verify
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/stream/poll/{stream_id}'].post"
+    description: delegate.streams.poll
+    update:
+      x-speakeasy-group: delegate.streams
+      x-speakeasy-name-override: poll
+
+  # delegate.status — SSF stream status
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/stream/status/read'].post"
+    description: delegate.status.get
+    update:
+      x-speakeasy-group: delegate.status
+      x-speakeasy-name-override: get
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/stream/status/update'].post"
+    description: delegate.status.update
+    update:
+      x-speakeasy-group: delegate.status
+      x-speakeasy-name-override: update
+
+  # delegate.subjects — SSF stream subjects
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/stream/subject/add'].post"
+    description: delegate.subjects.add
+    update:
+      x-speakeasy-group: delegate.subjects
+      x-speakeasy-name-override: add
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/stream/subject/remove'].post"
+    description: delegate.subjects.remove
+    update:
+      x-speakeasy-group: delegate.subjects
+      x-speakeasy-name-override: remove
+
+  - target: "$.paths['/ssf/transmitter/{transmitter_id}/delegate/stream/subject/list'].post"
+    description: delegate.subjects.list
+    update:
+      x-speakeasy-group: delegate.subjects
+      x-speakeasy-name-override: list
