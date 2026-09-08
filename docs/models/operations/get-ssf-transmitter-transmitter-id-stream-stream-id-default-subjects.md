@@ -7,7 +7,7 @@ Note that this property is proposed in [Issue 326 "default_subjects per stream"]
 ## Example Usage
 
 ```typescript
-import { GetSsfTransmitterTransmitterIdStreamStreamIdDefaultSubjects } from "authlete-arena/models/operations";
+import { GetSsfTransmitterTransmitterIdStreamStreamIdDefaultSubjects } from "@authlete/arena/models/operations";
 
 let value: GetSsfTransmitterTransmitterIdStreamStreamIdDefaultSubjects = "NONE";
 

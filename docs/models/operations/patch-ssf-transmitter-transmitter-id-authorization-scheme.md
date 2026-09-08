@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PatchSsfTransmitterTransmitterIdAuthorizationScheme } from "authlete-arena/models/operations";
+import { PatchSsfTransmitterTransmitterIdAuthorizationScheme } from "@authlete/arena/models/operations";
 
 let value: PatchSsfTransmitterTransmitterIdAuthorizationScheme = {
   specUrn: "urn:ietf:rfc:6749",

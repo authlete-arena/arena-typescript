@@ -6,7 +6,7 @@ The subject identifier with the `phone_number` format as defined in [Section 3.2
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterTransmitterIdEventRegisterSubId7 } from "authlete-arena/models/operations";
+import { PostSsfTransmitterTransmitterIdEventRegisterSubId7 } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterTransmitterIdEventRegisterSubId7 = {
   format: "phone_number",

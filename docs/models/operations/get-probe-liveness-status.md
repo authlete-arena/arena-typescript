@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetProbeLivenessStatus } from "authlete-arena/models/operations";
+import { GetProbeLivenessStatus } from "@authlete/arena/models/operations";
 
 let value: GetProbeLivenessStatus = "conflict";
 

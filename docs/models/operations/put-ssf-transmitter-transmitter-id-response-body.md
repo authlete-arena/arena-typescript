@@ -5,7 +5,7 @@ Successfully updated the transmitter.
 ## Example Usage
 
 ```typescript
-import { PutSsfTransmitterTransmitterIdResponseBody } from "authlete-arena/models/operations";
+import { PutSsfTransmitterTransmitterIdResponseBody } from "@authlete/arena/models/operations";
 
 let value: PutSsfTransmitterTransmitterIdResponseBody = {
   transmitter: {

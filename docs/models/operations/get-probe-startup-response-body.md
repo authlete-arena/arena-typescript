@@ -6,7 +6,7 @@ A successful response indicating that this web application has started up.
 ## Example Usage
 
 ```typescript
-import { GetProbeStartupResponseBody } from "authlete-arena/models/operations";
+import { GetProbeStartupResponseBody } from "@authlete/arena/models/operations";
 
 let value: GetProbeStartupResponseBody = {};
 ```

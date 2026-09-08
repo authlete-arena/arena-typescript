@@ -7,7 +7,7 @@ There is no transmitter with the transmitter ID.
 ```typescript
 import {
   PostSsfTransmitterTransmitterIdDelegateWellKnownOauthProtectedResourceNotFoundError,
-} from "authlete-arena/models/errors";
+} from "@authlete/arena/models/errors";
 
 // No examples available for this model
 ```

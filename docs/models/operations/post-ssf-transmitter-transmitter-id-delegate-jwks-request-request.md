@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterTransmitterIdDelegateJwksRequestRequest } from "authlete-arena/models/operations";
+import { PostSsfTransmitterTransmitterIdDelegateJwksRequestRequest } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterTransmitterIdDelegateJwksRequestRequest = {
   xFapiInteractionId: "1152537a-7f40-4405-860e-0fbdc75837b3",

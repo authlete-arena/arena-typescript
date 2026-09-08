@@ -5,7 +5,7 @@ Successfully retrieved information about the stream.
 ## Example Usage
 
 ```typescript
-import { GetSsfTransmitterTransmitterIdStreamStreamIdResponseBody } from "authlete-arena/models/operations";
+import { GetSsfTransmitterTransmitterIdStreamStreamIdResponseBody } from "@authlete/arena/models/operations";
 
 let value: GetSsfTransmitterTransmitterIdStreamStreamIdResponseBody = {
   stream: {

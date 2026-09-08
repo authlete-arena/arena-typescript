@@ -6,7 +6,7 @@ The subject identifier with the `account` format as defined in [Section 3.2.1. A
 ## Example Usage
 
 ```typescript
-import { GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1 } from "authlete-arena/models/operations";
+import { GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1 } from "@authlete/arena/models/operations";
 
 let value: GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1 = {
   format: "account",

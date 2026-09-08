@@ -5,7 +5,7 @@ The creator of the transmitter.
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterCreator } from "authlete-arena/models/operations";
+import { PostSsfTransmitterCreator } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterCreator = {};
 ```

@@ -6,7 +6,7 @@ A successful response indicating that this web application is alive.
 ## Example Usage
 
 ```typescript
-import { GetProbeLivenessResponseBody } from "authlete-arena/models/operations";
+import { GetProbeLivenessResponseBody } from "@authlete/arena/models/operations";
 
 let value: GetProbeLivenessResponseBody = {};
 ```

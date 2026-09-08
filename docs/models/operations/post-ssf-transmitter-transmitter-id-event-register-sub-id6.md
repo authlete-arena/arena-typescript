@@ -6,7 +6,7 @@ The subject identifier with the `opaque` format as defined in [Section 3.2.4. Op
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterTransmitterIdEventRegisterSubId6 } from "authlete-arena/models/operations";
+import { PostSsfTransmitterTransmitterIdEventRegisterSubId6 } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterTransmitterIdEventRegisterSubId6 = {
   format: "opaque",

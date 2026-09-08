@@ -6,7 +6,7 @@ JSON Patch's operation object defined in [RFC 6902: JavaScript Object Notation (
 ## Example Usage
 
 ```typescript
-import { Patch } from "authlete-arena/models/operations";
+import { Patch } from "@authlete/arena/models/operations";
 
 let value: Patch = {
   op: "replace",

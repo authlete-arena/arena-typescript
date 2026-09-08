@@ -6,7 +6,7 @@ A verification event was registered into the stream.
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterTransmitterIdStreamStreamIdVerifyResponseBody } from "authlete-arena/models/operations";
+import { PostSsfTransmitterTransmitterIdStreamStreamIdVerifyResponseBody } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterTransmitterIdStreamStreamIdVerifyResponseBody = {};
 ```

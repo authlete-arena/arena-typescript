@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetOpenapiStatus } from "authlete-arena/models/operations";
+import { GetOpenapiStatus } from "@authlete/arena/models/operations";
 
 let value: GetOpenapiStatus = "service_unavailable";
 

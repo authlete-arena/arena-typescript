@@ -6,7 +6,7 @@ The message body of a request to the event registration API.
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterTransmitterIdEventRegisterRequestBody } from "authlete-arena/models/operations";
+import { PostSsfTransmitterTransmitterIdEventRegisterRequestBody } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterTransmitterIdEventRegisterRequestBody = {
   subId: {

@@ -6,7 +6,7 @@ The subject identifier with the `aliases` format as defined in [Section 3.2.8. A
 ## Example Usage
 
 ```typescript
-import { GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20 } from "authlete-arena/models/operations";
+import { GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20 } from "@authlete/arena/models/operations";
 
 let value: GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20 = {
   format: "aliases",

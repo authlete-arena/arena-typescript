@@ -5,7 +5,7 @@ There is no transmitter with the transmitter ID.
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterTransmitterIdDelegateStreamSubjectListNotFoundError } from "authlete-arena/models/errors";
+import { PostSsfTransmitterTransmitterIdDelegateStreamSubjectListNotFoundError } from "@authlete/arena/models/errors";
 
 // No examples available for this model
 ```

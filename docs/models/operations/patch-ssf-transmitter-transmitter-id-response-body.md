@@ -5,7 +5,7 @@ Successfully applied the patch to the transmitter.
 ## Example Usage
 
 ```typescript
-import { PatchSsfTransmitterTransmitterIdResponseBody } from "authlete-arena/models/operations";
+import { PatchSsfTransmitterTransmitterIdResponseBody } from "@authlete/arena/models/operations";
 
 let value: PatchSsfTransmitterTransmitterIdResponseBody = {
   transmitter: {

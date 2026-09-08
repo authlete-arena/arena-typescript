@@ -5,7 +5,7 @@ Successfully deleted the event.
 ## Example Usage
 
 ```typescript
-import { DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiResponseBody } from "authlete-arena/models/operations";
+import { DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiResponseBody } from "@authlete/arena/models/operations";
 
 let value:
   DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiResponseBody = {};

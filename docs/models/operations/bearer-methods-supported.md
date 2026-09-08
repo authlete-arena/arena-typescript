@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BearerMethodsSupported } from "authlete-arena/models/operations";
+import { BearerMethodsSupported } from "@authlete/arena/models/operations";
 
 let value: BearerMethodsSupported = "header";
 

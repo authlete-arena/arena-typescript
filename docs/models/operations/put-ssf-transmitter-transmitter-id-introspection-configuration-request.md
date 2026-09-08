@@ -6,7 +6,7 @@ Configuration for access token introspection ([RFC 7662](https://www.rfc-editor.
 ## Example Usage
 
 ```typescript
-import { PutSsfTransmitterTransmitterIdIntrospectionConfigurationRequest } from "authlete-arena/models/operations";
+import { PutSsfTransmitterTransmitterIdIntrospectionConfigurationRequest } from "@authlete/arena/models/operations";
 
 let value: PutSsfTransmitterTransmitterIdIntrospectionConfigurationRequest = {
   issuer: "jcb",

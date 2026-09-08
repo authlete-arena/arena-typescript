@@ -5,7 +5,7 @@ The patch was rejected.
 ## Example Usage
 
 ```typescript
-import { PatchSsfTransmitterTransmitterIdBadRequestError } from "authlete-arena/models/errors";
+import { PatchSsfTransmitterTransmitterIdBadRequestError } from "@authlete/arena/models/errors";
 
 // No examples available for this model
 ```

@@ -16,7 +16,7 @@ OPTIONAL. A string indicating the default behavior of newly created streams. If 
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterDefaultSubjectsRequest } from "authlete-arena/models/operations";
+import { PostSsfTransmitterDefaultSubjectsRequest } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterDefaultSubjectsRequest = "NONE";
 ```

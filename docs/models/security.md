@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Security } from "authlete-arena/models";
+import { Security } from "@authlete/arena/models";
 
 let value: Security = {};
 ```

@@ -1,21 +1,19 @@
 workflowVersion: 1.0.0
 speakeasyVersion: latest
 sources:
-    Arena Core Server:
+    arena-api:
         inputs:
-            - location: ../openapi.yaml
+            - location: registry.speakeasyapi.dev/authlete/sdk-workspace/arena-api
         overlays:
             - location: ./overlays/method-naming.yaml
         output: .speakeasy/out.openapi.yaml
-        registry:
-            location: registry.speakeasyapi.dev/authlete/sdk-workspace/arena-core-server
 targets:
     arena:
         target: typescript
-        source: Arena Core Server
+        source: arena-api
         codeSamples:
             registry:
-                location: registry.speakeasyapi.dev/authlete/sdk-workspace/arena-core-server-typescript-code-samples
+                location: registry.speakeasyapi.dev/authlete/sdk-workspace/arena-api-typescript-code-samples
             labelOverride:
                 fixedValue: Typescript (SDK)
             blocking: false

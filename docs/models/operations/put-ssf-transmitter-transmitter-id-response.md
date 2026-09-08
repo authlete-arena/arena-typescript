@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PutSsfTransmitterTransmitterIdResponse } from "authlete-arena/models/operations";
+import { PutSsfTransmitterTransmitterIdResponse } from "@authlete/arena/models/operations";
 
 let value: PutSsfTransmitterTransmitterIdResponse = {
   headers: {

@@ -6,7 +6,7 @@ A successful response indicating that this web application is ready.
 ## Example Usage
 
 ```typescript
-import { GetProbeReadinessResponseBody } from "authlete-arena/models/operations";
+import { GetProbeReadinessResponseBody } from "@authlete/arena/models/operations";
 
 let value: GetProbeReadinessResponseBody = {};
 ```

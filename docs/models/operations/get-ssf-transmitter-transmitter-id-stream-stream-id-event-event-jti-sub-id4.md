@@ -6,7 +6,7 @@ The subject identifier with the `iss_sub` format as defined in [Section 3.2.3. I
 ## Example Usage
 
 ```typescript
-import { GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4 } from "authlete-arena/models/operations";
+import { GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4 } from "@authlete/arena/models/operations";
 
 let value: GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4 = {
   format: "iss_sub",

@@ -6,7 +6,7 @@ The error information in the same format as an error object defined in [Section 
 ## Example Usage
 
 ```typescript
-import { ErrorT } from "authlete-arena/models/operations";
+import { ErrorT } from "@authlete/arena/models/operations";
 
 let value: ErrorT = {
   err: "authentication_failed",

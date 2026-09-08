@@ -6,7 +6,7 @@ The subject identifier with the `saml_assertion_id` format as defined in [Sectio
 ## Example Usage
 
 ```typescript
-import { GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8 } from "authlete-arena/models/operations";
+import { GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8 } from "@authlete/arena/models/operations";
 
 let value:
   GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8 = {

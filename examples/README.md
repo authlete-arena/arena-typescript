@@ -1,6 +1,6 @@
-# authlete-arena Examples
+# @authlete/arena Examples
 
-This directory contains example scripts demonstrating how to use the authlete-arena SDK.
+This directory contains example scripts demonstrating how to use the @authlete/arena SDK.
 
 ## Prerequisites
 

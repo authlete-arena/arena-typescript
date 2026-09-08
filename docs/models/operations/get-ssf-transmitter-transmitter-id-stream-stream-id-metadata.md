@@ -6,7 +6,7 @@ Stream Configuration defined in [OpenID Shared Signals Framework Specification 1
 ## Example Usage
 
 ```typescript
-import { GetSsfTransmitterTransmitterIdStreamStreamIdMetadata } from "authlete-arena/models/operations";
+import { GetSsfTransmitterTransmitterIdStreamStreamIdMetadata } from "@authlete/arena/models/operations";
 
 let value: GetSsfTransmitterTransmitterIdStreamStreamIdMetadata = {
   streamId: "stj3odpcfg19u6q62t2h7k0uk3t7srkdai6e0ccd7jd4ognt",

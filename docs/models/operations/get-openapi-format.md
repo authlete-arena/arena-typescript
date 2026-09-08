@@ -6,7 +6,7 @@ The format of the OpenAPI document. Either `YAML` or `JSON` (case-insensitive). 
 ## Example Usage
 
 ```typescript
-import { GetOpenapiFormat } from "authlete-arena/models/operations";
+import { GetOpenapiFormat } from "@authlete/arena/models/operations";
 
 let value: GetOpenapiFormat = "YAML";
 ```

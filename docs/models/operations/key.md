@@ -6,7 +6,7 @@ JWK defined in [RFC 7517: JSON Web Key (JWK)](https://www.rfc-editor.org/rfc/rfc
 ## Example Usage
 
 ```typescript
-import { Key } from "authlete-arena/models/operations";
+import { Key } from "@authlete/arena/models/operations";
 
 let value: Key = {
   kty: "EC",

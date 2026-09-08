@@ -6,7 +6,7 @@ An error response indicating that the database connection is down.
 ## Example Usage
 
 ```typescript
-import { GetProbeDatabaseServiceUnavailableError } from "authlete-arena/models/errors";
+import { GetProbeDatabaseServiceUnavailableError } from "@authlete/arena/models/errors";
 
 // No examples available for this model
 ```

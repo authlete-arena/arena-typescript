@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetWellKnownOauthProtectedResourceRequest } from "authlete-arena/models/operations";
+import { GetWellKnownOauthProtectedResourceRequest } from "@authlete/arena/models/operations";
 
 let value: GetWellKnownOauthProtectedResourceRequest = {
   xFapiInteractionId: "1152537a-7f40-4405-860e-0fbdc75837b3",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Delivery } from "authlete-arena/models/operations";
+import { Delivery } from "@authlete/arena/models/operations";
 
 let value: Delivery = {
   method: "urn:ietf:rfc:8935",

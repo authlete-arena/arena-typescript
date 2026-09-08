@@ -6,7 +6,7 @@ There is no transmitter with the transmitter ID, or there is no stream with the 
 ## Example Usage
 
 ```typescript
-import { DeleteSsfTransmitterTransmitterIdStreamStreamIdNotFoundError } from "authlete-arena/models/errors";
+import { DeleteSsfTransmitterTransmitterIdStreamStreamIdNotFoundError } from "@authlete/arena/models/errors";
 
 // No examples available for this model
 ```

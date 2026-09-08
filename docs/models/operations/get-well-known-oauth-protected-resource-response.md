@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetWellKnownOauthProtectedResourceResponse } from "authlete-arena/models/operations";
+import { GetWellKnownOauthProtectedResourceResponse } from "@authlete/arena/models/operations";
 
 let value: GetWellKnownOauthProtectedResourceResponse = {
   headers: {

@@ -6,7 +6,7 @@ Transmitter Configuration Metadata defined in [OpenID Shared Signals Framework S
 ## Example Usage
 
 ```typescript
-import { PutSsfTransmitterTransmitterIdTransmitterMetadata } from "authlete-arena/models/operations";
+import { PutSsfTransmitterTransmitterIdTransmitterMetadata } from "@authlete/arena/models/operations";
 
 let value: PutSsfTransmitterTransmitterIdTransmitterMetadata = {
   specVersion: "1_0",

@@ -6,7 +6,7 @@ A value from the IANA "[Security Event Token Error Codes](https://www.iana.org/a
 ## Example Usage
 
 ```typescript
-import { Err } from "authlete-arena/models/operations";
+import { Err } from "@authlete/arena/models/operations";
 
 let value: Err = "access_denied";
 

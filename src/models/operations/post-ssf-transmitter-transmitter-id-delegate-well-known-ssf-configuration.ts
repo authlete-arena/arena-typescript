@@ -110,7 +110,7 @@ export type PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationOpti
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestRequestBody =
+export type DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequest =
   {
     /**
      * The HTTP method such as `GET`.
@@ -186,7 +186,7 @@ export type PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequ
      * @remarks
      */
     request:
-      PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestRequestBody;
+      DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequest;
   };
 
 export type PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestRequest =
@@ -271,7 +271,7 @@ export type PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResu
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponseResponseBody =
+export type DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponse =
   {
     /**
      * The HTTP status code of the HTTP response.
@@ -316,7 +316,7 @@ export type PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResp
      * @remarks
      */
     response:
-      PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponseResponseBody;
+      DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponse;
   };
 
 export type PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponseResponse =
@@ -363,7 +363,7 @@ export function postSsfTransmitterTransmitterIdDelegateWellKnownSsfConfiguration
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestRequestBody$Outbound =
+export type DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequest$Outbound =
   {
     method: any;
     uri: any;
@@ -374,10 +374,10 @@ export type PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequ
   };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestRequestBody$outboundSchema:
+export const DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequest$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestRequestBody$Outbound,
-    PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestRequestBody
+    DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequest$Outbound,
+    DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequest
   > = z.pipe(
     z.object({
       method: z.any(),
@@ -394,14 +394,14 @@ export const PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationReq
     }),
   );
 
-export function postSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestRequestBodyToJSON(
-  postSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestRequestBody:
-    PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestRequestBody,
+export function delegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestToJSON(
+  delegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequest:
+    DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequest,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestRequestBody$outboundSchema
+    DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequest$outboundSchema
       .parse(
-        postSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestRequestBody,
+        delegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequest,
       ),
   );
 }
@@ -413,7 +413,7 @@ export type PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequ
       | PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationOptions$Outbound
       | undefined;
     request:
-      PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestRequestBody$Outbound;
+      DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequest$Outbound;
   };
 
 /** @internal */
@@ -428,7 +428,7 @@ export const PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationReq
       ),
     ),
     request: z.lazy(() =>
-      PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequestRequestBody$outboundSchema
+      DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRequest$outboundSchema
     ),
   });
 
@@ -564,9 +564,9 @@ export function postSsfTransmitterTransmitterIdDelegateWellKnownSsfConfiguration
 }
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponseResponseBody$inboundSchema:
+export const DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponse$inboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponseResponseBody,
+    DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponse,
     unknown
   > = z.object({
     status: z.any(),
@@ -575,18 +575,18 @@ export const PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRes
     body: types.optional(z.any()),
   });
 
-export function postSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponseResponseBodyFromJSON(
+export function delegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponseFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponseResponseBody,
+  DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponse,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponseResponseBody$inboundSchema
+      DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponse$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponseResponseBody' from JSON`,
+    `Failed to parse 'DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponse' from JSON`,
   );
 }
 
@@ -602,7 +602,7 @@ export const PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationRes
       ),
     ),
     response: z.lazy(() =>
-      PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponseResponseBody$inboundSchema
+      DelegateWellKnownPostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponse$inboundSchema
     ),
   });
 

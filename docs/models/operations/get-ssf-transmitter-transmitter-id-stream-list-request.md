@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetSsfTransmitterTransmitterIdStreamListRequest } from "authlete-arena/models/operations";
+import { GetSsfTransmitterTransmitterIdStreamListRequest } from "@authlete/arena/models/operations";
 
 let value: GetSsfTransmitterTransmitterIdStreamListRequest = {
   xFapiInteractionId: "1152537a-7f40-4405-860e-0fbdc75837b3",

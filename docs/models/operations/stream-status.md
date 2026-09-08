@@ -6,7 +6,7 @@ This is the status of the stream. The value is one of `enabled`, `paused`, or `d
 ## Example Usage
 
 ```typescript
-import { StreamStatus } from "authlete-arena/models/operations";
+import { StreamStatus } from "@authlete/arena/models/operations";
 
 let value: StreamStatus = "enabled";
 

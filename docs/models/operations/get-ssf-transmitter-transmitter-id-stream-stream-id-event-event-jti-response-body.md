@@ -5,7 +5,7 @@ Successfully retrieved information about the event.
 ## Example Usage
 
 ```typescript
-import { GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiResponseBody } from "authlete-arena/models/operations";
+import { GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiResponseBody } from "@authlete/arena/models/operations";
 
 let value:
   GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiResponseBody = {

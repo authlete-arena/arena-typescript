@@ -6,7 +6,7 @@ The subject identifier with the `email` format as defined in [Section 3.2.2. Ema
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterTransmitterIdEventRegisterSubId13 } from "authlete-arena/models/operations";
+import { PostSsfTransmitterTransmitterIdEventRegisterSubId13 } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterTransmitterIdEventRegisterSubId13 = {
   format: "email",

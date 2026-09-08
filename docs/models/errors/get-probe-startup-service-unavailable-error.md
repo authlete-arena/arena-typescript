@@ -6,7 +6,7 @@ An error response indicating that this web application failed to start up.
 ## Example Usage
 
 ```typescript
-import { GetProbeStartupServiceUnavailableError } from "authlete-arena/models/errors";
+import { GetProbeStartupServiceUnavailableError } from "@authlete/arena/models/errors";
 
 // No examples available for this model
 ```

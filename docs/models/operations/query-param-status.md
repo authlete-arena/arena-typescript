@@ -6,7 +6,7 @@ The allowed values are `enabled`, `paused`, and `disabled`.
 ## Example Usage
 
 ```typescript
-import { QueryParamStatus } from "authlete-arena/models/operations";
+import { QueryParamStatus } from "@authlete/arena/models/operations";
 
 let value: QueryParamStatus = "paused";
 ```

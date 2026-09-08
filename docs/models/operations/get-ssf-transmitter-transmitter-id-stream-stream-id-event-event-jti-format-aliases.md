@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiFormatAliases } from "authlete-arena/models/operations";
+import { GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiFormatAliases } from "@authlete/arena/models/operations";
 
 let value:
   GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiFormatAliases =

@@ -109,7 +109,7 @@ export type PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddOptions = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestRequestBody =
+export type DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequest =
   {
     /**
      * The HTTP method such as `GET`.
@@ -185,7 +185,7 @@ export type PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestBody =
      * @remarks
      */
     request:
-      PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestRequestBody;
+      DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequest;
   };
 
 export type PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestRequest =
@@ -268,7 +268,7 @@ export type PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResult = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponseResponseBody =
+export type DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponse =
   {
     /**
      * The HTTP status code of the HTTP response.
@@ -313,7 +313,7 @@ export type PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponseBody 
      * @remarks
      */
     response:
-      PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponseResponseBody;
+      DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponse;
   };
 
 export type PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponseResponse =
@@ -357,7 +357,7 @@ export function postSsfTransmitterTransmitterIdDelegateStreamSubjectAddOptionsTo
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestRequestBody$Outbound =
+export type DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequest$Outbound =
   {
     method: any;
     uri: any;
@@ -368,10 +368,10 @@ export type PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestReques
   };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestRequestBody$outboundSchema:
+export const DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequest$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestRequestBody$Outbound,
-    PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestRequestBody
+    DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequest$Outbound,
+    DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequest
   > = z.pipe(
     z.object({
       method: z.any(),
@@ -388,14 +388,14 @@ export const PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestReque
     }),
   );
 
-export function postSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestRequestBodyToJSON(
-  postSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestRequestBody:
-    PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestRequestBody,
+export function delegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestToJSON(
+  delegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequest:
+    DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequest,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestRequestBody$outboundSchema
+    DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequest$outboundSchema
       .parse(
-        postSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestRequestBody,
+        delegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequest,
       ),
   );
 }
@@ -407,7 +407,7 @@ export type PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestBody$O
       | PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddOptions$Outbound
       | undefined;
     request:
-      PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestRequestBody$Outbound;
+      DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequest$Outbound;
   };
 
 /** @internal */
@@ -422,7 +422,7 @@ export const PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestBody$
       ),
     ),
     request: z.lazy(() =>
-      PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestRequestBody$outboundSchema
+      DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequest$outboundSchema
     ),
   });
 
@@ -558,9 +558,9 @@ export function postSsfTransmitterTransmitterIdDelegateStreamSubjectAddResultFro
 }
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponseResponseBody$inboundSchema:
+export const DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponse$inboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponseResponseBody,
+    DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponse,
     unknown
   > = z.object({
     status: z.any(),
@@ -569,18 +569,18 @@ export const PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponseResp
     body: types.optional(z.any()),
   });
 
-export function postSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponseResponseBodyFromJSON(
+export function delegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponseFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponseResponseBody,
+  DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponse,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponseResponseBody$inboundSchema
+      DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponse$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponseResponseBody' from JSON`,
+    `Failed to parse 'DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponse' from JSON`,
   );
 }
 
@@ -596,7 +596,7 @@ export const PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponseBody
       ),
     ),
     response: z.lazy(() =>
-      PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponseResponseBody$inboundSchema
+      DelegateSubjectsPostSsfTransmitterTransmitterIdDelegateStreamSubjectAddResponse$inboundSchema
     ),
   });
 

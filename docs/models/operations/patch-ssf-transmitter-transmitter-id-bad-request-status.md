@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PatchSsfTransmitterTransmitterIdBadRequestStatus } from "authlete-arena/models/operations";
+import { PatchSsfTransmitterTransmitterIdBadRequestStatus } from "@authlete/arena/models/operations";
 
 let value: PatchSsfTransmitterTransmitterIdBadRequestStatus = "not_found";
 

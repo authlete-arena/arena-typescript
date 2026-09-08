@@ -5,7 +5,7 @@ The HTTP authentication scheme.
 ## Example Usage
 
 ```typescript
-import { PatchSsfTransmitterTransmitterIdScheme } from "authlete-arena/models/operations";
+import { PatchSsfTransmitterTransmitterIdScheme } from "@authlete/arena/models/operations";
 
 let value: PatchSsfTransmitterTransmitterIdScheme = "Bearer";
 

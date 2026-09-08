@@ -5,7 +5,7 @@ The creator of the stream.
 ## Example Usage
 
 ```typescript
-import { GetSsfTransmitterTransmitterIdStreamStreamIdCreator } from "authlete-arena/models/operations";
+import { GetSsfTransmitterTransmitterIdStreamStreamIdCreator } from "@authlete/arena/models/operations";
 
 let value: GetSsfTransmitterTransmitterIdStreamStreamIdCreator = {};
 ```

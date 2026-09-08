@@ -5,7 +5,7 @@ Successfully deleted the stream.
 ## Example Usage
 
 ```typescript
-import { DeleteSsfTransmitterTransmitterIdStreamStreamIdResponseBody } from "authlete-arena/models/operations";
+import { DeleteSsfTransmitterTransmitterIdStreamStreamIdResponseBody } from "@authlete/arena/models/operations";
 
 let value: DeleteSsfTransmitterTransmitterIdStreamStreamIdResponseBody = {};
 ```

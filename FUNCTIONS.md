@@ -19,8 +19,8 @@ specific category of applications.
 ## Example
 
 ```typescript
-import { ArenaCore } from "authlete-arena/core.js";
-import { getWellKnownOauthProtectedResource } from "authlete-arena/funcs/get-well-known-oauth-protected-resource.js";
+import { ArenaCore } from "@authlete/arena/core.js";
+import { metadataGetProtectedResource } from "@authlete/arena/funcs/metadata-get-protected-resource.js";
 
 // Use `ArenaCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -29,14 +29,14 @@ const arena = new ArenaCore({
 });
 
 async function run() {
-  const res = await getWellKnownOauthProtectedResource(arena, {
+  const res = await metadataGetProtectedResource(arena, {
     xFapiInteractionId: "1152537a-7f40-4405-860e-0fbdc75837b3",
   });
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("getWellKnownOauthProtectedResource failed:", res.error);
+    console.log("metadataGetProtectedResource failed:", res.error);
   }
 }
 

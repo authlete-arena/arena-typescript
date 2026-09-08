@@ -6,7 +6,7 @@ The event information in the same format as a SET payload. The only difference i
 ## Example Usage
 
 ```typescript
-import { Payload } from "authlete-arena/models/operations";
+import { Payload } from "@authlete/arena/models/operations";
 
 let value: Payload = {};
 ```

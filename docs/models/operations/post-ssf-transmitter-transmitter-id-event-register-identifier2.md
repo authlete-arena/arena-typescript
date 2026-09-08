@@ -6,7 +6,7 @@ The subject identifier with the `did` format as defined in [Section 3.2.6. Decen
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterTransmitterIdEventRegisterIdentifier2 } from "authlete-arena/models/operations";
+import { PostSsfTransmitterTransmitterIdEventRegisterIdentifier2 } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterTransmitterIdEventRegisterIdentifier2 = {
   format: "did",

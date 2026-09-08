@@ -86,14 +86,14 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 ### Example
 
 ```typescript
-import { Arena } from "authlete-arena";
+import { Arena } from "@authlete/arena";
 
 const arena = new Arena({
   serverURL: "https://api.example.com",
 });
 
 async function run() {
-  const result = await arena.getWellKnownOauthProtectedResource({
+  const result = await arena.metadata.getProtectedResource({
     xFapiInteractionId: "1152537a-7f40-4405-860e-0fbdc75837b3",
   });
 
@@ -119,7 +119,7 @@ This SDK supports the following security schemes globally:
 
 You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. The selected scheme will be used by default to authenticate with the API for all operations that support it. For example:
 ```typescript
-import { Arena } from "authlete-arena";
+import { Arena } from "@authlete/arena";
 
 const arena = new Arena({
   serverURL: "https://api.example.com",
@@ -129,7 +129,7 @@ const arena = new Arena({
 });
 
 async function run() {
-  const result = await arena.getWellKnownOauthProtectedResource({
+  const result = await arena.metadata.getProtectedResource({
     xFapiInteractionId: "1152537a-7f40-4405-860e-0fbdc75837b3",
   });
 
@@ -147,43 +147,70 @@ run();
 <details open>
 <summary>Available methods</summary>
 
-### [Arena SDK](docs/sdks/arena/README.md)
+### [Delegate](docs/sdks/delegate/README.md)
 
-* [getWellKnownOauthProtectedResource](docs/sdks/arena/README.md#getwellknownoauthprotectedresource) - OAuth 2.0 Protected Resource Metadata
-* [getJwks](docs/sdks/arena/README.md#getjwks) - JWK Set Document
-* [getOpenapi](docs/sdks/arena/README.md#getopenapi) - Retrieve the OpenAPI document of this web application.
-* [getProbeDatabase](docs/sdks/arena/README.md#getprobedatabase) - Database probe.
-* [getProbeLiveness](docs/sdks/arena/README.md#getprobeliveness) - Liveness probe for Kubernetes.
-* [getProbeReadiness](docs/sdks/arena/README.md#getprobereadiness) - Readiness probe for Kubernetes.
-* [getProbeStartup](docs/sdks/arena/README.md#getprobestartup) - Startup probe for Kubernetes.
-* [postSsfTransmitter](docs/sdks/arena/README.md#postssftransmitter) - Create a transmitter.
-* [getSsfTransmitterTransmitterId](docs/sdks/arena/README.md#getssftransmittertransmitterid) - Retrieve information about the transmitter.
-* [putSsfTransmitterTransmitterId](docs/sdks/arena/README.md#putssftransmittertransmitterid) - Update the transmitter.
-* [deleteSsfTransmitterTransmitterId](docs/sdks/arena/README.md#deletessftransmittertransmitterid) - Delete the transmitter.
-* [patchSsfTransmitterTransmitterId](docs/sdks/arena/README.md#patchssftransmittertransmitterid) - Apply a patch to the transmitter.
-* [postSsfTransmitterTransmitterIdDelegateJwks](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatejwks) - JWK Set Document Endpoint
-* [postSsfTransmitterTransmitterIdDelegateStreamCreate](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamcreate) - Stream Create (HTTP POST to the configuration endpoint)
-* [postSsfTransmitterTransmitterIdDelegateStreamRead](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamread) - Stream Read (HTTP GET to the configuration endpoint)
-* [postSsfTransmitterTransmitterIdDelegateStreamUpdate](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamupdate) - Stream Update (HTTP PATCH to the configuration endpoint)
-* [postSsfTransmitterTransmitterIdDelegateStreamReplace](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamreplace) - Stream Replace (HTTP PUT to the configuration endpoint)
-* [postSsfTransmitterTransmitterIdDelegateStreamDelete](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamdelete) - Stream Delete (HTTP DELETE to the configuration endpoint)
-* [postSsfTransmitterTransmitterIdDelegateStreamVerify](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamverify) - Stream Verify (HTTP POST to the verification endpoint)
-* [postSsfTransmitterTransmitterIdDelegateStreamPollStreamId](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreampollstreamid) - Stream Poll (HTTP POST to the poll endpoint)
-* [postSsfTransmitterTransmitterIdDelegateStreamStatusRead](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamstatusread) - Stream Status Read (HTTP GET to the status endpoint)
-* [postSsfTransmitterTransmitterIdDelegateStreamStatusUpdate](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamstatusupdate) - Stream Status Update (HTTP POST to the status endpoint)
-* [postSsfTransmitterTransmitterIdDelegateStreamSubjectAdd](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamsubjectadd) - Stream Subject Add (HTTP POST to the add subject endpoint)
-* [postSsfTransmitterTransmitterIdDelegateStreamSubjectRemove](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamsubjectremove) - Stream Subject Remove (HTTP POST to the remove subject endpoint)
-* [postSsfTransmitterTransmitterIdDelegateStreamSubjectList](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamsubjectlist) - Stream Subject List (HTTP GET to the list subjects endpoint)
-* [postSsfTransmitterTransmitterIdDelegateWellKnownOauthProtectedResource](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatewellknownoauthprotectedresource) - Protected Resource Metadata Endpoint (/.well-known/oauth-protected-resource)
-* [postSsfTransmitterTransmitterIdDelegateWellKnownSsfConfiguration](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatewellknownssfconfiguration) - Transmitter Metadata Endpoint (/.well-known/ssf-configuration)
-* [postSsfTransmitterTransmitterIdEventRegister](docs/sdks/arena/README.md#postssftransmittertransmitterideventregister) - Register an event.
-* [getSsfTransmitterTransmitterIdStreamList](docs/sdks/arena/README.md#getssftransmittertransmitteridstreamlist) - List streams.
-* [getSsfTransmitterTransmitterIdStreamStreamId](docs/sdks/arena/README.md#getssftransmittertransmitteridstreamstreamid) - Retrieve information about the stream.
-* [deleteSsfTransmitterTransmitterIdStreamStreamId](docs/sdks/arena/README.md#deletessftransmittertransmitteridstreamstreamid) - Delete the stream.
-* [postSsfTransmitterTransmitterIdStreamStreamIdVerify](docs/sdks/arena/README.md#postssftransmittertransmitteridstreamstreamidverify) - Register a verification event into the stream.
-* [getSsfTransmitterTransmitterIdStreamStreamIdEventList](docs/sdks/arena/README.md#getssftransmittertransmitteridstreamstreamideventlist) - List stream events.
-* [getSsfTransmitterTransmitterIdStreamStreamIdEventEventJti](docs/sdks/arena/README.md#getssftransmittertransmitteridstreamstreamideventeventjti) - Retrieve information about the event.
-* [deleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJti](docs/sdks/arena/README.md#deletessftransmittertransmitteridstreamstreamideventeventjti) - Delete the event.
+* [jwks](docs/sdks/delegate/README.md#jwks) - JWK Set Document Endpoint
+
+#### [Delegate.Status](docs/sdks/status/README.md)
+
+* [get](docs/sdks/status/README.md#get) - Stream Status Read (HTTP GET to the status endpoint)
+* [update](docs/sdks/status/README.md#update) - Stream Status Update (HTTP POST to the status endpoint)
+
+#### [Delegate.Streams](docs/sdks/delegatestreams/README.md)
+
+* [create](docs/sdks/delegatestreams/README.md#create) - Stream Create (HTTP POST to the configuration endpoint)
+* [get](docs/sdks/delegatestreams/README.md#get) - Stream Read (HTTP GET to the configuration endpoint)
+* [update](docs/sdks/delegatestreams/README.md#update) - Stream Update (HTTP PATCH to the configuration endpoint)
+* [replace](docs/sdks/delegatestreams/README.md#replace) - Stream Replace (HTTP PUT to the configuration endpoint)
+* [delete](docs/sdks/delegatestreams/README.md#delete) - Stream Delete (HTTP DELETE to the configuration endpoint)
+* [verify](docs/sdks/delegatestreams/README.md#verify) - Stream Verify (HTTP POST to the verification endpoint)
+* [poll](docs/sdks/delegatestreams/README.md#poll) - Stream Poll (HTTP POST to the poll endpoint)
+
+#### [Delegate.Subjects](docs/sdks/subjects/README.md)
+
+* [add](docs/sdks/subjects/README.md#add) - Stream Subject Add (HTTP POST to the add subject endpoint)
+* [remove](docs/sdks/subjects/README.md#remove) - Stream Subject Remove (HTTP POST to the remove subject endpoint)
+* [list](docs/sdks/subjects/README.md#list) - Stream Subject List (HTTP GET to the list subjects endpoint)
+
+#### [Delegate.WellKnown](docs/sdks/wellknown/README.md)
+
+* [protectedResource](docs/sdks/wellknown/README.md#protectedresource) - Protected Resource Metadata Endpoint (/.well-known/oauth-protected-resource)
+* [ssfConfiguration](docs/sdks/wellknown/README.md#ssfconfiguration) - Transmitter Metadata Endpoint (/.well-known/ssf-configuration)
+
+### [Events](docs/sdks/events/README.md)
+
+* [register](docs/sdks/events/README.md#register) - Register an event.
+* [list](docs/sdks/events/README.md#list) - List stream events.
+* [get](docs/sdks/events/README.md#get) - Retrieve information about the event.
+* [delete](docs/sdks/events/README.md#delete) - Delete the event.
+
+### [Health](docs/sdks/health/README.md)
+
+* [database](docs/sdks/health/README.md#database) - Database probe.
+* [liveness](docs/sdks/health/README.md#liveness) - Liveness probe for Kubernetes.
+* [readiness](docs/sdks/health/README.md#readiness) - Readiness probe for Kubernetes.
+* [startup](docs/sdks/health/README.md#startup) - Startup probe for Kubernetes.
+
+### [Metadata](docs/sdks/metadata/README.md)
+
+* [getProtectedResource](docs/sdks/metadata/README.md#getprotectedresource) - OAuth 2.0 Protected Resource Metadata
+* [getJwks](docs/sdks/metadata/README.md#getjwks) - JWK Set Document
+* [getOpenApiDocument](docs/sdks/metadata/README.md#getopenapidocument) - Retrieve the OpenAPI document of this web application.
+
+### [Streams](docs/sdks/streams/README.md)
+
+* [list](docs/sdks/streams/README.md#list) - List streams.
+* [get](docs/sdks/streams/README.md#get) - Retrieve information about the stream.
+* [delete](docs/sdks/streams/README.md#delete) - Delete the stream.
+* [verify](docs/sdks/streams/README.md#verify) - Register a verification event into the stream.
+
+### [Transmitters](docs/sdks/transmitters/README.md)
+
+* [create](docs/sdks/transmitters/README.md#create) - Create a transmitter.
+* [get](docs/sdks/transmitters/README.md#get) - Retrieve information about the transmitter.
+* [update](docs/sdks/transmitters/README.md#update) - Update the transmitter.
+* [delete](docs/sdks/transmitters/README.md#delete) - Delete the transmitter.
+* [patch](docs/sdks/transmitters/README.md#patch) - Apply a patch to the transmitter.
 
 </details>
 <!-- End Available Resources and Operations [operations] -->
@@ -203,41 +230,41 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 <summary>Available standalone functions</summary>
 
-- [`deleteSsfTransmitterTransmitterId`](docs/sdks/arena/README.md#deletessftransmittertransmitterid) - Delete the transmitter.
-- [`deleteSsfTransmitterTransmitterIdStreamStreamId`](docs/sdks/arena/README.md#deletessftransmittertransmitteridstreamstreamid) - Delete the stream.
-- [`deleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJti`](docs/sdks/arena/README.md#deletessftransmittertransmitteridstreamstreamideventeventjti) - Delete the event.
-- [`getJwks`](docs/sdks/arena/README.md#getjwks) - JWK Set Document
-- [`getOpenapi`](docs/sdks/arena/README.md#getopenapi) - Retrieve the OpenAPI document of this web application.
-- [`getProbeDatabase`](docs/sdks/arena/README.md#getprobedatabase) - Database probe.
-- [`getProbeLiveness`](docs/sdks/arena/README.md#getprobeliveness) - Liveness probe for Kubernetes.
-- [`getProbeReadiness`](docs/sdks/arena/README.md#getprobereadiness) - Readiness probe for Kubernetes.
-- [`getProbeStartup`](docs/sdks/arena/README.md#getprobestartup) - Startup probe for Kubernetes.
-- [`getSsfTransmitterTransmitterId`](docs/sdks/arena/README.md#getssftransmittertransmitterid) - Retrieve information about the transmitter.
-- [`getSsfTransmitterTransmitterIdStreamList`](docs/sdks/arena/README.md#getssftransmittertransmitteridstreamlist) - List streams.
-- [`getSsfTransmitterTransmitterIdStreamStreamId`](docs/sdks/arena/README.md#getssftransmittertransmitteridstreamstreamid) - Retrieve information about the stream.
-- [`getSsfTransmitterTransmitterIdStreamStreamIdEventEventJti`](docs/sdks/arena/README.md#getssftransmittertransmitteridstreamstreamideventeventjti) - Retrieve information about the event.
-- [`getSsfTransmitterTransmitterIdStreamStreamIdEventList`](docs/sdks/arena/README.md#getssftransmittertransmitteridstreamstreamideventlist) - List stream events.
-- [`getWellKnownOauthProtectedResource`](docs/sdks/arena/README.md#getwellknownoauthprotectedresource) - OAuth 2.0 Protected Resource Metadata
-- [`patchSsfTransmitterTransmitterId`](docs/sdks/arena/README.md#patchssftransmittertransmitterid) - Apply a patch to the transmitter.
-- [`postSsfTransmitter`](docs/sdks/arena/README.md#postssftransmitter) - Create a transmitter.
-- [`postSsfTransmitterTransmitterIdDelegateJwks`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatejwks) - JWK Set Document Endpoint
-- [`postSsfTransmitterTransmitterIdDelegateStreamCreate`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamcreate) - Stream Create (HTTP POST to the configuration endpoint)
-- [`postSsfTransmitterTransmitterIdDelegateStreamDelete`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamdelete) - Stream Delete (HTTP DELETE to the configuration endpoint)
-- [`postSsfTransmitterTransmitterIdDelegateStreamPollStreamId`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreampollstreamid) - Stream Poll (HTTP POST to the poll endpoint)
-- [`postSsfTransmitterTransmitterIdDelegateStreamRead`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamread) - Stream Read (HTTP GET to the configuration endpoint)
-- [`postSsfTransmitterTransmitterIdDelegateStreamReplace`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamreplace) - Stream Replace (HTTP PUT to the configuration endpoint)
-- [`postSsfTransmitterTransmitterIdDelegateStreamStatusRead`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamstatusread) - Stream Status Read (HTTP GET to the status endpoint)
-- [`postSsfTransmitterTransmitterIdDelegateStreamStatusUpdate`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamstatusupdate) - Stream Status Update (HTTP POST to the status endpoint)
-- [`postSsfTransmitterTransmitterIdDelegateStreamSubjectAdd`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamsubjectadd) - Stream Subject Add (HTTP POST to the add subject endpoint)
-- [`postSsfTransmitterTransmitterIdDelegateStreamSubjectList`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamsubjectlist) - Stream Subject List (HTTP GET to the list subjects endpoint)
-- [`postSsfTransmitterTransmitterIdDelegateStreamSubjectRemove`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamsubjectremove) - Stream Subject Remove (HTTP POST to the remove subject endpoint)
-- [`postSsfTransmitterTransmitterIdDelegateStreamUpdate`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamupdate) - Stream Update (HTTP PATCH to the configuration endpoint)
-- [`postSsfTransmitterTransmitterIdDelegateStreamVerify`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatestreamverify) - Stream Verify (HTTP POST to the verification endpoint)
-- [`postSsfTransmitterTransmitterIdDelegateWellKnownOauthProtectedResource`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatewellknownoauthprotectedresource) - Protected Resource Metadata Endpoint (/.well-known/oauth-protected-resource)
-- [`postSsfTransmitterTransmitterIdDelegateWellKnownSsfConfiguration`](docs/sdks/arena/README.md#postssftransmittertransmitteriddelegatewellknownssfconfiguration) - Transmitter Metadata Endpoint (/.well-known/ssf-configuration)
-- [`postSsfTransmitterTransmitterIdEventRegister`](docs/sdks/arena/README.md#postssftransmittertransmitterideventregister) - Register an event.
-- [`postSsfTransmitterTransmitterIdStreamStreamIdVerify`](docs/sdks/arena/README.md#postssftransmittertransmitteridstreamstreamidverify) - Register a verification event into the stream.
-- [`putSsfTransmitterTransmitterId`](docs/sdks/arena/README.md#putssftransmittertransmitterid) - Update the transmitter.
+- [`delegateJwks`](docs/sdks/delegate/README.md#jwks) - JWK Set Document Endpoint
+- [`delegateStatusGet`](docs/sdks/status/README.md#get) - Stream Status Read (HTTP GET to the status endpoint)
+- [`delegateStatusUpdate`](docs/sdks/status/README.md#update) - Stream Status Update (HTTP POST to the status endpoint)
+- [`delegateStreamsCreate`](docs/sdks/delegatestreams/README.md#create) - Stream Create (HTTP POST to the configuration endpoint)
+- [`delegateStreamsDelete`](docs/sdks/delegatestreams/README.md#delete) - Stream Delete (HTTP DELETE to the configuration endpoint)
+- [`delegateStreamsGet`](docs/sdks/delegatestreams/README.md#get) - Stream Read (HTTP GET to the configuration endpoint)
+- [`delegateStreamsPoll`](docs/sdks/delegatestreams/README.md#poll) - Stream Poll (HTTP POST to the poll endpoint)
+- [`delegateStreamsReplace`](docs/sdks/delegatestreams/README.md#replace) - Stream Replace (HTTP PUT to the configuration endpoint)
+- [`delegateStreamsUpdate`](docs/sdks/delegatestreams/README.md#update) - Stream Update (HTTP PATCH to the configuration endpoint)
+- [`delegateStreamsVerify`](docs/sdks/delegatestreams/README.md#verify) - Stream Verify (HTTP POST to the verification endpoint)
+- [`delegateSubjectsAdd`](docs/sdks/subjects/README.md#add) - Stream Subject Add (HTTP POST to the add subject endpoint)
+- [`delegateSubjectsList`](docs/sdks/subjects/README.md#list) - Stream Subject List (HTTP GET to the list subjects endpoint)
+- [`delegateSubjectsRemove`](docs/sdks/subjects/README.md#remove) - Stream Subject Remove (HTTP POST to the remove subject endpoint)
+- [`delegateWellKnownProtectedResource`](docs/sdks/wellknown/README.md#protectedresource) - Protected Resource Metadata Endpoint (/.well-known/oauth-protected-resource)
+- [`delegateWellKnownSsfConfiguration`](docs/sdks/wellknown/README.md#ssfconfiguration) - Transmitter Metadata Endpoint (/.well-known/ssf-configuration)
+- [`eventsDelete`](docs/sdks/events/README.md#delete) - Delete the event.
+- [`eventsGet`](docs/sdks/events/README.md#get) - Retrieve information about the event.
+- [`eventsList`](docs/sdks/events/README.md#list) - List stream events.
+- [`eventsRegister`](docs/sdks/events/README.md#register) - Register an event.
+- [`healthDatabase`](docs/sdks/health/README.md#database) - Database probe.
+- [`healthLiveness`](docs/sdks/health/README.md#liveness) - Liveness probe for Kubernetes.
+- [`healthReadiness`](docs/sdks/health/README.md#readiness) - Readiness probe for Kubernetes.
+- [`healthStartup`](docs/sdks/health/README.md#startup) - Startup probe for Kubernetes.
+- [`metadataGetJwks`](docs/sdks/metadata/README.md#getjwks) - JWK Set Document
+- [`metadataGetOpenApiDocument`](docs/sdks/metadata/README.md#getopenapidocument) - Retrieve the OpenAPI document of this web application.
+- [`metadataGetProtectedResource`](docs/sdks/metadata/README.md#getprotectedresource) - OAuth 2.0 Protected Resource Metadata
+- [`streamsDelete`](docs/sdks/streams/README.md#delete) - Delete the stream.
+- [`streamsGet`](docs/sdks/streams/README.md#get) - Retrieve information about the stream.
+- [`streamsList`](docs/sdks/streams/README.md#list) - List streams.
+- [`streamsVerify`](docs/sdks/streams/README.md#verify) - Register a verification event into the stream.
+- [`transmittersCreate`](docs/sdks/transmitters/README.md#create) - Create a transmitter.
+- [`transmittersDelete`](docs/sdks/transmitters/README.md#delete) - Delete the transmitter.
+- [`transmittersGet`](docs/sdks/transmitters/README.md#get) - Retrieve information about the transmitter.
+- [`transmittersPatch`](docs/sdks/transmitters/README.md#patch) - Apply a patch to the transmitter.
+- [`transmittersUpdate`](docs/sdks/transmitters/README.md#update) - Update the transmitter.
 
 </details>
 <!-- End Standalone functions [standalone-funcs] -->
@@ -249,14 +276,14 @@ Some of the endpoints in this SDK support retries.  If you use the SDK without a
 
 To change the default retry strategy for a single API call, simply provide a retryConfig object to the call:
 ```typescript
-import { Arena } from "authlete-arena";
+import { Arena } from "@authlete/arena";
 
 const arena = new Arena({
   serverURL: "https://api.example.com",
 });
 
 async function run() {
-  const result = await arena.getWellKnownOauthProtectedResource({
+  const result = await arena.metadata.getProtectedResource({
     xFapiInteractionId: "1152537a-7f40-4405-860e-0fbdc75837b3",
   }, {
     retries: {
@@ -280,7 +307,7 @@ run();
 
 If you'd like to override the default retry strategy for all operations that support retries, you can provide a retryConfig at SDK initialization:
 ```typescript
-import { Arena } from "authlete-arena";
+import { Arena } from "@authlete/arena";
 
 const arena = new Arena({
   serverURL: "https://api.example.com",
@@ -297,7 +324,7 @@ const arena = new Arena({
 });
 
 async function run() {
-  const result = await arena.getWellKnownOauthProtectedResource({
+  const result = await arena.metadata.getProtectedResource({
     xFapiInteractionId: "1152537a-7f40-4405-860e-0fbdc75837b3",
   });
 
@@ -325,8 +352,8 @@ run();
 
 ### Example
 ```typescript
-import { Arena } from "authlete-arena";
-import * as errors from "authlete-arena/models/errors";
+import { Arena } from "@authlete/arena";
+import * as errors from "@authlete/arena/models/errors";
 
 const arena = new Arena({
   serverURL: "https://api.example.com",
@@ -334,7 +361,7 @@ const arena = new Arena({
 
 async function run() {
   try {
-    const result = await arena.getOpenapi({
+    const result = await arena.metadata.getOpenApiDocument({
       xFapiInteractionId: "1152537a-7f40-4405-860e-0fbdc75837b3",
     });
 
@@ -384,6 +411,14 @@ run();
 * [`DeleteSsfTransmitterTransmitterIdNotFoundError`](./src/models/errors/delete-ssf-transmitter-transmitter-id-not-found-error.ts): There is no transmitter with the transmitter ID. Status code `404`. Applicable to 1 of 35 methods.*
 * [`PatchSsfTransmitterTransmitterIdNotFoundError`](./src/models/errors/patch-ssf-transmitter-transmitter-id-not-found-error.ts): There is no transmitter with the transmitter ID. Status code `404`. Applicable to 1 of 35 methods.*
 * [`PostSsfTransmitterTransmitterIdDelegateJwksNotFoundError`](./src/models/errors/post-ssf-transmitter-transmitter-id-delegate-jwks-not-found-error.ts): There is no transmitter with the transmitter ID. Status code `404`. Applicable to 1 of 35 methods.*
+* [`PostSsfTransmitterTransmitterIdEventRegisterNotFoundError`](./src/models/errors/post-ssf-transmitter-transmitter-id-event-register-not-found-error.ts): There is no transmitter with the transmitter ID. Status code `404`. Applicable to 1 of 35 methods.*
+* [`GetSsfTransmitterTransmitterIdStreamStreamIdEventListNotFoundError`](./src/models/errors/get-ssf-transmitter-transmitter-id-stream-stream-id-event-list-not-found-error.ts): There is no transmitter with the transmitter ID, or there is no stream with the stream ID that belongs to the transmitter. Status code `404`. Applicable to 1 of 35 methods.*
+* [`GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoundError`](./src/models/errors/get-ssf-transmitter-transmitter-id-stream-stream-id-event-event-jti-not-found-error.ts): There is no transmitter with the transmitter ID, there is no stream with the stream ID that belongs to the transmitter, or there is no event with the JTI. Status code `404`. Applicable to 1 of 35 methods.*
+* [`DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoundError`](./src/models/errors/delete-ssf-transmitter-transmitter-id-stream-stream-id-event-event-jti-not-found-error.ts): There is no transmitter with the transmitter ID, there is no stream with the stream ID that belongs to the transmitter, or there is no event with the JTI. Status code `404`. Applicable to 1 of 35 methods.*
+* [`GetSsfTransmitterTransmitterIdStreamListNotFoundError`](./src/models/errors/get-ssf-transmitter-transmitter-id-stream-list-not-found-error.ts): There is no transmitter with the transmitter ID. Status code `404`. Applicable to 1 of 35 methods.*
+* [`GetSsfTransmitterTransmitterIdStreamStreamIdNotFoundError`](./src/models/errors/get-ssf-transmitter-transmitter-id-stream-stream-id-not-found-error.ts): There is no transmitter with the transmitter ID, or there is no stream with the stream ID that belongs to the transmitter. Status code `404`. Applicable to 1 of 35 methods.*
+* [`DeleteSsfTransmitterTransmitterIdStreamStreamIdNotFoundError`](./src/models/errors/delete-ssf-transmitter-transmitter-id-stream-stream-id-not-found-error.ts): There is no transmitter with the transmitter ID, or there is no stream with the stream ID that belong to the transmitter. Status code `404`. Applicable to 1 of 35 methods.*
+* [`PostSsfTransmitterTransmitterIdStreamStreamIdVerifyNotFoundError`](./src/models/errors/post-ssf-transmitter-transmitter-id-stream-stream-id-verify-not-found-error.ts): There is no transmitter with the transmitter ID, or there is no stream with the stream ID that belongs to the transmitter. Status code `404`. Applicable to 1 of 35 methods.*
 * [`PostSsfTransmitterTransmitterIdDelegateStreamCreateNotFoundError`](./src/models/errors/post-ssf-transmitter-transmitter-id-delegate-stream-create-not-found-error.ts): There is no transmitter with the transmitter ID. Status code `404`. Applicable to 1 of 35 methods.*
 * [`PostSsfTransmitterTransmitterIdDelegateStreamReadNotFoundError`](./src/models/errors/post-ssf-transmitter-transmitter-id-delegate-stream-read-not-found-error.ts): There is no transmitter with the transmitter ID. Status code `404`. Applicable to 1 of 35 methods.*
 * [`PostSsfTransmitterTransmitterIdDelegateStreamUpdateNotFoundError`](./src/models/errors/post-ssf-transmitter-transmitter-id-delegate-stream-update-not-found-error.ts): There is no transmitter with the transmitter ID. Status code `404`. Applicable to 1 of 35 methods.*
@@ -398,14 +433,6 @@ run();
 * [`PostSsfTransmitterTransmitterIdDelegateStreamSubjectListNotFoundError`](./src/models/errors/post-ssf-transmitter-transmitter-id-delegate-stream-subject-list-not-found-error.ts): There is no transmitter with the transmitter ID. Status code `404`. Applicable to 1 of 35 methods.*
 * [`PostSsfTransmitterTransmitterIdDelegateWellKnownOauthProtectedResourceNotFoundError`](./src/models/errors/post-ssf-transmitter-transmitter-id-delegate-well-known-oauth-protected-resource-not-found-error.ts): There is no transmitter with the transmitter ID. Status code `404`. Applicable to 1 of 35 methods.*
 * [`PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationNotFoundError`](./src/models/errors/post-ssf-transmitter-transmitter-id-delegate-well-known-ssf-configuration-not-found-error.ts): There is no transmitter with the transmitter ID. Status code `404`. Applicable to 1 of 35 methods.*
-* [`PostSsfTransmitterTransmitterIdEventRegisterNotFoundError`](./src/models/errors/post-ssf-transmitter-transmitter-id-event-register-not-found-error.ts): There is no transmitter with the transmitter ID. Status code `404`. Applicable to 1 of 35 methods.*
-* [`GetSsfTransmitterTransmitterIdStreamListNotFoundError`](./src/models/errors/get-ssf-transmitter-transmitter-id-stream-list-not-found-error.ts): There is no transmitter with the transmitter ID. Status code `404`. Applicable to 1 of 35 methods.*
-* [`GetSsfTransmitterTransmitterIdStreamStreamIdNotFoundError`](./src/models/errors/get-ssf-transmitter-transmitter-id-stream-stream-id-not-found-error.ts): There is no transmitter with the transmitter ID, or there is no stream with the stream ID that belongs to the transmitter. Status code `404`. Applicable to 1 of 35 methods.*
-* [`DeleteSsfTransmitterTransmitterIdStreamStreamIdNotFoundError`](./src/models/errors/delete-ssf-transmitter-transmitter-id-stream-stream-id-not-found-error.ts): There is no transmitter with the transmitter ID, or there is no stream with the stream ID that belong to the transmitter. Status code `404`. Applicable to 1 of 35 methods.*
-* [`PostSsfTransmitterTransmitterIdStreamStreamIdVerifyNotFoundError`](./src/models/errors/post-ssf-transmitter-transmitter-id-stream-stream-id-verify-not-found-error.ts): There is no transmitter with the transmitter ID, or there is no stream with the stream ID that belongs to the transmitter. Status code `404`. Applicable to 1 of 35 methods.*
-* [`GetSsfTransmitterTransmitterIdStreamStreamIdEventListNotFoundError`](./src/models/errors/get-ssf-transmitter-transmitter-id-stream-stream-id-event-list-not-found-error.ts): There is no transmitter with the transmitter ID, or there is no stream with the stream ID that belongs to the transmitter. Status code `404`. Applicable to 1 of 35 methods.*
-* [`GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoundError`](./src/models/errors/get-ssf-transmitter-transmitter-id-stream-stream-id-event-event-jti-not-found-error.ts): There is no transmitter with the transmitter ID, there is no stream with the stream ID that belongs to the transmitter, or there is no event with the JTI. Status code `404`. Applicable to 1 of 35 methods.*
-* [`DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoundError`](./src/models/errors/delete-ssf-transmitter-transmitter-id-stream-stream-id-event-event-jti-not-found-error.ts): There is no transmitter with the transmitter ID, there is no stream with the stream ID that belongs to the transmitter, or there is no event with the JTI. Status code `404`. Applicable to 1 of 35 methods.*
 * [`GetProbeDatabaseServiceUnavailableError`](./src/models/errors/get-probe-database-service-unavailable-error.ts): An error response indicating that the database connection is down. Status code `503`. Applicable to 1 of 35 methods.*
 * [`GetProbeStartupServiceUnavailableError`](./src/models/errors/get-probe-startup-service-unavailable-error.ts): An error response indicating that this web application failed to start up. Status code `503`. Applicable to 1 of 35 methods.*
 * [`ResponseValidationError`](./src/models/errors/response-validation-error.ts): Type mismatch between the data returned from the server and the structure expected by the SDK. See `error.rawValue` for the raw value and `error.pretty()` for a nicely formatted multi-line string.
@@ -434,9 +461,9 @@ The following example shows how to:
 - use the `"requestError"` hook to log errors
 
 ```typescript
-import { Arena } from "authlete-arena";
+import { Arena } from "@authlete/arena";
 import { ProxyAgent } from "undici";
-import { HTTPClient } from "authlete-arena/lib/http";
+import { HTTPClient } from "@authlete/arena/lib/http";
 
 const dispatcher = new ProxyAgent("http://proxy.example.com:8080");
 
@@ -479,7 +506,7 @@ You can pass a logger that matches `console`'s interface as an SDK option.
 > Beware that debug logging will reveal secrets, like API tokens in headers, in log messages printed to a console or files. It's recommended to use this feature only during local development and not in production.
 
 ```typescript
-import { Arena } from "authlete-arena";
+import { Arena } from "@authlete/arena";
 
 const sdk = new Arena({ debugLogger: console });
 ```

@@ -6,7 +6,7 @@ The subject identifier with the `complex` format as defined in [Section 3.3. Com
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterTransmitterIdEventRegisterSubId10 } from "authlete-arena/models/operations";
+import { PostSsfTransmitterTransmitterIdEventRegisterSubId10 } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterTransmitterIdEventRegisterSubId10 = {
   format: "complex",

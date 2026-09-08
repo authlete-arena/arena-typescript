@@ -6,7 +6,7 @@ A verification event cannot be registered because the stream is disabled.
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterTransmitterIdStreamStreamIdVerifyBadRequestError } from "authlete-arena/models/errors";
+import { PostSsfTransmitterTransmitterIdStreamStreamIdVerifyBadRequestError } from "@authlete/arena/models/errors";
 
 // No examples available for this model
 ```

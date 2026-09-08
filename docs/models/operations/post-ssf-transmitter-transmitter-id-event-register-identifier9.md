@@ -6,7 +6,7 @@ The subject identifier with the `uri` format as defined in [Section 3.2.7. Unifo
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterTransmitterIdEventRegisterIdentifier9 } from "authlete-arena/models/operations";
+import { PostSsfTransmitterTransmitterIdEventRegisterIdentifier9 } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterTransmitterIdEventRegisterIdentifier9 = {
   format: "uri",

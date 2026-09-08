@@ -6,7 +6,7 @@ JWK Set defined in [RFC 7517: JSON Web Key (JWK)](https://www.rfc-editor.org/rfc
 ## Example Usage
 
 ```typescript
-import { GetJwksResponseBody } from "authlete-arena/models/operations";
+import { GetJwksResponseBody } from "@authlete/arena/models/operations";
 
 let value: GetJwksResponseBody = {
   keys: [],

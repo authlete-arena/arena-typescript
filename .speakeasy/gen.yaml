@@ -34,7 +34,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 typescript:
-  version: 0.0.1
+  version: 0.1.2
   acceptHeaderEnum: false
   additionalDependencies:
     dependencies: {}
@@ -83,7 +83,7 @@ typescript:
   moduleFormat: esm
   multipartArrayFormat: standard
   outputModelSuffix: output
-  packageName: authlete-arena
+  packageName: '@authlete/arena'
   preApplyUnionDiscriminators: true
   preserveModelFieldNames: false
   privateIdentifierPrefix: '#'

@@ -6,7 +6,7 @@ The delivery method. Supported values are `urn:ietf:rfc:8935` (PUSH) ([RFC 8935:
 ## Example Usage
 
 ```typescript
-import { Method } from "authlete-arena/models/operations";
+import { Method } from "@authlete/arena/models/operations";
 
 let value: Method = "urn:ietf:rfc:8935";
 

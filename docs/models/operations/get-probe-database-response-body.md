@@ -6,7 +6,7 @@ A successful response indicating that the database connection is alive.
 ## Example Usage
 
 ```typescript
-import { GetProbeDatabaseResponseBody } from "authlete-arena/models/operations";
+import { GetProbeDatabaseResponseBody } from "@authlete/arena/models/operations";
 
 let value: GetProbeDatabaseResponseBody = {};
 ```

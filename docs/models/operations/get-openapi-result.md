@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetOpenapiResult } from "authlete-arena/models/operations";
+import { GetOpenapiResult } from "@authlete/arena/models/operations";
 
 let value: GetOpenapiResult = {};
 ```

@@ -5,7 +5,7 @@ Successfully deleted the transmitter.
 ## Example Usage
 
 ```typescript
-import { DeleteSsfTransmitterTransmitterIdResponseBody } from "authlete-arena/models/operations";
+import { DeleteSsfTransmitterTransmitterIdResponseBody } from "@authlete/arena/models/operations";
 
 let value: DeleteSsfTransmitterTransmitterIdResponseBody = {};
 ```

@@ -5,7 +5,7 @@
 ```typescript
 import {
   PostSsfTransmitterTransmitterIdDelegateWellKnownOauthProtectedResourceRequestRequest,
-} from "authlete-arena/models/operations";
+} from "@authlete/arena/models/operations";
 
 let value:
   PostSsfTransmitterTransmitterIdDelegateWellKnownOauthProtectedResourceRequestRequest =

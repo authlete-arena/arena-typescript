@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetSsfTransmitterTransmitterIdStreamListNotFoundStatus } from "authlete-arena/models/operations";
+import { GetSsfTransmitterTransmitterIdStreamListNotFoundStatus } from "@authlete/arena/models/operations";
 
 let value: GetSsfTransmitterTransmitterIdStreamListNotFoundStatus = "forbidden";
 

@@ -5,7 +5,7 @@ Event registration was successfully accepted.
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterTransmitterIdEventRegisterResponseBody } from "authlete-arena/models/operations";
+import { PostSsfTransmitterTransmitterIdEventRegisterResponseBody } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterTransmitterIdEventRegisterResponseBody = {};
 ```

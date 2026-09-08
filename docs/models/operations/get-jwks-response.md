@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetJwksResponse } from "authlete-arena/models/operations";
+import { GetJwksResponse } from "@authlete/arena/models/operations";
 
 let value: GetJwksResponse = {
   headers: {

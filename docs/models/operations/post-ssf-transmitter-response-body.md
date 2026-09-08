@@ -5,7 +5,7 @@ Successfully created a transmitter.
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterResponseBody } from "authlete-arena/models/operations";
+import { PostSsfTransmitterResponseBody } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterResponseBody = {
   transmitter: {

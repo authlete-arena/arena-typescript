@@ -5,7 +5,7 @@ Successfully retrieved information about the transmitter.
 ## Example Usage
 
 ```typescript
-import { GetSsfTransmitterTransmitterIdResponseBody } from "authlete-arena/models/operations";
+import { GetSsfTransmitterTransmitterIdResponseBody } from "@authlete/arena/models/operations";
 
 let value: GetSsfTransmitterTransmitterIdResponseBody = {
   transmitter: {

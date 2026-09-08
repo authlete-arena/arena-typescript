@@ -6,7 +6,7 @@ There is no transmitter with the transmitter ID, or there is no stream with the 
 ## Example Usage
 
 ```typescript
-import { GetSsfTransmitterTransmitterIdStreamStreamIdNotFoundError } from "authlete-arena/models/errors";
+import { GetSsfTransmitterTransmitterIdStreamStreamIdNotFoundError } from "@authlete/arena/models/errors";
 
 // No examples available for this model
 ```

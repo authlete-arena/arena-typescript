@@ -5,7 +5,7 @@ The HTTP authentication scheme.
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterSchemeResponse } from "authlete-arena/models/operations";
+import { PostSsfTransmitterSchemeResponse } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterSchemeResponse = "DPoP";
 

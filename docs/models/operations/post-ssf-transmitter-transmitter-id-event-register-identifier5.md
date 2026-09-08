@@ -6,7 +6,7 @@ The subject identifier with the `jwt_id` format as defined in [Section 3.5.1. JW
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterTransmitterIdEventRegisterIdentifier5 } from "authlete-arena/models/operations";
+import { PostSsfTransmitterTransmitterIdEventRegisterIdentifier5 } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterTransmitterIdEventRegisterIdentifier5 = {
   format: "jwt_id",

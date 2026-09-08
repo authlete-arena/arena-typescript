@@ -6,7 +6,7 @@ An error response indicating the value of the `format` request parameter is not 
 ## Example Usage
 
 ```typescript
-import { GetOpenapiBadRequestError } from "authlete-arena/models/errors";
+import { GetOpenapiBadRequestError } from "@authlete/arena/models/errors";
 
 // No examples available for this model
 ```

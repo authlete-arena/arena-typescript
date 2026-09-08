@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterTransmitterIdEventRegisterResult } from "authlete-arena/models/operations";
+import { PostSsfTransmitterTransmitterIdEventRegisterResult } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterTransmitterIdEventRegisterResult = {};
 ```

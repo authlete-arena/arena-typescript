@@ -6,7 +6,7 @@
 ## Example Usage
 
 ```typescript
-import { GetWellKnownOauthProtectedResourceResponseBody } from "authlete-arena/models/operations";
+import { GetWellKnownOauthProtectedResourceResponseBody } from "@authlete/arena/models/operations";
 
 let value: GetWellKnownOauthProtectedResourceResponseBody = {
   resource: "<value>",

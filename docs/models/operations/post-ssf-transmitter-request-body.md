@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PostSsfTransmitterRequestBody } from "authlete-arena/models/operations";
+import { PostSsfTransmitterRequestBody } from "@authlete/arena/models/operations";
 
 let value: PostSsfTransmitterRequestBody = {
   metadata: {
