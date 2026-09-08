@@ -9,9 +9,9 @@
 const value: Uint8Array = new TextEncoder().encode("0xdC7D3f4be0");
 ```
 
-### `any`
+### `operations.GetOpenapiResponseBody`
 
 ```typescript
-const value: any = "<value>";
+const value: operations.GetOpenapiResponseBody = {};
 ```
 

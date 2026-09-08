@@ -3,87 +3,97 @@
 
 ## Supported Types
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId1`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId1 = {
-  format: "account",
-  uri: "https://beloved-lace.com/",
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1 = {
+    format: "account",
+    uri: "https://austere-premier.com/",
+  };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId2`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId2 = {
-  format: "did",
-  url: "https://voluminous-wallaby.com/",
-};
+const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1 =
+  {
+    format: "did",
+    url: "https://silky-merit.biz",
+  };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId3`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId3 = {
-  format: "email",
-  email: "Deshawn.Douglas38@gmail.com",
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1 = {
+    format: "email",
+    email: "Sterling75@yahoo.com",
+  };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId4`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId4 = {
-  format: "iss_sub",
-  iss: "<value>",
-  sub: "<value>",
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1 = {
+    format: "iss_sub",
+    iss: "<value>",
+    sub: "<value>",
+  };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId5`
+### `operations.PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId5 = {
-  format: "jwt_id",
-  iss: "<value>",
-  jti: "<value>",
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1 = {
+    format: "jwt_id",
+    iss: "<value>",
+    jti: "<value>",
+  };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId6`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId6 = {
-  format: "opaque",
-  id: "<id>",
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1 = {
+    format: "opaque",
+    id: "<id>",
+  };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId7`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId7 = {
-  format: "phone_number",
-  phoneNumber: "1-556-813-3184",
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1 = {
+    format: "phone_number",
+    phoneNumber: "459.880.3030",
+  };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId8`
+### `operations.PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId8 = {
-  format: "saml_assertion_id",
-  issuer: "american_express",
-  assertionId: "<id>",
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1 =
+    {
+      format: "saml_assertion_id",
+      issuer: "jcb",
+      assertionId: "<id>",
+    };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId9`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId9 = {
-  format: "uri",
-  uri: "https://intrepid-annual.com/",
-};
+const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1 =
+  {
+    format: "uri",
+    uri: "https://free-fencing.com/",
+  };
 ```
 

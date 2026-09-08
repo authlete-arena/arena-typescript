@@ -15,6 +15,7 @@ let value: PostSsfTransmitterTransmitterIdDelegateStreamDeleteRequestBody = {
   request: {
     method: "<value>",
     uri: "https://sentimental-object.info",
+    ipAddress: "192.168.0.1",
   },
 };
 ```

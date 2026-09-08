@@ -7,11 +7,18 @@ sources:
         tags:
             - latest
             - latest
+    arena-api-spec:
+        sourceNamespace: arena-api
+        sourceRevisionDigest: sha256:30606cea73a4f3da2a304d15934d1c12b32763f0b966cf6a058f8d378299ca40
+        sourceBlobDigest: sha256:c1de1e523061379570863c806ae91c6ddd42f19ca6251e9159d16c84ef1e2312
+        tags:
+            - latest
+            - latest
 targets:
     arena:
         source: arena-api
         codeSamplesNamespace: arena-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:959de959fbbe625abeb42627237b6d8d5370d1d9c075117b2b1acd3eb8c6a50c
+        codeSamplesRevisionDigest: sha256:ce831ac1f38982451de8324c1f7f22a47508b7646765e827ef24f2cd3d0ed5dd
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -22,6 +29,11 @@ workflow:
             overlays:
                 - location: ./overlays/method-naming.yaml
             output: .speakeasy/out.openapi.yaml
+        arena-api-spec:
+            inputs:
+                - location: ./openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/authlete/sdk-workspace/arena-api
     targets:
         arena:
             target: typescript

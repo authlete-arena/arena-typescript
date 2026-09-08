@@ -17,7 +17,7 @@ export type GetWellKnownOauthProtectedResourceRequest = {
    *
    * @remarks
    */
-  xFapiInteractionId?: any | undefined;
+  xFapiInteractionId?: string | undefined;
 };
 
 export const BearerMethodsSupported = {
@@ -38,25 +38,25 @@ export type GetWellKnownOauthProtectedResourceResponseBody = {
    *
    * @remarks
    */
-  resource: any;
+  resource: string;
   /**
    * OPTIONAL. JSON array containing a list of OAuth authorization server issuer identifiers, as defined in [[RFC8414](https://www.rfc-editor.org/rfc/rfc8414.html)], for authorization servers that can be used with this protected resource. Protected resources MAY choose not to advertise some supported authorization servers even when this parameter is used. In some use cases, the set of authorization servers will not be enumerable, in which case this metadata parameter would not be used.
    *
    * @remarks
    */
-  authorizationServers?: Array<any> | undefined;
+  authorizationServers?: Array<string> | undefined;
   /**
    * OPTIONAL. URL of the protected resource's JSON Web Key (JWK) Set [[JWK](https://www.rfc-editor.org/rfc/rfc7517.html)] document. This contains public keys belonging to the protected resource, such as signing key(s) that the resource server uses to sign resource responses. This URL MUST use the `https` scheme. When both signing and encryption keys are made available, a use (public key use) parameter value is REQUIRED for all keys in the referenced JWK Set to indicate each key's intended usage.
    *
    * @remarks
    */
-  jwksUri?: any | undefined;
+  jwksUri?: string | undefined;
   /**
    * RECOMMENDED. JSON array containing a list of scope values, as defined in [OAuth 2.0](https://www.rfc-editor.org/rfc/rfc6749.html) [[RFC6749](https://www.rfc-editor.org/rfc/rfc6749.html)], that are used in authorization requests to request access to this protected resource. Protected resources MAY choose not to advertise some scope values supported even when this parameter is used.
    *
    * @remarks
    */
-  scopesSupported?: Array<any> | undefined;
+  scopesSupported?: Array<string> | undefined;
   /**
    * OPTIONAL. JSON array containing a list of the supported methods of sending an OAuth 2.0 bearer token [[RFC6750](https://www.rfc-editor.org/rfc/rfc6750.html)] to the protected resource. Defined values are [`"header"`, `"body"`, `"query"`], corresponding to Sections [2.1](https://rfc-editor.org/rfc/rfc6750#section-2.1), [2.2](https://rfc-editor.org/rfc/rfc6750#section-2.2), and [2.3](https://rfc-editor.org/rfc/rfc6750#section-2.3) of [[RFC6750](https://rfc-editor.org/rfc/rfc6750)]. The empty array [] can be used to indicate that no bearer methods are supported. If this entry is omitted, no default bearer methods supported are implied, nor does its absence indicate that they are not supported.
    *
@@ -68,55 +68,55 @@ export type GetWellKnownOauthProtectedResourceResponseBody = {
    *
    * @remarks
    */
-  resourceSigningAlgValuesSupported?: Array<any> | undefined;
+  resourceSigningAlgValuesSupported?: Array<string> | undefined;
   /**
    * Human-readable name of the protected resource intended for display to the end user. It is RECOMMENDED that protected resource metadata include this field. The value of this field MAY be internationalized, as described in [Section 2.1](https://www.rfc-editor.org/rfc/rfc9728.html#HumanReadableMetadata).
    *
    * @remarks
    */
-  resourceName?: any | undefined;
+  resourceName?: string | undefined;
   /**
    * OPTIONAL. URL of a page containing human-readable information that developers might want or need to know when using the protected resource. The value of this field MAY be internationalized, as described in [Section 2.1](https://www.rfc-editor.org/rfc/rfc9728.html#HumanReadableMetadata).
    *
    * @remarks
    */
-  resourceDocumentation?: any | undefined;
+  resourceDocumentation?: string | undefined;
   /**
    * OPTIONAL. URL of a page containing human-readable information about the protected resource's requirements on how the client can use the data provided by the protected resource. The value of this field MAY be internationalized, as described in [Section 2.1](https://www.rfc-editor.org/rfc/rfc9728.html#HumanReadableMetadata).
    *
    * @remarks
    */
-  resourcePolicyUri?: any | undefined;
+  resourcePolicyUri?: string | undefined;
   /**
    * OPTIONAL. URL of a page containing human-readable information about the protected resource's terms of service. The value of this field MAY be internationalized, as described in [Section 2.1](https://www.rfc-editor.org/rfc/rfc9728.html#HumanReadableMetadata).
    *
    * @remarks
    */
-  resourceTosUri?: any | undefined;
+  resourceTosUri?: string | undefined;
   /**
    * OPTIONAL. Boolean value indicating protected resource support for mutual-TLS client certificate-bound access tokens [[RFC8705](https://www.rfc-editor.org/rfc/rfc8705.html)]. If omitted, the default value is false.
    *
    * @remarks
    */
-  tlsClientCertificateBoundAccessTokens: any;
+  tlsClientCertificateBoundAccessTokens: boolean;
   /**
    * OPTIONAL. JSON array containing a list of the authorization details type values supported by the resource server when the `authorization_details` request parameter [[RFC9396](https://www.rfc-editor.org/rfc/rfc9396.html)] is used.
    *
    * @remarks
    */
-  authorizationDetailsTypesSupported?: Array<any> | undefined;
+  authorizationDetailsTypesSupported?: Array<string> | undefined;
   /**
    * OPTIONAL. JSON array containing a list of the JWS alg values (from the "JSON Web Signature and Encryption Algorithms" registry [[IANA.JOSE](https://www.iana.org/assignments/jose/jose.xhtml)]) supported by the resource server for validating Demonstrating Proof of Possession (DPoP) proof JWTs [[RFC9449](https://www.rfc-editor.org/rfc/rfc9449.html)].
    *
    * @remarks
    */
-  dpopSigningAlgValuesSupported?: Array<any> | undefined;
+  dpopSigningAlgValuesSupported?: Array<string> | undefined;
   /**
    * OPTIONAL. Boolean value specifying whether the protected resource always requires the use of DPoP-bound access tokens [[RFC9449](https://www.rfc-editor.org/rfc/rfc9449.html)]. If omitted, the default value is false.
    *
    * @remarks
    */
-  dpopBoundAccessTokensRequired: any;
+  dpopBoundAccessTokensRequired: boolean;
 };
 
 export type GetWellKnownOauthProtectedResourceResponse = {
@@ -126,7 +126,7 @@ export type GetWellKnownOauthProtectedResourceResponse = {
 
 /** @internal */
 export type GetWellKnownOauthProtectedResourceRequest$Outbound = {
-  "x-fapi-interaction-id"?: any | undefined;
+  "x-fapi-interaction-id"?: string | undefined;
 };
 
 /** @internal */
@@ -136,7 +136,7 @@ export const GetWellKnownOauthProtectedResourceRequest$outboundSchema:
     GetWellKnownOauthProtectedResourceRequest
   > = z.pipe(
     z.object({
-      xFapiInteractionId: z.optional(z.any()),
+      xFapiInteractionId: z.optional(z.string()),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -167,22 +167,31 @@ export const GetWellKnownOauthProtectedResourceResponseBody$inboundSchema:
   z.ZodMiniType<GetWellKnownOauthProtectedResourceResponseBody, unknown> = z
     .pipe(
       z.object({
-        resource: z.any(),
-        authorization_servers: types.optional(z.array(z.any())),
-        jwks_uri: types.optional(z.any()),
-        scopes_supported: types.optional(z.array(z.any())),
+        resource: types.string(),
+        authorization_servers: types.optional(z.array(types.string())),
+        jwks_uri: types.optional(types.string()),
+        scopes_supported: types.optional(z.array(types.string())),
         bearer_methods_supported: types.optional(
           z.array(BearerMethodsSupported$inboundSchema),
         ),
-        resource_signing_alg_values_supported: types.optional(z.array(z.any())),
-        resource_name: types.optional(z.any()),
-        resource_documentation: types.optional(z.any()),
-        resource_policy_uri: types.optional(z.any()),
-        resource_tos_uri: types.optional(z.any()),
-        tls_client_certificate_bound_access_tokens: z.any(),
-        authorization_details_types_supported: types.optional(z.array(z.any())),
-        dpop_signing_alg_values_supported: types.optional(z.array(z.any())),
-        dpop_bound_access_tokens_required: z.any(),
+        resource_signing_alg_values_supported: types.optional(
+          z.array(types.string()),
+        ),
+        resource_name: types.optional(types.string()),
+        resource_documentation: types.optional(types.string()),
+        resource_policy_uri: types.optional(types.string()),
+        resource_tos_uri: types.optional(types.string()),
+        tls_client_certificate_bound_access_tokens: z._default(
+          types.boolean(),
+          false,
+        ),
+        authorization_details_types_supported: types.optional(
+          z.array(types.string()),
+        ),
+        dpop_signing_alg_values_supported: types.optional(
+          z.array(types.string()),
+        ),
+        dpop_bound_access_tokens_required: z._default(types.boolean(), false),
       }),
       z.transform((v) => {
         return remap$(v, {

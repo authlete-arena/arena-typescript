@@ -11,7 +11,7 @@ import { PostSsfTransmitterTransmitterIdDelegateStreamSubjectRemoveResponseBody 
 let value:
   PostSsfTransmitterTransmitterIdDelegateStreamSubjectRemoveResponseBody = {
     response: {
-      status: "<value>",
+      status: 290428,
     },
   };
 ```

@@ -13,7 +13,7 @@ let value:
       headers: {},
       result: {
         response: {
-          status: "<value>",
+          status: 888098,
         },
       },
     };

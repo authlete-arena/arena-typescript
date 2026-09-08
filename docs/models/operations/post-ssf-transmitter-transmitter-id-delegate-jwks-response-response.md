@@ -19,7 +19,7 @@ let value: PostSsfTransmitterTransmitterIdDelegateJwksResponseResponse = {
   },
   result: {
     response: {
-      status: "<value>",
+      status: 730774,
     },
   },
 };

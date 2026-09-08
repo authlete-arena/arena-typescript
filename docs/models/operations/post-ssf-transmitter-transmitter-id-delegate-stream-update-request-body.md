@@ -15,6 +15,7 @@ let value: PostSsfTransmitterTransmitterIdDelegateStreamUpdateRequestBody = {
   request: {
     method: "<value>",
     uri: "https://muffled-emergent.org/",
+    ipAddress: "192.168.0.1",
   },
 };
 ```

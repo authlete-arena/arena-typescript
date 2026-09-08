@@ -15,6 +15,7 @@ let value: PostSsfTransmitterTransmitterIdDelegateStreamReadRequestBody = {
   request: {
     method: "<value>",
     uri: "https://alert-gerbil.com/",
+    ipAddress: "192.168.0.1",
   },
 };
 ```

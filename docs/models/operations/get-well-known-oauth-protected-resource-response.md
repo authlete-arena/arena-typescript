@@ -11,10 +11,9 @@ let value: GetWellKnownOauthProtectedResourceResponse = {
       "<value 1>",
       "<value 2>",
     ],
-    "key1": [],
   },
   result: {
-    resource: "<value>",
+    resource: "https://quarrelsome-bench.name",
   },
 };
 ```

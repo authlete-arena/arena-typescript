@@ -9,8 +9,8 @@ import { GetSsfTransmitterTransmitterIdStreamStreamIdResponseBody } from "@authl
 
 let value: GetSsfTransmitterTransmitterIdStreamStreamIdResponseBody = {
   stream: {
-    createdAt: "2025-06-20T06:47:00",
-    updatedAt: "2025-06-21T06:47:00",
+    createdAt: new Date("2025-06-20T06:47:00"),
+    updatedAt: new Date("2025-06-21T06:47:00"),
     streamId: "stj3odpcfg19u6q62t2h7k0uk3t7srkdai6e0ccd7jd4ognt",
     metadata: {
       streamId: "stj3odpcfg19u6q62t2h7k0uk3t7srkdai6e0ccd7jd4ognt",

@@ -16,6 +16,7 @@ let value: PostSsfTransmitterTransmitterIdDelegateStreamSubjectAddRequestBody =
     request: {
       method: "<value>",
       uri: "https://carefree-making.name",
+      ipAddress: "192.168.0.1",
     },
   };
 ```

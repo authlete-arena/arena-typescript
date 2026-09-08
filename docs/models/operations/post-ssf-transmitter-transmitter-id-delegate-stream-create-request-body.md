@@ -15,6 +15,7 @@ let value: PostSsfTransmitterTransmitterIdDelegateStreamCreateRequestBody = {
   request: {
     method: "<value>",
     uri: "https://these-bin.org/",
+    ipAddress: "192.168.0.1",
   },
 };
 ```

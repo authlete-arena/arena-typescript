@@ -16,6 +16,7 @@ let value: PostSsfTransmitterTransmitterIdDelegateStreamStatusReadRequestBody =
     request: {
       method: "<value>",
       uri: "https://rewarding-advertisement.net",
+      ipAddress: "192.168.0.1",
     },
   };
 ```

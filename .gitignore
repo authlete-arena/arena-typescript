@@ -28,3 +28,6 @@
 .env
 .env.local
 .env.*.local
+
+# Raw API spec — local publish input only; never committed
+/openapi.yaml

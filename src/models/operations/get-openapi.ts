@@ -35,7 +35,7 @@ export type GetOpenapiRequest = {
    *
    * @remarks
    */
-  xFapiInteractionId?: any | undefined;
+  xFapiInteractionId?: string | undefined;
   /**
    * The format of the OpenAPI document. Either `YAML` or `JSON` (case-insensitive). The default format is `YAML` as required by the [MicroProfile OpenAPI Specification](https://microprofile.io/).
    *
@@ -59,15 +59,32 @@ export type GetOpenapiStatus = OpenEnum<typeof GetOpenapiStatus>;
 
 export type GetOpenapiResult = {
   status?: GetOpenapiStatus | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
-export type GetOpenapiResponseResult = Uint8Array | string | any;
+/**
+ * A successful response including the OpenAPI document of this web application.
+ *
+ * @remarks
+ */
+export type GetOpenapiResponseBody = {};
+
+/**
+ * A successful response including the OpenAPI document of this web application.
+ *
+ * @remarks
+ */
+export type GetOpenapiYamlResponseBody = {};
+
+export type GetOpenapiResponseResult =
+  | Uint8Array
+  | string
+  | GetOpenapiResponseBody;
 
 export type GetOpenapiResponse = {
   headers: { [k: string]: Array<string> };
-  result: Uint8Array | string | any;
+  result: Uint8Array | string | GetOpenapiResponseBody;
 };
 
 /** @internal */
@@ -77,7 +94,7 @@ export const GetOpenapiFormat$outboundSchema: z.ZodMiniEnum<
 
 /** @internal */
 export type GetOpenapiRequest$Outbound = {
-  "x-fapi-interaction-id"?: any | undefined;
+  "x-fapi-interaction-id"?: string | undefined;
   format?: string | undefined;
 };
 
@@ -87,7 +104,7 @@ export const GetOpenapiRequest$outboundSchema: z.ZodMiniType<
   GetOpenapiRequest
 > = z.pipe(
   z.object({
-    xFapiInteractionId: z.optional(z.any()),
+    xFapiInteractionId: z.optional(z.string()),
     format: z.optional(GetOpenapiFormat$outboundSchema),
   }),
   z.transform((v) => {
@@ -117,8 +134,8 @@ export const GetOpenapiResult$inboundSchema: z.ZodMiniType<
   unknown
 > = z.object({
   status: types.optional(GetOpenapiStatus$inboundSchema),
-  code: types.optional(z.any()),
-  message: types.optional(z.any()),
+  code: types.optional(types.string()),
+  message: types.optional(types.string()),
 });
 
 export function getOpenapiResultFromJSON(
@@ -132,10 +149,45 @@ export function getOpenapiResultFromJSON(
 }
 
 /** @internal */
+export const GetOpenapiResponseBody$inboundSchema: z.ZodMiniType<
+  GetOpenapiResponseBody,
+  unknown
+> = z.object({});
+
+export function getOpenapiResponseBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<GetOpenapiResponseBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetOpenapiResponseBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetOpenapiResponseBody' from JSON`,
+  );
+}
+
+/** @internal */
+export const GetOpenapiYamlResponseBody$inboundSchema: z.ZodMiniType<
+  GetOpenapiYamlResponseBody,
+  unknown
+> = z.object({});
+
+export function getOpenapiYamlResponseBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<GetOpenapiYamlResponseBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetOpenapiYamlResponseBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetOpenapiYamlResponseBody' from JSON`,
+  );
+}
+
+/** @internal */
 export const GetOpenapiResponseResult$inboundSchema: z.ZodMiniType<
   GetOpenapiResponseResult,
   unknown
-> = smartUnion([b64$.zodInbound, z.any()]);
+> = smartUnion([
+  b64$.zodInbound,
+  z.lazy(() => GetOpenapiResponseBody$inboundSchema),
+]);
 
 export function getOpenapiResponseResultFromJSON(
   jsonString: string,
@@ -154,7 +206,10 @@ export const GetOpenapiResponse$inboundSchema: z.ZodMiniType<
 > = z.pipe(
   z.object({
     Headers: z._default(z.record(z.string(), z.array(z.string())), {}),
-    Result: smartUnion([b64$.zodInbound, z.any()]),
+    Result: smartUnion([
+      b64$.zodInbound,
+      z.lazy(() => GetOpenapiResponseBody$inboundSchema),
+    ]),
   }),
   z.transform((v) => {
     return remap$(v, {

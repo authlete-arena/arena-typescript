@@ -16,20 +16,21 @@ const value:
   };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId10`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId10 = {
+const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId = {
   format: "complex",
 };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId20`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId20 = {
-  format: "aliases",
-  identifiers: [],
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases = {
+    format: "aliases",
+    identifiers: [],
+  };
 ```
 

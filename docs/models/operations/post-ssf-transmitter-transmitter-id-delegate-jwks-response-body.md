@@ -10,7 +10,7 @@ import { PostSsfTransmitterTransmitterIdDelegateJwksResponseBody } from "@authle
 
 let value: PostSsfTransmitterTransmitterIdDelegateJwksResponseBody = {
   response: {
-    status: "<value>",
+    status: 730774,
   },
 };
 ```

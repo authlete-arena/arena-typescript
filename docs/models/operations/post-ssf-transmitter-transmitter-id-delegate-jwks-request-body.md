@@ -15,6 +15,7 @@ let value: PostSsfTransmitterTransmitterIdDelegateJwksRequestBody = {
   request: {
     method: "<value>",
     uri: "https://unwieldy-guidance.com",
+    ipAddress: "192.168.0.1",
   },
 };
 ```

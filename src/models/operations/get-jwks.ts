@@ -15,7 +15,7 @@ export type GetJwksRequest = {
    *
    * @remarks
    */
-  xFapiInteractionId?: any | undefined;
+  xFapiInteractionId?: string | undefined;
 };
 
 /**
@@ -24,15 +24,15 @@ export type GetJwksRequest = {
  * @remarks
  */
 export type Key = {
-  kty: any;
-  use?: any | undefined;
-  keyOps?: any | undefined;
-  alg?: any | undefined;
-  kid?: any | undefined;
-  x5u?: any | undefined;
-  x5c?: Array<any> | undefined;
-  x5t?: any | undefined;
-  x5tNumberS256?: any | undefined;
+  kty: string;
+  use?: string | undefined;
+  keyOps?: string | undefined;
+  alg?: string | undefined;
+  kid?: string | undefined;
+  x5u?: string | undefined;
+  x5c?: Array<string> | undefined;
+  x5t?: string | undefined;
+  x5tNumberS256?: string | undefined;
 };
 
 /**
@@ -51,7 +51,7 @@ export type GetJwksResponse = {
 
 /** @internal */
 export type GetJwksRequest$Outbound = {
-  "x-fapi-interaction-id"?: any | undefined;
+  "x-fapi-interaction-id"?: string | undefined;
 };
 
 /** @internal */
@@ -60,7 +60,7 @@ export const GetJwksRequest$outboundSchema: z.ZodMiniType<
   GetJwksRequest
 > = z.pipe(
   z.object({
-    xFapiInteractionId: z.optional(z.any()),
+    xFapiInteractionId: z.optional(z.string()),
   }),
   z.transform((v) => {
     return remap$(v, {
@@ -76,15 +76,15 @@ export function getJwksRequestToJSON(getJwksRequest: GetJwksRequest): string {
 /** @internal */
 export const Key$inboundSchema: z.ZodMiniType<Key, unknown> = z.pipe(
   z.object({
-    kty: z.any(),
-    use: types.optional(z.any()),
-    key_ops: types.optional(z.any()),
-    alg: types.optional(z.any()),
-    kid: types.optional(z.any()),
-    x5u: types.optional(z.any()),
-    x5c: types.optional(z.array(z.any())),
-    x5t: types.optional(z.any()),
-    "x5t#S256": types.optional(z.any()),
+    kty: types.string(),
+    use: types.optional(types.string()),
+    key_ops: types.optional(types.string()),
+    alg: types.optional(types.string()),
+    kid: types.optional(types.string()),
+    x5u: types.optional(types.string()),
+    x5c: types.optional(z.array(types.string())),
+    x5t: types.optional(types.string()),
+    "x5t#S256": types.optional(types.string()),
   }),
   z.transform((v) => {
     return remap$(v, {

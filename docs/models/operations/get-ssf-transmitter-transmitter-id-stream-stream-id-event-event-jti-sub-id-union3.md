@@ -17,21 +17,20 @@ const value:
     };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19 =
-    {
-      format: "complex",
-    };
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId = {
+    format: "complex",
+  };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAliases`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20 =
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAliases =
     {
       format: "aliases",
       identifiers: [],

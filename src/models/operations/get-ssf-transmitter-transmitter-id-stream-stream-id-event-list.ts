@@ -17,25 +17,25 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventListRequest = {
    *
    * @remarks
    */
-  xFapiInteractionId?: any | undefined;
+  xFapiInteractionId?: string | undefined;
   /**
    * This query parameter enables pretty-printing when the response content type is JSON. If `pretty=true` (case-insensitive), the response is formatted for readability. If `pretty` is omitted or set to any other value, pretty-printing is disabled.
    *
    * @remarks
    */
-  pretty?: any | undefined;
+  pretty?: boolean | undefined;
   /**
    * The transmitter ID.
    *
    * @remarks
    */
-  transmitterId: any;
+  transmitterId: string;
   /**
    * The stream ID.
    *
    * @remarks
    */
-  streamId: any;
+  streamId: string;
   /**
    * This query parameter specifies the starting position of the search. By
    *
@@ -45,7 +45,7 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventListRequest = {
    * resume the search from where the previous API call left off. For details,
    * see the description of this API.
    */
-  cursor?: any | undefined;
+  cursor?: string | undefined;
   /**
    * This query parameter specifies the lower bound (inclusive) of the event
    *
@@ -63,7 +63,7 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventListRequest = {
    * - `YYYY-MM-DDThh:mm:ssZ`
    * - `YYYY-MM-DDThh:mm:ss[+-]hh:mm`
    */
-  toeGe?: any | undefined;
+  toeGe?: string | undefined;
   /**
    * This query parameter specifies the upper bound (exclusive) of the event
    *
@@ -81,7 +81,7 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventListRequest = {
    * - `YYYY-MM-DDThh:mm:ssZ`
    * - `YYYY-MM-DDThh:mm:ss[+-]hh:mm`
    */
-  toeLt?: any | undefined;
+  toeLt?: string | undefined;
   /**
    * This query parameter specifies, as a search criterion, a subject
    *
@@ -91,14 +91,14 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventListRequest = {
    * given subject identifier and uses it to find events associated with the
    * same subject.
    */
-  subjectIdentifier?: any | undefined;
+  subjectIdentifier?: string | undefined;
   /**
    * This query parameter specifies, as a search criterion, the event
    *
    * @remarks
    * identifier (a URI) of the events to be included in the search results.
    */
-  eventIdentifier?: any | undefined;
+  eventIdentifier?: string | undefined;
   /**
    * This query parameter specifies the maximum number of events to include
    *
@@ -106,7 +106,7 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventListRequest = {
    * in the search results. If omitted, the default value is `50`. Valid
    * values range from `1` to `200`, inclusive.
    */
-  limit?: any | undefined;
+  limit?: number | undefined;
 };
 
 export const GetSsfTransmitterTransmitterIdStreamStreamIdEventListNotFoundStatus =
@@ -131,8 +131,8 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventListNotFoundResult 
     status?:
       | GetSsfTransmitterTransmitterIdStreamStreamIdEventListNotFoundStatus
       | undefined;
-    code?: any | undefined;
-    message?: any | undefined;
+    code?: string | undefined;
+    message?: string | undefined;
   };
 
 export const GetSsfTransmitterTransmitterIdStreamStreamIdEventListStatus = {
@@ -153,9 +153,16 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventListResult = {
   status?:
     | GetSsfTransmitterTransmitterIdStreamStreamIdEventListStatus
     | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
+
+/**
+ * This is the subject identifier of the event, in one of the formats described in RFC 9493 Subject Identifiers for Security Event Tokens.
+ *
+ * @remarks
+ */
+export type SubjectIdentifier = {};
 
 export type GetSsfTransmitterTransmitterIdStreamStreamIdEventListEvent = {
   /**
@@ -163,31 +170,31 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventListEvent = {
    *
    * @remarks
    */
-  id?: any | undefined;
+  id?: number | undefined;
   /**
    * This is the value of the `jti` claim of the Security Event Token (SET) used to deliver this event.
    *
    * @remarks
    */
-  jti?: any | undefined;
+  jti?: string | undefined;
   /**
    * This is the subject identifier of the event, in one of the formats described in RFC 9493 Subject Identifiers for Security Event Tokens.
    *
    * @remarks
    */
-  subjectIdentifier?: any | undefined;
+  subjectIdentifier?: SubjectIdentifier | undefined;
   /**
    * This is the event identifier (a URI) of the event.
    *
    * @remarks
    */
-  eventIdentifier?: any | undefined;
+  eventIdentifier?: string | undefined;
   /**
    * This is the date and time at which the event occurred. The format is `YYYY-MM-DDThh:mm:ss`.
    *
    * @remarks
    */
-  toe?: any | undefined;
+  toe?: Date | undefined;
 };
 
 /**
@@ -201,7 +208,7 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventListResponseBody =
     events?:
       | Array<GetSsfTransmitterTransmitterIdStreamStreamIdEventListEvent>
       | undefined;
-    nextCursor?: any | undefined;
+    nextCursor?: string | undefined;
   };
 
 export type GetSsfTransmitterTransmitterIdStreamStreamIdEventListResponse = {
@@ -212,16 +219,16 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventListResponse = {
 /** @internal */
 export type GetSsfTransmitterTransmitterIdStreamStreamIdEventListRequest$Outbound =
   {
-    "x-fapi-interaction-id"?: any | undefined;
-    pretty: any;
-    transmitter_id: any;
-    stream_id: any;
-    cursor?: any | undefined;
-    toe_ge?: any | undefined;
-    toe_lt?: any | undefined;
-    subject_identifier?: any | undefined;
-    event_identifier?: any | undefined;
-    limit: any;
+    "x-fapi-interaction-id"?: string | undefined;
+    pretty: boolean;
+    transmitter_id: string;
+    stream_id: string;
+    cursor?: string | undefined;
+    toe_ge?: string | undefined;
+    toe_lt?: string | undefined;
+    subject_identifier?: string | undefined;
+    event_identifier?: string | undefined;
+    limit: number;
   };
 
 /** @internal */
@@ -231,16 +238,16 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventListRequest$outbou
     GetSsfTransmitterTransmitterIdStreamStreamIdEventListRequest
   > = z.pipe(
     z.object({
-      xFapiInteractionId: z.optional(z.any()),
-      pretty: z.any(),
-      transmitterId: z.any(),
-      streamId: z.any(),
-      cursor: z.optional(z.any()),
-      toeGe: z.optional(z.any()),
-      toeLt: z.optional(z.any()),
-      subjectIdentifier: z.optional(z.any()),
-      eventIdentifier: z.optional(z.any()),
-      limit: z.any(),
+      xFapiInteractionId: z.optional(z.string()),
+      pretty: z._default(z.boolean(), false),
+      transmitterId: z.string(),
+      streamId: z.string(),
+      cursor: z.optional(z.string()),
+      toeGe: z.optional(z.string()),
+      toeLt: z.optional(z.string()),
+      subjectIdentifier: z.optional(z.string()),
+      eventIdentifier: z.optional(z.string()),
+      limit: z._default(z.int(), 50),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -283,8 +290,8 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventListNotFoundResult
     status: types.optional(
       GetSsfTransmitterTransmitterIdStreamStreamIdEventListNotFoundStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function getSsfTransmitterTransmitterIdStreamStreamIdEventListNotFoundResultFromJSON(
@@ -320,8 +327,8 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventListResult$inbound
     status: types.optional(
       GetSsfTransmitterTransmitterIdStreamStreamIdEventListStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function getSsfTransmitterTransmitterIdStreamStreamIdEventListResultFromJSON(
@@ -340,17 +347,35 @@ export function getSsfTransmitterTransmitterIdStreamStreamIdEventListResultFromJ
 }
 
 /** @internal */
+export const SubjectIdentifier$inboundSchema: z.ZodMiniType<
+  SubjectIdentifier,
+  unknown
+> = z.object({});
+
+export function subjectIdentifierFromJSON(
+  jsonString: string,
+): SafeParseResult<SubjectIdentifier, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => SubjectIdentifier$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'SubjectIdentifier' from JSON`,
+  );
+}
+
+/** @internal */
 export const GetSsfTransmitterTransmitterIdStreamStreamIdEventListEvent$inboundSchema:
   z.ZodMiniType<
     GetSsfTransmitterTransmitterIdStreamStreamIdEventListEvent,
     unknown
   > = z.pipe(
     z.object({
-      id: types.optional(z.any()),
-      jti: types.optional(z.any()),
-      subject_identifier: types.optional(z.any()),
-      event_identifier: types.optional(z.any()),
-      toe: types.optional(z.any()),
+      id: types.optional(types.number()),
+      jti: types.optional(types.string()),
+      subject_identifier: types.optional(
+        z.lazy(() => SubjectIdentifier$inboundSchema),
+      ),
+      event_identifier: types.optional(types.string()),
+      toe: types.optional(types.date()),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -388,7 +413,7 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventListResponseBody$i
       events: types.optional(z.array(z.lazy(() =>
         GetSsfTransmitterTransmitterIdStreamStreamIdEventListEvent$inboundSchema
       ))),
-      next_cursor: types.optional(z.any()),
+      next_cursor: types.optional(types.string()),
     }),
     z.transform((v) => {
       return remap$(v, {

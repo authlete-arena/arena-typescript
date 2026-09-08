@@ -18,7 +18,7 @@ let value: PostSsfTransmitterTransmitterIdDelegateStreamUpdateResponseResponse =
     },
     result: {
       response: {
-        status: "<value>",
+        status: 995369,
       },
     },
   };

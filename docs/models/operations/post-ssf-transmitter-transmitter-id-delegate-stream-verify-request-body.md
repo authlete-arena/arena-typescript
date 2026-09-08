@@ -15,6 +15,7 @@ let value: PostSsfTransmitterTransmitterIdDelegateStreamVerifyRequestBody = {
   request: {
     method: "<value>",
     uri: "https://intent-responsibility.com",
+    ipAddress: "192.168.0.1",
   },
 };
 ```

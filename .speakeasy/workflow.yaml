@@ -7,6 +7,11 @@ sources:
         overlays:
             - location: ./overlays/method-naming.yaml
         output: .speakeasy/out.openapi.yaml
+    arena-api-spec:
+        inputs:
+            - location: ./openapi.yaml
+        registry:
+            location: registry.speakeasyapi.dev/authlete/sdk-workspace/arena-api
 targets:
     arena:
         target: typescript

@@ -3,44 +3,44 @@
 
 ## Supported Types
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId10`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount2`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId10 =
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount2 =
     {
       format: "account",
-      uri: "https://handy-blight.net/",
+      uri: "https://glum-diver.com/",
     };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId11`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid2`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId11 =
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid2 =
     {
       format: "did",
-      url: "https://brilliant-representation.name",
+      url: "https://upright-toaster.net/",
     };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId12`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail2`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId12 =
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail2 =
     {
       format: "email",
-      email: "Oliver.Bauch91@hotmail.com",
+      email: "Deangelo.Kris83@hotmail.com",
     };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId13`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub2`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId13 =
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub2 =
     {
       format: "iss_sub",
       iss: "<value>",
@@ -48,11 +48,11 @@ const value:
     };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId14`
+### `operations.GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId2`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId14 =
+  operations.GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId2 =
     {
       format: "jwt_id",
       iss: "<value>",
@@ -60,33 +60,33 @@ const value:
     };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId15`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque2`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId15 =
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque2 =
     {
       format: "opaque",
       id: "<id>",
     };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId16`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber2`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId16 =
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber2 =
     {
       format: "phone_number",
-      phoneNumber: "223.808.0691 x4201",
+      phoneNumber: "(875) 237-0064 x7573",
     };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId17`
+### `operations.GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId2`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId17 =
+  operations.GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId2 =
     {
       format: "saml_assertion_id",
       issuer: "american_express",
@@ -94,14 +94,14 @@ const value:
     };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId18`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri2`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId18 =
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri2 =
     {
       format: "uri",
-      uri: "https://surprised-fibre.info/",
+      uri: "https://regal-giggle.org/",
     };
 ```
 

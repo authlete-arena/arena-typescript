@@ -18,25 +18,25 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdRequest = {
    *
    * @remarks
    */
-  xFapiInteractionId?: any | undefined;
+  xFapiInteractionId?: string | undefined;
   /**
    * The transmitter ID.
    *
    * @remarks
    */
-  transmitterId: any;
+  transmitterId: string;
   /**
    * This query parameter enables pretty-printing when the response content type is JSON. If `pretty=true` (case-insensitive), the response is formatted for readability. If `pretty` is omitted or set to any other value, pretty-printing is disabled.
    *
    * @remarks
    */
-  pretty?: any | undefined;
+  pretty?: boolean | undefined;
   /**
    * The stream ID.
    *
    * @remarks
    */
-  streamId: any;
+  streamId: string;
 };
 
 export const GetSsfTransmitterTransmitterIdStreamStreamIdNotFoundStatus = {
@@ -57,8 +57,8 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdNotFoundResult = {
   status?:
     | GetSsfTransmitterTransmitterIdStreamStreamIdNotFoundStatus
     | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 export const GetSsfTransmitterTransmitterIdStreamStreamIdStatus = {
@@ -78,8 +78,8 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdStatus = OpenEnum<
 
 export type GetSsfTransmitterTransmitterIdStreamStreamIdResult = {
   status?: GetSsfTransmitterTransmitterIdStreamStreamIdStatus | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 /**
@@ -89,23 +89,23 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdCreator = {
   /**
    * The issuer of the access token.
    */
-  iss?: any | undefined;
+  iss?: string | undefined;
   /**
    * The subject of the access token.
    */
-  sub?: any | undefined;
+  sub?: string | undefined;
   /**
    * The client ID of the access token.
    */
-  clientId?: any | undefined;
+  clientId?: string | undefined;
   /**
    * The identifier of the access token.
    */
-  jti?: any | undefined;
+  jti?: string | undefined;
   /**
    * The base64url-encoded SHA-256 hash of the access token.
    */
-  hash?: any | undefined;
+  hash?: string | undefined;
 };
 
 /**
@@ -113,7 +113,7 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdCreator = {
  *
  * @remarks
  */
-export type Aud = any | Array<any>;
+export type Aud = string | Array<string>;
 
 /**
  * The delivery method. Supported values are `urn:ietf:rfc:8935` (PUSH) ([RFC 8935: Push-Based Security Event Token (SET) Delivery Using HTTP](https://www.rfc-editor.org/rfc/rfc8935.html)) and `urn:ietf:rfc:8936` (POLL) ([RFC 8936: Poll-Based Security Event Token (SET) Delivery Using HTTP](https://www.rfc-editor.org/rfc/rfc8936.html)).
@@ -145,13 +145,13 @@ export type Delivery = {
    * When the delivery method is POLL (`urn:ietf:rfc:8936`), this property represents the URL where events can be retrieved from. This is specified by the Transmitter. These URLs MAY be reused across Receivers, but MUST be unique per stream for a given Receiver.
    * Implementation-specific note: If the receiver-supplied `endpoint_url` contains the literal `STREAM_ID`, it is replaced with the actual stream ID on the transmitter side.
    */
-  endpointUrl?: any | undefined;
+  endpointUrl?: string | undefined;
   /**
    * When the delivery method is PUSH (`urn:ietf:rfc:8935`), and if the `endpoint_url` requires authorization, the receiver SHOULD provide this authorization header in the stream creation/updation. If present, the Transmitter MUST provide this value with every HTTP request to the `endpoint_url`.
    *
    * @remarks
    */
-  authorizationHeader?: any | undefined;
+  authorizationHeader?: string | undefined;
 };
 
 /**
@@ -184,56 +184,56 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdMetadata = {
    *
    * @remarks
    */
-  streamId?: any | undefined;
+  streamId?: string | undefined;
   /**
    * Transmitter-Supplied, REQUIRED. A URL using the https scheme with no query or fragment component that the Transmitter asserts as its Issuer Identifier. This MUST be identical to the "iss" Claim value in Security Event Tokens issued from this Transmitter.
    *
    * @remarks
    */
-  iss?: any | undefined;
+  iss?: string | undefined;
   /**
    * Transmitter-Supplied, REQUIRED. A string or an array of strings containing an audience claim as defined in JSON Web Token (JWT) [RFC7519](https://www.rfc-editor.org/rfc/rfc7519.html) that identifies the Event Receiver(s) for the Event Stream. This property cannot be updated. If multiple Receivers are specified then the Transmitter SHOULD know that these Receivers are the same entity.
    *
    * @remarks
    */
-  aud?: any | Array<any> | undefined;
+  aud?: string | Array<string> | undefined;
   /**
    * Transmitter-Supplied, OPTIONAL. An array of URIs identifying the set of events supported by the Transmitter for this Receiver. If omitted, Event Transmitters SHOULD make this set available to the Event Receiver via some other means (e.g. publishing it in online documentation).
    *
    * @remarks
    */
-  eventsSupported?: Array<any> | undefined;
+  eventsSupported?: Array<string> | undefined;
   /**
    * Receiver-Supplied, OPTIONAL. An array of URIs identifying the set of events that the Receiver requested. A Receiver SHOULD request only the events that it understands and it can act on. This is configurable by the Receiver. A Transmitter MUST ignore any array values that it does not understand. This array SHOULD NOT be empty.
    *
    * @remarks
    */
-  eventsRequested?: Array<any> | undefined;
+  eventsRequested?: Array<string> | undefined;
   /**
    * Transmitter-Supplied, REQUIRED. An array of URIs identifying the set of events that the Transmitter MUST include in the stream. This is a subset (not necessarily a proper subset) of the intersection of "events_supported" and "events_requested". A Receiver MUST rely on the values received in this field to understand which event types it can expect from the Transmitter.
    *
    * @remarks
    */
-  eventsDelivered?: Array<any> | undefined;
+  eventsDelivered?: Array<string> | undefined;
   delivery?: Delivery | undefined;
   /**
    * Transmitter-Supplied, OPTIONAL. An integer indicating the minimum amount of time in seconds that must pass in between verification requests. If an Event Receiver submits verification requests more frequently than this, the Event Transmitter MAY respond with a 429 status code. An Event Transmitter SHOULD NOT respond with a 429 status code if an Event Receiver is not exceeding this frequency.
    *
    * @remarks
    */
-  minVerificationInterval?: any | undefined;
+  minVerificationInterval?: number | undefined;
   /**
    * Receiver-Supplied, OPTIONAL. A string that describes the properties of the stream. This is useful in multi-stream systems to identify the stream for human actors. The transmitter MAY truncate the string beyond an allowed max length.
    *
    * @remarks
    */
-  description?: any | undefined;
+  description?: string | undefined;
   /**
    * Transmitter-Supplied, OPTIONAL. The refreshable inactivity timeout of the stream in seconds. After the timeout duration passes with no eligible activity from the Receiver, the Transmitter MAY either pause, disable, or delete the stream. The syntax is the same as that of `expires_in` from Section A.14 of [RFC6749](https://www.rfc-editor.org/rfc/rfc6749.html).
    *
    * @remarks
    */
-  inactivityTimeout?: any | undefined;
+  inactivityTimeout?: number | undefined;
   /**
    * OPTIONAL. The `default_subjects` configured for this stream. If explicitly specified at stream creation, that value is used; if omitted, the Transmitter's `default_subjects` value is used instead. This property cannot be changed after stream creation.
    *
@@ -251,13 +251,13 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdStream = {
    *
    * @remarks
    */
-  createdAt?: any | undefined;
+  createdAt?: Date | undefined;
   /**
    * The time at which the stream was updated, in the format of `YYYY-MM-DDThh:mm:ss`.
    *
    * @remarks
    */
-  updatedAt?: any | undefined;
+  updatedAt?: Date | undefined;
   /**
    * The creator of the stream.
    */
@@ -269,7 +269,7 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdStream = {
    * Strictly speaking, since the first 10 bits of the data are overwritten to ensure that the resulting string always starts with `st`, the actual entropy is 230 bits. The `st` here denotes Stream.
    * The purpose of this process is to enable someone encountering a 48-character base32hex-encoded string beginning with `st` to infer that it might be a Stream ID. Conversely, a random string not starting with `st` can be identified as not being a Stream ID.
    */
-  streamId?: any | undefined;
+  streamId?: string | undefined;
   /**
    * Stream Configuration defined in [OpenID Shared Signals Framework Specification 1.0](https://openid.net/specs/openid-sharedsignals-framework-1_0.html).
    *
@@ -293,10 +293,10 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdResponse = {
 
 /** @internal */
 export type GetSsfTransmitterTransmitterIdStreamStreamIdRequest$Outbound = {
-  "x-fapi-interaction-id"?: any | undefined;
-  transmitter_id: any;
-  pretty: any;
-  stream_id: any;
+  "x-fapi-interaction-id"?: string | undefined;
+  transmitter_id: string;
+  pretty: boolean;
+  stream_id: string;
 };
 
 /** @internal */
@@ -306,10 +306,10 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdRequest$outboundSchema:
     GetSsfTransmitterTransmitterIdStreamStreamIdRequest
   > = z.pipe(
     z.object({
-      xFapiInteractionId: z.optional(z.any()),
-      transmitterId: z.any(),
-      pretty: z.any(),
-      streamId: z.any(),
+      xFapiInteractionId: z.optional(z.string()),
+      transmitterId: z.string(),
+      pretty: z._default(z.boolean(), false),
+      streamId: z.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -349,8 +349,8 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdNotFoundResult$inboundS
     status: types.optional(
       GetSsfTransmitterTransmitterIdStreamStreamIdNotFoundStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function getSsfTransmitterTransmitterIdStreamStreamIdNotFoundResultFromJSON(
@@ -380,8 +380,8 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdResult$inboundSchema:
       status: types.optional(
         GetSsfTransmitterTransmitterIdStreamStreamIdStatus$inboundSchema,
       ),
-      code: types.optional(z.any()),
-      message: types.optional(z.any()),
+      code: types.optional(types.string()),
+      message: types.optional(types.string()),
     });
 
 export function getSsfTransmitterTransmitterIdStreamStreamIdResultFromJSON(
@@ -405,11 +405,11 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdCreator$inboundSchema:
   z.ZodMiniType<GetSsfTransmitterTransmitterIdStreamStreamIdCreator, unknown> =
     z.pipe(
       z.object({
-        iss: types.optional(z.any()),
-        sub: types.optional(z.any()),
-        client_id: types.optional(z.any()),
-        jti: types.optional(z.any()),
-        hash: types.optional(z.any()),
+        iss: types.optional(types.string()),
+        sub: types.optional(types.string()),
+        client_id: types.optional(types.string()),
+        jti: types.optional(types.string()),
+        hash: types.optional(types.string()),
       }),
       z.transform((v) => {
         return remap$(v, {
@@ -436,8 +436,8 @@ export function getSsfTransmitterTransmitterIdStreamStreamIdCreatorFromJSON(
 
 /** @internal */
 export const Aud$inboundSchema: z.ZodMiniType<Aud, unknown> = smartUnion([
-  z.any(),
-  z.array(z.any()),
+  types.string(),
+  z.array(types.string()),
 ]);
 
 export function audFromJSON(
@@ -458,8 +458,8 @@ export const Method$inboundSchema: z.ZodMiniType<Method, unknown> = openEnums
 export const Delivery$inboundSchema: z.ZodMiniType<Delivery, unknown> = z.pipe(
   z.object({
     method: Method$inboundSchema,
-    endpoint_url: types.optional(z.any()),
-    authorization_header: types.optional(z.any()),
+    endpoint_url: types.optional(types.string()),
+    authorization_header: types.optional(types.string()),
   }),
   z.transform((v) => {
     return remap$(v, {
@@ -493,16 +493,18 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdMetadata$inboundSchema:
   z.ZodMiniType<GetSsfTransmitterTransmitterIdStreamStreamIdMetadata, unknown> =
     z.pipe(
       z.object({
-        stream_id: types.optional(z.any()),
-        iss: types.optional(z.any()),
-        aud: types.optional(smartUnion([z.any(), z.array(z.any())])),
-        events_supported: types.optional(z.array(z.any())),
-        events_requested: types.optional(z.array(z.any())),
-        events_delivered: types.optional(z.array(z.any())),
+        stream_id: types.optional(types.string()),
+        iss: types.optional(types.string()),
+        aud: types.optional(
+          smartUnion([types.string(), z.array(types.string())]),
+        ),
+        events_supported: types.optional(z.array(types.string())),
+        events_requested: types.optional(z.array(types.string())),
+        events_delivered: types.optional(z.array(types.string())),
         delivery: types.optional(z.lazy(() => Delivery$inboundSchema)),
-        min_verification_interval: types.optional(z.any()),
-        description: types.optional(z.any()),
-        inactivity_timeout: types.optional(z.any()),
+        min_verification_interval: types.optional(types.number()),
+        description: types.optional(types.string()),
+        inactivity_timeout: types.optional(types.number()),
         default_subjects: types.optional(
           GetSsfTransmitterTransmitterIdStreamStreamIdDefaultSubjects$inboundSchema,
         ),
@@ -541,12 +543,12 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdStream$inboundSchema:
   z.ZodMiniType<GetSsfTransmitterTransmitterIdStreamStreamIdStream, unknown> = z
     .pipe(
       z.object({
-        created_at: types.optional(z.any()),
-        updated_at: types.optional(z.any()),
+        created_at: types.optional(types.date()),
+        updated_at: types.optional(types.date()),
         creator: types.optional(z.lazy(() =>
           GetSsfTransmitterTransmitterIdStreamStreamIdCreator$inboundSchema
         )),
-        stream_id: types.optional(z.any()),
+        stream_id: types.optional(types.string()),
         metadata: z.lazy(() =>
           GetSsfTransmitterTransmitterIdStreamStreamIdMetadata$inboundSchema
         ),

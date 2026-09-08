@@ -15,7 +15,7 @@ let value: GetOpenapiResponse = {
       "<value 1>",
     ],
   },
-  result: "0xBFc12c15d5",
+  result: {},
 };
 ```
 

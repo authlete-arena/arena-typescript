@@ -14,7 +14,7 @@ let value:
   PostSsfTransmitterTransmitterIdDelegateWellKnownOauthProtectedResourceResponseBody =
     {
       response: {
-        status: "<value>",
+        status: 888098,
       },
     };
 ```

@@ -18,7 +18,7 @@ let value:
       },
       result: {
         response: {
-          status: "<value>",
+          status: 57983,
         },
       },
     };

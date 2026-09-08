@@ -17,14 +17,14 @@ export type DeleteSsfTransmitterTransmitterIdRequest = {
    *
    * @remarks
    */
-  xFapiInteractionId?: any | undefined;
+  xFapiInteractionId?: string | undefined;
   /**
    * This query parameter enables pretty-printing when the response content type is JSON. If `pretty=true` (case-insensitive), the response is formatted for readability. If `pretty` is omitted or set to any other value, pretty-printing is disabled.
    *
    * @remarks
    */
-  pretty?: any | undefined;
-  transmitterId: any;
+  pretty?: boolean | undefined;
+  transmitterId: string;
 };
 
 export const DeleteSsfTransmitterTransmitterIdNotFoundStatus = {
@@ -44,8 +44,8 @@ export type DeleteSsfTransmitterTransmitterIdNotFoundStatus = OpenEnum<
 
 export type DeleteSsfTransmitterTransmitterIdNotFoundResult = {
   status?: DeleteSsfTransmitterTransmitterIdNotFoundStatus | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 export const DeleteSsfTransmitterTransmitterIdStatus = {
@@ -65,8 +65,8 @@ export type DeleteSsfTransmitterTransmitterIdStatus = OpenEnum<
 
 export type DeleteSsfTransmitterTransmitterIdResult = {
   status?: DeleteSsfTransmitterTransmitterIdStatus | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 /**
@@ -83,9 +83,9 @@ export type DeleteSsfTransmitterTransmitterIdResponse = {
 
 /** @internal */
 export type DeleteSsfTransmitterTransmitterIdRequest$Outbound = {
-  "x-fapi-interaction-id"?: any | undefined;
-  pretty: any;
-  transmitter_id: any;
+  "x-fapi-interaction-id"?: string | undefined;
+  pretty: boolean;
+  transmitter_id: string;
 };
 
 /** @internal */
@@ -95,9 +95,9 @@ export const DeleteSsfTransmitterTransmitterIdRequest$outboundSchema:
     DeleteSsfTransmitterTransmitterIdRequest
   > = z.pipe(
     z.object({
-      xFapiInteractionId: z.optional(z.any()),
-      pretty: z.any(),
-      transmitterId: z.any(),
+      xFapiInteractionId: z.optional(z.string()),
+      pretty: z._default(z.boolean(), false),
+      transmitterId: z.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -130,8 +130,8 @@ export const DeleteSsfTransmitterTransmitterIdNotFoundResult$inboundSchema:
       status: types.optional(
         DeleteSsfTransmitterTransmitterIdNotFoundStatus$inboundSchema,
       ),
-      code: types.optional(z.any()),
-      message: types.optional(z.any()),
+      code: types.optional(types.string()),
+      message: types.optional(types.string()),
     });
 
 export function deleteSsfTransmitterTransmitterIdNotFoundResultFromJSON(
@@ -161,8 +161,8 @@ export const DeleteSsfTransmitterTransmitterIdResult$inboundSchema:
     status: types.optional(
       DeleteSsfTransmitterTransmitterIdStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function deleteSsfTransmitterTransmitterIdResultFromJSON(

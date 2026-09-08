@@ -12,7 +12,7 @@ let value:
   PostSsfTransmitterTransmitterIdDelegateWellKnownSsfConfigurationResponseBody =
     {
       response: {
-        status: "<value>",
+        status: 57983,
       },
     };
 ```

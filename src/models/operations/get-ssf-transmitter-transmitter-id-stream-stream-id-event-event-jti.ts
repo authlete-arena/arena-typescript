@@ -23,31 +23,31 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiRequest = {
    *
    * @remarks
    */
-  xFapiInteractionId?: any | undefined;
+  xFapiInteractionId?: string | undefined;
   /**
    * The transmitter ID.
    *
    * @remarks
    */
-  transmitterId: any;
+  transmitterId: string;
   /**
    * The stream ID.
    *
    * @remarks
    */
-  streamId: any;
+  streamId: string;
   /**
    * The JTI of the event.
    *
    * @remarks
    */
-  eventJti: any;
+  eventJti: string;
   /**
    * This query parameter enables pretty-printing when the response content type is JSON. If `pretty=true` (case-insensitive), the response is formatted for readability. If `pretty` is omitted or set to any other value, pretty-printing is disabled.
    *
    * @remarks
    */
-  pretty?: any | undefined;
+  pretty?: boolean | undefined;
 };
 
 export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoundStatus =
@@ -72,8 +72,8 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoundRes
     status?:
       | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoundStatus
       | undefined;
-    code?: any | undefined;
-    message?: any | undefined;
+    code?: string | undefined;
+    message?: string | undefined;
   };
 
 export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiStatus = {
@@ -96,8 +96,8 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiResult = {
   status?:
     | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiStatus
     | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiFormatAliases =
@@ -114,10 +114,10 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiFormatAlias
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier9 =
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierURI =
   {
     format: "uri";
-    uri: any;
+    uri: string;
   };
 
 /**
@@ -125,11 +125,11 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier9
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8 =
+export type GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierSamlAssertionID =
   {
     format: "saml_assertion_id";
-    issuer: any;
-    assertionId: any;
+    issuer: string;
+    assertionId: string;
   };
 
 /**
@@ -137,10 +137,10 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier7 =
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierPhoneNumber =
   {
     format: "phone_number";
-    phoneNumber: any;
+    phoneNumber: string;
   };
 
 /**
@@ -148,10 +148,10 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier7
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier6 =
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierOpaque =
   {
     format: "opaque";
-    id: any;
+    id: string;
   };
 
 /**
@@ -159,11 +159,11 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier6
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier5 =
+export type GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierJwtID =
   {
     format: "jwt_id";
-    iss: any;
-    jti: any;
+    iss: string;
+    jti: string;
   };
 
 /**
@@ -171,11 +171,11 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier5
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier4 =
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierIssSub =
   {
     format: "iss_sub";
-    iss: any;
-    sub: any;
+    iss: string;
+    sub: string;
   };
 
 /**
@@ -183,10 +183,10 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier4
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier3 =
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierEmail =
   {
     format: "email";
-    email: any;
+    email: string;
   };
 
 /**
@@ -194,10 +194,10 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier3
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier2 =
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierDid =
   {
     format: "did";
-    url: any;
+    url: string;
   };
 
 /**
@@ -205,22 +205,22 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier2
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier1 =
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierAccount =
   {
     format: "account";
-    uri: any;
+    uri: string;
   };
 
 export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierUnion =
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier1
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier2
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier3
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier4
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier5
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier6
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier7
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier9
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierAccount
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierDid
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierEmail
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierIssSub
+  | GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierJwtID
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierOpaque
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierPhoneNumber
+  | GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierSamlAssertionID
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierURI
   | discriminatedUnionTypes.Unknown<"format">;
 
 /**
@@ -228,22 +228,23 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierU
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20 = {
-  format:
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiFormatAliases;
-  identifiers: Array<
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier1
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier2
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier3
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier4
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier5
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier6
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier7
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier9
-    | discriminatedUnionTypes.Unknown<"format">
-  >;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAliases =
+  {
+    format:
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiFormatAliases;
+    identifiers: Array<
+      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierAccount
+      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierDid
+      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierEmail
+      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierIssSub
+      | GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierJwtID
+      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierOpaque
+      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierPhoneNumber
+      | GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierSamlAssertionID
+      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierURI
+      | discriminatedUnionTypes.Unknown<"format">
+    >;
+  };
 
 export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiFormatComplex =
   {
@@ -259,104 +260,113 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiFormatCompl
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId18 = {
-  format: "uri";
-  uri: any;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri2 =
+  {
+    format: "uri";
+    uri: string;
+  };
 
 /**
  * The subject identifier with the `saml_assertion_id` format as defined in [Section 3.5.2. SAML Assertion ID Subject Identifier Format](https://openid.github.io/sharedsignals/openid-sharedsignals-framework-1_0.html#section-3.5.2) of [OpenID Shared Signals Framework Specification 1.0](https://openid.github.io/sharedsignals/openid-sharedsignals-framework-1_0.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId17 = {
-  format: "saml_assertion_id";
-  issuer: any;
-  assertionId: any;
-};
+export type GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId2 =
+  {
+    format: "saml_assertion_id";
+    issuer: string;
+    assertionId: string;
+  };
 
 /**
  * The subject identifier with the `phone_number` format as defined in [Section 3.2.5. Phone Number Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.5) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId16 = {
-  format: "phone_number";
-  phoneNumber: any;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber2 =
+  {
+    format: "phone_number";
+    phoneNumber: string;
+  };
 
 /**
  * The subject identifier with the `opaque` format as defined in [Section 3.2.4. Opaque Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.4) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId15 = {
-  format: "opaque";
-  id: any;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque2 =
+  {
+    format: "opaque";
+    id: string;
+  };
 
 /**
  * The subject identifier with the `jwt_id` format as defined in [Section 3.5.1. JWT ID Subject Identifier Format](https://openid.github.io/sharedsignals/openid-sharedsignals-framework-1_0.html#section-3.5.1) of [OpenID Shared Signals Framework Specification 1.0](https://openid.github.io/sharedsignals/openid-sharedsignals-framework-1_0.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId14 = {
-  format: "jwt_id";
-  iss: any;
-  jti: any;
-};
+export type GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId2 =
+  {
+    format: "jwt_id";
+    iss: string;
+    jti: string;
+  };
 
 /**
  * The subject identifier with the `iss_sub` format as defined in [Section 3.2.3. Issuer and Subject Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.3) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId13 = {
-  format: "iss_sub";
-  iss: any;
-  sub: any;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub2 =
+  {
+    format: "iss_sub";
+    iss: string;
+    sub: string;
+  };
 
 /**
  * The subject identifier with the `email` format as defined in [Section 3.2.2. Email Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.2) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId12 = {
-  format: "email";
-  email: any;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail2 =
+  {
+    format: "email";
+    email: string;
+  };
 
 /**
  * The subject identifier with the `did` format as defined in [Section 3.2.6. Decentralized Identifier (DID) Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.6) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId11 = {
-  format: "did";
-  url: any;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid2 =
+  {
+    format: "did";
+    url: string;
+  };
 
 /**
  * The subject identifier with the `account` format as defined in [Section 3.2.1. Account Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.1) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId10 = {
-  format: "account";
-  uri: any;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount2 =
+  {
+    format: "account";
+    uri: string;
+  };
 
 export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUnion2 =
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId10
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId11
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId12
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId13
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId14
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId15
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId16
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId17
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId18
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount2
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid2
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail2
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub2
+  | GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId2
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque2
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber2
+  | GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId2
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri2
   | discriminatedUnionTypes.Unknown<"format">;
 
 /**
@@ -364,20 +374,20 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUnion2
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19 = {
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId = {
   format:
     GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiFormatComplex;
   additionalProperties?: {
     [k: string]:
-      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId10
-      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId11
-      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId12
-      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId13
-      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId14
-      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId15
-      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId16
-      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId17
-      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId18
+      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount2
+      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid2
+      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail2
+      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub2
+      | GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId2
+      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque2
+      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber2
+      | GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId2
+      | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri2
       | discriminatedUnionTypes.Unknown<"format">;
   } | undefined;
 };
@@ -387,104 +397,113 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19 = {
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9 = {
-  format: "uri";
-  uri: any;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri1 =
+  {
+    format: "uri";
+    uri: string;
+  };
 
 /**
  * The subject identifier with the `saml_assertion_id` format as defined in [Section 3.5.2. SAML Assertion ID Subject Identifier Format](https://openid.github.io/sharedsignals/openid-sharedsignals-framework-1_0.html#section-3.5.2) of [OpenID Shared Signals Framework Specification 1.0](https://openid.github.io/sharedsignals/openid-sharedsignals-framework-1_0.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8 = {
-  format: "saml_assertion_id";
-  issuer: any;
-  assertionId: any;
-};
+export type GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId1 =
+  {
+    format: "saml_assertion_id";
+    issuer: string;
+    assertionId: string;
+  };
 
 /**
  * The subject identifier with the `phone_number` format as defined in [Section 3.2.5. Phone Number Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.5) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7 = {
-  format: "phone_number";
-  phoneNumber: any;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1 =
+  {
+    format: "phone_number";
+    phoneNumber: string;
+  };
 
 /**
  * The subject identifier with the `opaque` format as defined in [Section 3.2.4. Opaque Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.4) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6 = {
-  format: "opaque";
-  id: any;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1 =
+  {
+    format: "opaque";
+    id: string;
+  };
 
 /**
  * The subject identifier with the `jwt_id` format as defined in [Section 3.5.1. JWT ID Subject Identifier Format](https://openid.github.io/sharedsignals/openid-sharedsignals-framework-1_0.html#section-3.5.1) of [OpenID Shared Signals Framework Specification 1.0](https://openid.github.io/sharedsignals/openid-sharedsignals-framework-1_0.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5 = {
-  format: "jwt_id";
-  iss: any;
-  jti: any;
-};
+export type GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId1 =
+  {
+    format: "jwt_id";
+    iss: string;
+    jti: string;
+  };
 
 /**
  * The subject identifier with the `iss_sub` format as defined in [Section 3.2.3. Issuer and Subject Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.3) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4 = {
-  format: "iss_sub";
-  iss: any;
-  sub: any;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1 =
+  {
+    format: "iss_sub";
+    iss: string;
+    sub: string;
+  };
 
 /**
  * The subject identifier with the `email` format as defined in [Section 3.2.2. Email Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.2) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3 = {
-  format: "email";
-  email: any;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1 =
+  {
+    format: "email";
+    email: string;
+  };
 
 /**
  * The subject identifier with the `did` format as defined in [Section 3.2.6. Decentralized Identifier (DID) Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.6) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2 = {
-  format: "did";
-  url: any;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1 =
+  {
+    format: "did";
+    url: string;
+  };
 
 /**
  * The subject identifier with the `account` format as defined in [Section 3.2.1. Account Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.1) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1 = {
-  format: "account";
-  uri: any;
-};
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1 =
+  {
+    format: "account";
+    uri: string;
+  };
 
 export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUnion1 =
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1
+  | GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId1
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1
+  | GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId1
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri1
   | discriminatedUnionTypes.Unknown<"format">;
 
 /**
@@ -493,18 +512,21 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUnion1
  * @remarks
  */
 export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUnion3 =
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8
-  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAliases
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1
+  | GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId1
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1
+  | GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId1
+  | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri1
   | discriminatedUnionTypes.Unknown<"format">;
+
+export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiEvents =
+  {};
 
 /**
  * The event information in the same format as a SET payload. The only difference is that the `iat` property is omitted if the event has not yet been delivered.
@@ -517,54 +539,54 @@ export type Payload = {
    *
    * @remarks
    */
-  iss?: any | undefined;
+  iss?: string | undefined;
   /**
    * The audience of the security event token. This is the identifier of the receiver.
    *
    * @remarks
    */
-  aud?: any | undefined;
+  aud?: string | undefined;
   /**
    * The JWT ID of the security event token.
    *
    * @remarks
    */
-  jti?: any | undefined;
+  jti?: string | undefined;
   /**
    * The issuance time of the security event token. The value is represented as the number of seconds since the Unix epoch.
    *
    * @remarks
    */
-  iat?: any | undefined;
+  iat?: number | undefined;
   /**
    * The transaction identifier associated with the event.
    *
    * @remarks
    */
-  txn?: any | undefined;
+  txn?: string | undefined;
   /**
    * The time of event. The value is represents as the number of seconds since the Unix epoch.
    *
    * @remarks
    */
-  toe?: any | undefined;
+  toe?: number | undefined;
   /**
    * The subject identifier associated with the event.
    *
    * @remarks
    */
   subId?:
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8
-    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9
+    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAliases
+    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId
+    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1
+    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1
+    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1
+    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1
+    | GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId1
+    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1
+    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1
+    | GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId1
+    | GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri1
     | discriminatedUnionTypes.Unknown<"format">
     | undefined;
   /**
@@ -572,7 +594,10 @@ export type Payload = {
    *
    * @remarks
    */
-  events?: { [k: string]: any } | undefined;
+  events?: {
+    [k: string]:
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiEvents;
+  } | undefined;
 };
 
 /**
@@ -612,7 +637,7 @@ export type ErrorT = {
    *
    * @remarks
    */
-  description?: any | undefined;
+  description?: string | undefined;
 };
 
 export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiEvent = {
@@ -627,19 +652,19 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiEvent = {
    *
    * @remarks
    */
-  deliveredAt?: any | undefined;
+  deliveredAt?: Date | undefined;
   /**
    * The time at which the receiver acknowledged receipt of the event. If the receiver has not acknowledged it yet, this property is omitted or its value is `null`.
    *
    * @remarks
    */
-  acknowledgedAt?: any | undefined;
+  acknowledgedAt?: Date | undefined;
   /**
    * The time at which the receiver reported an error about the event. If the receiver has not reported it yet, this property is omitted or its value is `null`.
    *
    * @remarks
    */
-  errorReportedAt?: any | undefined;
+  errorReportedAt?: Date | undefined;
   /**
    * The error information in the same format as an error object defined in [Section 2.6](https://www.rfc-editor.org/rfc/rfc8936.html#section-2.6) of [RFC 8936 Poll-Based Security Event Token (SET) Delivery Using HTTP](https://www.rfc-editor.org/rfc/rfc8936.html).
    *
@@ -671,11 +696,11 @@ export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiResponse =
 /** @internal */
 export type GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiRequest$Outbound =
   {
-    "x-fapi-interaction-id"?: any | undefined;
-    transmitter_id: any;
-    stream_id: any;
-    event_jti: any;
-    pretty: any;
+    "x-fapi-interaction-id"?: string | undefined;
+    transmitter_id: string;
+    stream_id: string;
+    event_jti: string;
+    pretty: boolean;
   };
 
 /** @internal */
@@ -685,11 +710,11 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiRequest$ou
     GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiRequest
   > = z.pipe(
     z.object({
-      xFapiInteractionId: z.optional(z.any()),
-      transmitterId: z.any(),
-      streamId: z.any(),
-      eventJti: z.any(),
-      pretty: z.any(),
+      xFapiInteractionId: z.optional(z.string()),
+      transmitterId: z.string(),
+      streamId: z.string(),
+      eventJti: z.string(),
+      pretty: z._default(z.boolean(), false),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -729,8 +754,8 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoundRe
     status: types.optional(
       GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoundStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoundResultFromJSON(
@@ -766,8 +791,8 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiResult$inb
     status: types.optional(
       GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiResultFromJSON(
@@ -794,40 +819,40 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiFormatAlia
   );
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier9$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierURI$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier9,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierURI,
     unknown
   > = z.object({
     format: types.literal("uri"),
-    uri: z.any(),
+    uri: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier9FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierURIFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier9,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierURI,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier9$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierURI$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier9' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierURI' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8$inboundSchema:
+export const GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierSamlAssertionID$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8,
+    GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierSamlAssertionID,
     unknown
   > = z.pipe(
     z.object({
       format: types.literal("saml_assertion_id"),
-      issuer: z.any(),
-      assertion_id: z.any(),
+      issuer: types.string(),
+      assertion_id: types.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -836,30 +861,30 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier
     }),
   );
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8FromJSON(
+export function getSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierSamlAssertionIDFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8,
+  GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierSamlAssertionID,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8$inboundSchema
+      GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierSamlAssertionID$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierSamlAssertionID' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier7$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierPhoneNumber$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier7,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierPhoneNumber,
     unknown
   > = z.pipe(
     z.object({
       format: types.literal("phone_number"),
-      phone_number: z.any(),
+      phone_number: types.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -868,170 +893,170 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier
     }),
   );
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier7FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierPhoneNumberFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier7,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierPhoneNumber,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier7$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierPhoneNumber$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier7' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierPhoneNumber' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier6$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierOpaque$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier6,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierOpaque,
     unknown
   > = z.object({
     format: types.literal("opaque"),
-    id: z.any(),
+    id: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier6FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierOpaqueFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier6,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierOpaque,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier6$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierOpaque$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier6' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierOpaque' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier5$inboundSchema:
+export const GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierJwtID$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier5,
+    GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierJwtID,
     unknown
   > = z.object({
     format: types.literal("jwt_id"),
-    iss: z.any(),
-    jti: z.any(),
+    iss: types.string(),
+    jti: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier5FromJSON(
+export function getSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierJwtIDFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier5,
+  GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierJwtID,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier5$inboundSchema
+      GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierJwtID$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier5' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierJwtID' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier4$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierIssSub$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier4,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierIssSub,
     unknown
   > = z.object({
     format: types.literal("iss_sub"),
-    iss: z.any(),
-    sub: z.any(),
+    iss: types.string(),
+    sub: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier4FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierIssSubFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier4,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierIssSub,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier4$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierIssSub$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier4' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierIssSub' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier3$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierEmail$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier3,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierEmail,
     unknown
   > = z.object({
     format: types.literal("email"),
-    email: z.any(),
+    email: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier3FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierEmailFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier3,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierEmail,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier3$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierEmail$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier3' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierEmail' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier2$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierDid$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier2,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierDid,
     unknown
   > = z.object({
     format: types.literal("did"),
-    url: z.any(),
+    url: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier2FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierDidFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier2,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierDid,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier2$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierDid$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier2' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierDid' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier1$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierAccount$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier1,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierAccount,
     unknown
   > = z.object({
     format: types.literal("account"),
-    uri: z.any(),
+    uri: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier1FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierAccountFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier1,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierAccount,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier1$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierAccount$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier1' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierAccount' from JSON`,
   );
 }
 
@@ -1042,31 +1067,31 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier
     unknown
   > = discriminatedUnion("format", {
     account: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier1$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierAccount$inboundSchema
     ),
     did: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier2$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierDid$inboundSchema
     ),
     email: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier3$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierEmail$inboundSchema
     ),
     iss_sub: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier4$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierIssSub$inboundSchema
     ),
     jwt_id: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier5$inboundSchema
+      GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierJwtID$inboundSchema
     ),
     opaque: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier6$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierOpaque$inboundSchema
     ),
     phone_number: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier7$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierPhoneNumber$inboundSchema
     ),
     saml_assertion_id: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8$inboundSchema
+      GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierSamlAssertionID$inboundSchema
     ),
     uri: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier9$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierURI$inboundSchema
     ),
   });
 
@@ -1086,56 +1111,56 @@ export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentif
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAliases$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAliases,
     unknown
   > = z.object({
     format:
       GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiFormatAliases$inboundSchema,
     identifiers: z.array(discriminatedUnion("format", {
       account: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier1$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierAccount$inboundSchema
       ),
       did: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier2$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierDid$inboundSchema
       ),
       email: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier3$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierEmail$inboundSchema
       ),
       iss_sub: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier4$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierIssSub$inboundSchema
       ),
       jwt_id: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier5$inboundSchema
+        GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierJwtID$inboundSchema
       ),
       opaque: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier6$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierOpaque$inboundSchema
       ),
       phone_number: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier7$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierPhoneNumber$inboundSchema
       ),
       saml_assertion_id: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier8$inboundSchema
+        GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiIdentifierSamlAssertionID$inboundSchema
       ),
       uri: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifier9$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiIdentifierURI$inboundSchema
       ),
     })),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAliasesFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAliases,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAliases$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAliases' from JSON`,
   );
 }
 
@@ -1148,40 +1173,40 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiFormatComp
   );
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId18$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri2$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId18,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri2,
     unknown
   > = z.object({
     format: types.literal("uri"),
-    uri: z.any(),
+    uri: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId18FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdURI2FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId18,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri2,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId18$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri2$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId18' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri2' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId17$inboundSchema:
+export const GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId2$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId17,
+    GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId2,
     unknown
   > = z.pipe(
     z.object({
       format: types.literal("saml_assertion_id"),
-      issuer: z.any(),
-      assertion_id: z.any(),
+      issuer: types.string(),
+      assertion_id: types.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -1190,30 +1215,30 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId17$in
     }),
   );
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId17FromJSON(
+export function getSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionID2FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId17,
+  GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId2,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId17$inboundSchema
+      GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId2$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId17' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId2' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId16$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber2$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId16,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber2,
     unknown
   > = z.pipe(
     z.object({
       format: types.literal("phone_number"),
-      phone_number: z.any(),
+      phone_number: types.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -1222,170 +1247,170 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId16$in
     }),
   );
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId16FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber2FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId16,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber2,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId16$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber2$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId16' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber2' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId15$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque2$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId15,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque2,
     unknown
   > = z.object({
     format: types.literal("opaque"),
-    id: z.any(),
+    id: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId15FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque2FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId15,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque2,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId15$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque2$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId15' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque2' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId14$inboundSchema:
+export const GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId2$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId14,
+    GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId2,
     unknown
   > = z.object({
     format: types.literal("jwt_id"),
-    iss: z.any(),
-    jti: z.any(),
+    iss: types.string(),
+    jti: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId14FromJSON(
+export function getSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtID2FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId14,
+  GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId2,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId14$inboundSchema
+      GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId2$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId14' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId2' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId13$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub2$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId13,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub2,
     unknown
   > = z.object({
     format: types.literal("iss_sub"),
-    iss: z.any(),
-    sub: z.any(),
+    iss: types.string(),
+    sub: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId13FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub2FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId13,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub2,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId13$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub2$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId13' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub2' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId12$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail2$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId12,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail2,
     unknown
   > = z.object({
     format: types.literal("email"),
-    email: z.any(),
+    email: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId12FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail2FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId12,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail2,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId12$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail2$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId12' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail2' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId11$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid2$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId11,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid2,
     unknown
   > = z.object({
     format: types.literal("did"),
-    url: z.any(),
+    url: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId11FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid2FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId11,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid2,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId11$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid2$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId11' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid2' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId10$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount2$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId10,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount2,
     unknown
   > = z.object({
     format: types.literal("account"),
-    uri: z.any(),
+    uri: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId10FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount2FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId10,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount2,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId10$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount2$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId10' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount2' from JSON`,
   );
 }
 
@@ -1396,31 +1421,31 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUnion
     unknown
   > = discriminatedUnion("format", {
     account: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId10$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount2$inboundSchema
     ),
     did: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId11$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid2$inboundSchema
     ),
     email: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId12$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail2$inboundSchema
     ),
     iss_sub: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId13$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub2$inboundSchema
     ),
     jwt_id: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId14$inboundSchema
+      GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId2$inboundSchema
     ),
     opaque: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId15$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque2$inboundSchema
     ),
     phone_number: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId16$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber2$inboundSchema
     ),
     saml_assertion_id: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId17$inboundSchema
+      GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId2$inboundSchema
     ),
     uri: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId18$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri2$inboundSchema
     ),
   });
 
@@ -1440,9 +1465,9 @@ export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUn
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId,
     unknown
   > = collectExtraKeys$(
     z.catchall(
@@ -1452,31 +1477,31 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19$in
       }),
       discriminatedUnion("format", {
         account: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId10$inboundSchema
+          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount2$inboundSchema
         ),
         did: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId11$inboundSchema
+          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid2$inboundSchema
         ),
         email: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId12$inboundSchema
+          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail2$inboundSchema
         ),
         iss_sub: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId13$inboundSchema
+          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub2$inboundSchema
         ),
         jwt_id: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId14$inboundSchema
+          GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId2$inboundSchema
         ),
         opaque: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId15$inboundSchema
+          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque2$inboundSchema
         ),
         phone_number: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId16$inboundSchema
+          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber2$inboundSchema
         ),
         saml_assertion_id: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId17$inboundSchema
+          GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId2$inboundSchema
         ),
         uri: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId18$inboundSchema
+          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri2$inboundSchema
         ),
       }),
     ),
@@ -1484,56 +1509,56 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19$in
     true,
   );
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri1$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri1,
     unknown
   > = z.object({
     format: types.literal("uri"),
-    uri: z.any(),
+    uri: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdURI1FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri1,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri1$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri1' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8$inboundSchema:
+export const GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId1$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8,
+    GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId1,
     unknown
   > = z.pipe(
     z.object({
       format: types.literal("saml_assertion_id"),
-      issuer: z.any(),
-      assertion_id: z.any(),
+      issuer: types.string(),
+      assertion_id: types.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -1542,30 +1567,30 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8$inb
     }),
   );
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8FromJSON(
+export function getSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionID1FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8,
+  GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId1,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8$inboundSchema
+      GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId1$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId1' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1,
     unknown
   > = z.pipe(
     z.object({
       format: types.literal("phone_number"),
-      phone_number: z.any(),
+      phone_number: types.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -1574,170 +1599,170 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7$inb
     }),
   );
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1,
     unknown
   > = z.object({
     format: types.literal("opaque"),
-    id: z.any(),
+    id: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5$inboundSchema:
+export const GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId1$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5,
+    GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId1,
     unknown
   > = z.object({
     format: types.literal("jwt_id"),
-    iss: z.any(),
-    jti: z.any(),
+    iss: types.string(),
+    jti: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5FromJSON(
+export function getSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtID1FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5,
+  GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId1,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5$inboundSchema
+      GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId1$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId1' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1,
     unknown
   > = z.object({
     format: types.literal("iss_sub"),
-    iss: z.any(),
-    sub: z.any(),
+    iss: types.string(),
+    sub: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1,
     unknown
   > = z.object({
     format: types.literal("email"),
-    email: z.any(),
+    email: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1,
     unknown
   > = z.object({
     format: types.literal("did"),
-    url: z.any(),
+    url: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1' from JSON`,
   );
 }
 
 /** @internal */
-export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1$inboundSchema:
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1$inboundSchema:
   z.ZodMiniType<
-    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1,
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1,
     unknown
   > = z.object({
     format: types.literal("account"),
-    uri: z.any(),
+    uri: types.string(),
   });
 
-export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1FromJSON(
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1FromJSON(
   jsonString: string,
 ): SafeParseResult<
-  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1,
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1$inboundSchema
         .parse(JSON.parse(x)),
-    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1' from JSON`,
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1' from JSON`,
   );
 }
 
@@ -1748,31 +1773,31 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUnion
     unknown
   > = discriminatedUnion("format", {
     account: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1$inboundSchema
     ),
     did: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1$inboundSchema
     ),
     email: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1$inboundSchema
     ),
     iss_sub: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1$inboundSchema
     ),
     jwt_id: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5$inboundSchema
+      GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId1$inboundSchema
     ),
     opaque: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1$inboundSchema
     ),
     phone_number: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1$inboundSchema
     ),
     saml_assertion_id: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8$inboundSchema
+      GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId1$inboundSchema
     ),
     uri: z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri1$inboundSchema
     ),
   });
 
@@ -1798,38 +1823,38 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUnion
     unknown
   > = smartUnion([
     z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAliases$inboundSchema
     ),
     z.lazy(() =>
-      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19$inboundSchema
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId$inboundSchema
     ),
     discriminatedUnion("format", {
       account: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1$inboundSchema
       ),
       did: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1$inboundSchema
       ),
       email: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1$inboundSchema
       ),
       iss_sub: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1$inboundSchema
       ),
       jwt_id: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5$inboundSchema
+        GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId1$inboundSchema
       ),
       opaque: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1$inboundSchema
       ),
       phone_number: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1$inboundSchema
       ),
       saml_assertion_id: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8$inboundSchema
+        GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId1$inboundSchema
       ),
       uri: z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri1$inboundSchema
       ),
     }),
   ]);
@@ -1850,52 +1875,79 @@ export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUn
 }
 
 /** @internal */
+export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiEvents$inboundSchema:
+  z.ZodMiniType<
+    GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiEvents,
+    unknown
+  > = z.object({});
+
+export function getSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiEventsFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiEvents,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiEvents$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiEvents' from JSON`,
+  );
+}
+
+/** @internal */
 export const Payload$inboundSchema: z.ZodMiniType<Payload, unknown> = z.pipe(
   z.object({
-    iss: types.optional(z.any()),
-    aud: types.optional(z.any()),
-    jti: types.optional(z.any()),
-    iat: types.optional(z.any()),
-    txn: types.optional(z.any()),
-    toe: types.optional(z.any()),
+    iss: types.optional(types.string()),
+    aud: types.optional(types.string()),
+    jti: types.optional(types.string()),
+    iat: types.optional(types.number()),
+    txn: types.optional(types.string()),
+    toe: types.optional(types.number()),
     sub_id: types.optional(smartUnion([
       z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId20$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAliases$inboundSchema
       ),
       z.lazy(() =>
-        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId19$inboundSchema
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId$inboundSchema
       ),
       discriminatedUnion("format", {
         account: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1$inboundSchema
+          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1$inboundSchema
         ),
         did: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2$inboundSchema
+          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1$inboundSchema
         ),
         email: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3$inboundSchema
+          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1$inboundSchema
         ),
         iss_sub: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4$inboundSchema
+          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1$inboundSchema
         ),
         jwt_id: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5$inboundSchema
+          GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId1$inboundSchema
         ),
         opaque: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6$inboundSchema
+          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1$inboundSchema
         ),
         phone_number: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7$inboundSchema
+          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1$inboundSchema
         ),
         saml_assertion_id: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8$inboundSchema
+          GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId1$inboundSchema
         ),
         uri: z.lazy(() =>
-          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9$inboundSchema
+          GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri1$inboundSchema
         ),
       }),
     ])),
-    events: types.optional(z.record(z.string(), z.any())),
+    events: types.optional(z.record(
+      z.string(),
+      z.lazy(() =>
+        GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiEvents$inboundSchema
+      ),
+    )),
   }),
   z.transform((v) => {
     return remap$(v, {
@@ -1921,7 +1973,7 @@ export const Err$inboundSchema: z.ZodMiniType<Err, unknown> = openEnums
 /** @internal */
 export const ErrorT$inboundSchema: z.ZodMiniType<ErrorT, unknown> = z.object({
   err: Err$inboundSchema,
-  description: types.optional(z.any()),
+  description: types.optional(types.string()),
 });
 
 export function errorFromJSON(
@@ -1942,9 +1994,9 @@ export const GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiEvent$inbo
   > = z.pipe(
     z.object({
       payload: types.optional(z.lazy(() => Payload$inboundSchema)),
-      delivered_at: types.optional(z.any()),
-      acknowledged_at: types.optional(z.any()),
-      error_reported_at: types.optional(z.any()),
+      delivered_at: types.optional(types.date()),
+      acknowledged_at: types.optional(types.date()),
+      error_reported_at: types.optional(types.date()),
       error: types.optional(z.lazy(() => ErrorT$inboundSchema)),
     }),
     z.transform((v) => {

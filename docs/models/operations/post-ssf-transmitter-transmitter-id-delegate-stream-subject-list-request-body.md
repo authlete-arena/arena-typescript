@@ -16,6 +16,7 @@ let value: PostSsfTransmitterTransmitterIdDelegateStreamSubjectListRequestBody =
     request: {
       method: "<value>",
       uri: "https://oily-alert.com/",
+      ipAddress: "192.168.0.1",
     },
   };
 ```

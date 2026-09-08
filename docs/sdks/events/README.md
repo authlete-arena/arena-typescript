@@ -38,9 +38,7 @@ async function run() {
         sub: "user001",
       },
       events: {
-        "https://schemas.openid.net/secevent/risc/event-type/credential-compromise": {
-          "credential_type": "password",
-        },
+        "https://schemas.openid.net/secevent/risc/event-type/credential-compromise": {},
       },
     },
   });
@@ -80,9 +78,7 @@ async function run() {
         sub: "user001",
       },
       events: {
-        "https://schemas.openid.net/secevent/risc/event-type/credential-compromise": {
-          "credential_type": "password",
-        },
+        "https://schemas.openid.net/secevent/risc/event-type/credential-compromise": {},
       },
     },
   });

@@ -16,6 +16,7 @@ let value:
     request: {
       method: "<value>",
       uri: "https://sneaky-chops.net/",
+      ipAddress: "192.168.0.1",
     },
   };
 ```

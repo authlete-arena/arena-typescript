@@ -20,12 +20,12 @@ let value: Key = {
 
 | Field              | Type               | Required           | Description        | Example            |
 | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| `kty`              | *any*              | :heavy_check_mark: | N/A                | EC                 |
-| `use`              | *any*              | :heavy_minus_sign: | N/A                | sig                |
-| `keyOps`           | *any*              | :heavy_minus_sign: | N/A                | sign               |
-| `alg`              | *any*              | :heavy_minus_sign: | N/A                | ES256              |
-| `kid`              | *any*              | :heavy_minus_sign: | N/A                |                    |
-| `x5u`              | *any*              | :heavy_minus_sign: | N/A                |                    |
-| `x5c`              | *any*[]            | :heavy_minus_sign: | N/A                |                    |
-| `x5t`              | *any*              | :heavy_minus_sign: | N/A                |                    |
-| `x5tNumberS256`    | *any*              | :heavy_minus_sign: | N/A                |                    |
+| `kty`              | *string*           | :heavy_check_mark: | N/A                | EC                 |
+| `use`              | *string*           | :heavy_minus_sign: | N/A                | sig                |
+| `keyOps`           | *string*           | :heavy_minus_sign: | N/A                | sign               |
+| `alg`              | *string*           | :heavy_minus_sign: | N/A                | ES256              |
+| `kid`              | *string*           | :heavy_minus_sign: | N/A                |                    |
+| `x5u`              | *string*           | :heavy_minus_sign: | N/A                |                    |
+| `x5c`              | *string*[]         | :heavy_minus_sign: | N/A                |                    |
+| `x5t`              | *string*           | :heavy_minus_sign: | N/A                |                    |
+| `x5tNumberS256`    | *string*           | :heavy_minus_sign: | N/A                |                    |

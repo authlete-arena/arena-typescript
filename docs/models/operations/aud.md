@@ -6,17 +6,18 @@ Transmitter-Supplied, REQUIRED. A string or an array of strings containing an au
 
 ## Supported Types
 
-### `any`
+### `string`
 
 ```typescript
-const value: any = "ssf-receiver";
+const value: string = "ssf-receiver";
 ```
 
-### `any[]`
+### `string[]`
 
 ```typescript
-const value: any[] = [
-  "ssf-receiver",
+const value: string[] = [
+  "<value 1>",
+  "<value 2>",
 ];
 ```
 

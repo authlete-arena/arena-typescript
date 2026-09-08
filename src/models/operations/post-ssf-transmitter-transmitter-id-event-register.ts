@@ -23,9 +23,9 @@ export type PostSsfTransmitterTransmitterIdEventRegisterFormatAliases =
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier9 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI = {
   format: "uri";
-  uri: any;
+  uri: string;
 };
 
 /**
@@ -33,30 +33,32 @@ export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier9 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier8 = {
-  format: "saml_assertion_id";
-  issuer: any;
-  assertionId: any;
-};
+export type PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID =
+  {
+    format: "saml_assertion_id";
+    issuer: string;
+    assertionId: string;
+  };
 
 /**
  * The subject identifier with the `phone_number` format as defined in [Section 3.2.5. Phone Number Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.5) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier7 = {
-  format: "phone_number";
-  phoneNumber: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber =
+  {
+    format: "phone_number";
+    phoneNumber: string;
+  };
 
 /**
  * The subject identifier with the `opaque` format as defined in [Section 3.2.4. Opaque Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.4) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier6 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque = {
   format: "opaque";
-  id: any;
+  id: string;
 };
 
 /**
@@ -64,10 +66,10 @@ export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier6 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier5 = {
+export type PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID = {
   format: "jwt_id";
-  iss: any;
-  jti: any;
+  iss: string;
+  jti: string;
 };
 
 /**
@@ -75,10 +77,10 @@ export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier5 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier4 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub = {
   format: "iss_sub";
-  iss: any;
-  sub: any;
+  iss: string;
+  sub: string;
 };
 
 /**
@@ -86,9 +88,9 @@ export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier4 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier3 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail = {
   format: "email";
-  email: any;
+  email: string;
 };
 
 /**
@@ -96,9 +98,9 @@ export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier3 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier2 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid = {
   format: "did";
-  url: any;
+  url: string;
 };
 
 /**
@@ -106,39 +108,39 @@ export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier2 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier1 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount = {
   format: "account";
-  uri: any;
+  uri: string;
 };
 
 export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierUnion =
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier1
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier2
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier3
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier4
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier5
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier6
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier7
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier8
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier9;
+  | PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount
+  | PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid
+  | PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail
+  | PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub
+  | PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID
+  | PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque
+  | PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber
+  | PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID
+  | PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI;
 
 /**
  * The subject identifier with the `aliases` format as defined in [Section 3.2.8. Aliases Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.8) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId20 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases = {
   format: PostSsfTransmitterTransmitterIdEventRegisterFormatAliases;
   identifiers: Array<
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier1
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier2
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier3
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier4
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier5
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier6
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier7
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier8
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier9
+    | PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount
+    | PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid
+    | PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail
+    | PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub
+    | PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID
+    | PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque
+    | PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber
+    | PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID
+    | PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI
   >;
 };
 
@@ -153,9 +155,9 @@ export type PostSsfTransmitterTransmitterIdEventRegisterFormatComplex =
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId19 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdUri2 = {
   format: "uri";
-  uri: any;
+  uri: string;
 };
 
 /**
@@ -163,20 +165,21 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId19 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId18 = {
-  format: "saml_assertion_id";
-  issuer: any;
-  assertionId: any;
-};
+export type PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2 =
+  {
+    format: "saml_assertion_id";
+    issuer: string;
+    assertionId: string;
+  };
 
 /**
  * The subject identifier with the `phone_number` format as defined in [Section 3.2.5. Phone Number Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.5) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId17 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2 = {
   format: "phone_number";
-  phoneNumber: any;
+  phoneNumber: string;
 };
 
 /**
@@ -184,9 +187,9 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId17 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId16 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2 = {
   format: "opaque";
-  id: any;
+  id: string;
 };
 
 /**
@@ -194,10 +197,10 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId16 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId15 = {
+export type PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2 = {
   format: "jwt_id";
-  iss: any;
-  jti: any;
+  iss: string;
+  jti: string;
 };
 
 /**
@@ -205,10 +208,10 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId15 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId14 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2 = {
   format: "iss_sub";
-  iss: any;
-  sub: any;
+  iss: string;
+  sub: string;
 };
 
 /**
@@ -216,9 +219,9 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId14 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId13 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail2 = {
   format: "email";
-  email: any;
+  email: string;
 };
 
 /**
@@ -226,9 +229,9 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId13 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId12 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdDid2 = {
   format: "did";
-  url: any;
+  url: string;
 };
 
 /**
@@ -236,40 +239,40 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId12 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId11 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount2 = {
   format: "account";
-  uri: any;
+  uri: string;
 };
 
 export type PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion3 =
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId11
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId12
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId13
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId14
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId15
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId16
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId17
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId18
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId19;
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount2
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdDid2
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail2
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2
+  | PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2
+  | PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdUri2;
 
 /**
  * The subject identifier with the `complex` format as defined in [Section 3.3. Complex Subject Members](https://openid.github.io/sharedsignals/openid-sharedsignals-framework-1_0.html#section-3.3) of [OpenID Shared Signals Framework Specification 1.0](https://openid.github.io/sharedsignals/openid-sharedsignals-framework-1_0.html).
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId10 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubId = {
   format: PostSsfTransmitterTransmitterIdEventRegisterFormatComplex;
   additionalProperties?: {
     [k: string]:
-      | PostSsfTransmitterTransmitterIdEventRegisterSubId11
-      | PostSsfTransmitterTransmitterIdEventRegisterSubId12
-      | PostSsfTransmitterTransmitterIdEventRegisterSubId13
-      | PostSsfTransmitterTransmitterIdEventRegisterSubId14
-      | PostSsfTransmitterTransmitterIdEventRegisterSubId15
-      | PostSsfTransmitterTransmitterIdEventRegisterSubId16
-      | PostSsfTransmitterTransmitterIdEventRegisterSubId17
-      | PostSsfTransmitterTransmitterIdEventRegisterSubId18
-      | PostSsfTransmitterTransmitterIdEventRegisterSubId19;
+      | PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount2
+      | PostSsfTransmitterTransmitterIdEventRegisterSubIdDid2
+      | PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail2
+      | PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2
+      | PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2
+      | PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2
+      | PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2
+      | PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2
+      | PostSsfTransmitterTransmitterIdEventRegisterSubIdUri2;
   } | undefined;
 };
 
@@ -278,9 +281,9 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId10 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId9 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1 = {
   format: "uri";
-  uri: any;
+  uri: string;
 };
 
 /**
@@ -288,20 +291,21 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId9 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId8 = {
-  format: "saml_assertion_id";
-  issuer: any;
-  assertionId: any;
-};
+export type PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1 =
+  {
+    format: "saml_assertion_id";
+    issuer: string;
+    assertionId: string;
+  };
 
 /**
  * The subject identifier with the `phone_number` format as defined in [Section 3.2.5. Phone Number Identifier Format](https://www.rfc-editor.org/rfc/rfc9493.html#section-3.2.5) of [RFC 9493: Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html).
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId7 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1 = {
   format: "phone_number";
-  phoneNumber: any;
+  phoneNumber: string;
 };
 
 /**
@@ -309,9 +313,9 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId7 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId6 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1 = {
   format: "opaque";
-  id: any;
+  id: string;
 };
 
 /**
@@ -319,10 +323,10 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId6 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId5 = {
+export type PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1 = {
   format: "jwt_id";
-  iss: any;
-  jti: any;
+  iss: string;
+  jti: string;
 };
 
 /**
@@ -330,10 +334,10 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId5 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId4 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1 = {
   format: "iss_sub";
-  iss: any;
-  sub: any;
+  iss: string;
+  sub: string;
 };
 
 /**
@@ -341,9 +345,9 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId4 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId3 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1 = {
   format: "email";
-  email: any;
+  email: string;
 };
 
 /**
@@ -351,9 +355,9 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId3 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId2 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1 = {
   format: "did";
-  url: any;
+  url: string;
 };
 
 /**
@@ -361,21 +365,21 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubId2 = {
  *
  * @remarks
  */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId1 = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1 = {
   format: "account";
-  uri: any;
+  uri: string;
 };
 
 export type PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion2 =
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId1
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId2
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId3
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId4
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId5
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId6
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId7
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId8
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId9;
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1
+  | PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1
+  | PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1;
 
 /**
  * A subject identifier that complies with [RFC 9493 Subject Identifiers for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9493.html) and [OpenID Shared Signals Framework Specification 1.0](https://openid.net/specs/openid-sharedsignals-framework-1_0.html).
@@ -383,17 +387,19 @@ export type PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion2 =
  * @remarks
  */
 export type PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion1 =
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId20
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId10
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId1
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId2
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId3
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId4
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId5
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId6
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId7
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId8
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId9;
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases
+  | PostSsfTransmitterTransmitterIdEventRegisterSubId
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1
+  | PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1
+  | PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1;
+
+export type PostSsfTransmitterTransmitterIdEventRegisterEvents = {};
 
 /**
  * The message body of a request to the event registration API.
@@ -407,37 +413,37 @@ export type PostSsfTransmitterTransmitterIdEventRegisterRequestBody = {
    * @remarks
    */
   subId:
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId20
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId10
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId1
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId2
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId3
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId4
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId5
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId6
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId7
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId8
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId9;
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases
+    | PostSsfTransmitterTransmitterIdEventRegisterSubId
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1
+    | PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1
+    | PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1;
   /**
    * An object used as the value of the `events` claim in a security event token, as defined in [RFC 8417 Security Event Token (SET)](https://www.rfc-editor.org/rfc/rfc8417.html). It must be a JSON object containing exactly one property. The property name must be a valid URI representing the event identifier. The property value must be a JSON object containing zero or more properties associated with the event.
    *
    * @remarks
    */
-  events: { [k: string]: any };
+  events: { [k: string]: PostSsfTransmitterTransmitterIdEventRegisterEvents };
   /**
    * An OPTIONAL string value that represents a unique transaction identifier. In cases in which multiple related JWTs are issued, the transaction identifier claim can be used to correlate these related JWTs. Note that this claim can be used in JWTs that are SETs and also in JWTs using non-SET profiles.
    *
    * @remarks
    * If omitted, the Arena Transaction ID assigned to the API call is used.
    */
-  txn?: any | undefined;
+  txn?: string | undefined;
   /**
    * A value that represents the date and time at which the event occurred. This value is a NumericDate (see Section 2 of [RFC7519]). By omitting this claim, the issuer indicates that they are not sharing an event time with the recipient. (Note that in some use cases, the represented time might be approximate; statements about the accuracy of this field MAY be made by profiling specifications.) This claim is OPTIONAL.
    *
    * @remarks
    * If omitted, the time of the API call is used.
    */
-  toe?: any | undefined;
+  toe?: number | undefined;
 };
 
 export type PostSsfTransmitterTransmitterIdEventRegisterRequest = {
@@ -446,19 +452,19 @@ export type PostSsfTransmitterTransmitterIdEventRegisterRequest = {
    *
    * @remarks
    */
-  xFapiInteractionId?: any | undefined;
+  xFapiInteractionId?: string | undefined;
   /**
    * This query parameter enables pretty-printing when the response content type is JSON. If `pretty=true` (case-insensitive), the response is formatted for readability. If `pretty` is omitted or set to any other value, pretty-printing is disabled.
    *
    * @remarks
    */
-  pretty?: any | undefined;
+  pretty?: boolean | undefined;
   /**
    * The transmitter ID.
    *
    * @remarks
    */
-  transmitterId: any;
+  transmitterId: string;
   body?: PostSsfTransmitterTransmitterIdEventRegisterRequestBody | undefined;
 };
 
@@ -480,8 +486,8 @@ export type PostSsfTransmitterTransmitterIdEventRegisterNotFoundResult = {
   status?:
     | PostSsfTransmitterTransmitterIdEventRegisterNotFoundStatus
     | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 export const PostSsfTransmitterTransmitterIdEventRegisterStatus = {
@@ -501,8 +507,8 @@ export type PostSsfTransmitterTransmitterIdEventRegisterStatus = OpenEnum<
 
 export type PostSsfTransmitterTransmitterIdEventRegisterResult = {
   status?: PostSsfTransmitterTransmitterIdEventRegisterStatus | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 /**
@@ -524,48 +530,50 @@ export const PostSsfTransmitterTransmitterIdEventRegisterFormatAliases$outboundS
   > = z.enum(PostSsfTransmitterTransmitterIdEventRegisterFormatAliases);
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier9$Outbound = {
-  format: "uri";
-  uri: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI$Outbound =
+  {
+    format: "uri";
+    uri: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterIdentifier9$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier9$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier9
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI
   > = z.object({
     format: z.literal("uri"),
-    uri: z.any(),
+    uri: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterIdentifier9ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterIdentifier9:
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier9,
+export function postSsfTransmitterTransmitterIdEventRegisterIdentifierURIToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterIdentifierURI:
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier9$outboundSchema
-      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifier9),
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifierURI),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier8$Outbound = {
-  format: "saml_assertion_id";
-  issuer: any;
-  assertion_id: any;
-};
+export type PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID$Outbound =
+  {
+    format: "saml_assertion_id";
+    issuer: string;
+    assertion_id: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterIdentifier8$outboundSchema:
+export const PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier8$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier8
+    PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID$Outbound,
+    PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID
   > = z.pipe(
     z.object({
       format: z.literal("saml_assertion_id"),
-      issuer: z.any(),
-      assertionId: z.any(),
+      issuer: z.string(),
+      assertionId: z.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -574,31 +582,34 @@ export const PostSsfTransmitterTransmitterIdEventRegisterIdentifier8$outboundSch
     }),
   );
 
-export function postSsfTransmitterTransmitterIdEventRegisterIdentifier8ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterIdentifier8:
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier8,
+export function postSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionIDToJSON(
+  postSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID:
+    PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier8$outboundSchema
-      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifier8),
+    PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID$outboundSchema
+      .parse(
+        postSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID,
+      ),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier7$Outbound = {
-  format: "phone_number";
-  phone_number: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber$Outbound =
+  {
+    format: "phone_number";
+    phone_number: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterIdentifier7$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier7$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier7
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber
   > = z.pipe(
     z.object({
       format: z.literal("phone_number"),
-      phoneNumber: z.any(),
+      phoneNumber: z.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -607,187 +618,193 @@ export const PostSsfTransmitterTransmitterIdEventRegisterIdentifier7$outboundSch
     }),
   );
 
-export function postSsfTransmitterTransmitterIdEventRegisterIdentifier7ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterIdentifier7:
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier7,
+export function postSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumberToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber:
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier7$outboundSchema
-      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifier7),
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier6$Outbound = {
-  format: "opaque";
-  id: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque$Outbound =
+  {
+    format: "opaque";
+    id: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterIdentifier6$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier6$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier6
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque
   > = z.object({
     format: z.literal("opaque"),
-    id: z.any(),
+    id: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterIdentifier6ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterIdentifier6:
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier6,
+export function postSsfTransmitterTransmitterIdEventRegisterIdentifierOpaqueToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque:
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier6$outboundSchema
-      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifier6),
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier5$Outbound = {
-  format: "jwt_id";
-  iss: any;
-  jti: any;
-};
+export type PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID$Outbound =
+  {
+    format: "jwt_id";
+    iss: string;
+    jti: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterIdentifier5$outboundSchema:
+export const PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier5$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier5
+    PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID$Outbound,
+    PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID
   > = z.object({
     format: z.literal("jwt_id"),
-    iss: z.any(),
-    jti: z.any(),
+    iss: z.string(),
+    jti: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterIdentifier5ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterIdentifier5:
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier5,
+export function postSsfTransmitterTransmitterIDEventRegisterIdentifierJwtIDToJSON(
+  postSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID:
+    PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier5$outboundSchema
-      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifier5),
+    PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID$outboundSchema
+      .parse(postSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier4$Outbound = {
-  format: "iss_sub";
-  iss: any;
-  sub: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub$Outbound =
+  {
+    format: "iss_sub";
+    iss: string;
+    sub: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterIdentifier4$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier4$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier4
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub
   > = z.object({
     format: z.literal("iss_sub"),
-    iss: z.any(),
-    sub: z.any(),
+    iss: z.string(),
+    sub: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterIdentifier4ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterIdentifier4:
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier4,
+export function postSsfTransmitterTransmitterIdEventRegisterIdentifierIssSubToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub:
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier4$outboundSchema
-      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifier4),
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier3$Outbound = {
-  format: "email";
-  email: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail$Outbound =
+  {
+    format: "email";
+    email: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterIdentifier3$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier3$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier3
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail
   > = z.object({
     format: z.literal("email"),
-    email: z.any(),
+    email: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterIdentifier3ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterIdentifier3:
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier3,
+export function postSsfTransmitterTransmitterIdEventRegisterIdentifierEmailToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterIdentifierEmail:
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier3$outboundSchema
-      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifier3),
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifierEmail),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier2$Outbound = {
-  format: "did";
-  url: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid$Outbound =
+  {
+    format: "did";
+    url: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterIdentifier2$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier2$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier2
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid
   > = z.object({
     format: z.literal("did"),
-    url: z.any(),
+    url: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterIdentifier2ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterIdentifier2:
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier2,
+export function postSsfTransmitterTransmitterIdEventRegisterIdentifierDidToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterIdentifierDid:
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier2$outboundSchema
-      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifier2),
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifierDid),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterIdentifier1$Outbound = {
-  format: "account";
-  uri: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount$Outbound =
+  {
+    format: "account";
+    uri: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterIdentifier1$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier1$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier1
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount
   > = z.object({
     format: z.literal("account"),
-    uri: z.any(),
+    uri: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterIdentifier1ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterIdentifier1:
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier1,
+export function postSsfTransmitterTransmitterIdEventRegisterIdentifierAccountToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterIdentifierAccount:
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterIdentifier1$outboundSchema
-      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifier1),
+    PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterIdentifierAccount),
   );
 }
 
 /** @internal */
 export type PostSsfTransmitterTransmitterIdEventRegisterIdentifierUnion$Outbound =
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier1$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier2$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier3$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier4$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier5$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier6$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier7$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier8$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterIdentifier9$Outbound;
+  | PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub$Outbound
+  | PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber$Outbound
+  | PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI$Outbound;
 
 /** @internal */
 export const PostSsfTransmitterTransmitterIdEventRegisterIdentifierUnion$outboundSchema:
@@ -796,31 +813,31 @@ export const PostSsfTransmitterTransmitterIdEventRegisterIdentifierUnion$outboun
     PostSsfTransmitterTransmitterIdEventRegisterIdentifierUnion
   > = z.union([
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterIdentifier1$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterIdentifier2$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterIdentifier3$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterIdentifier4$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterIdentifier5$outboundSchema
+      PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterIdentifier6$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterIdentifier7$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterIdentifier8$outboundSchema
+      PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterIdentifier9$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI$outboundSchema
     ),
   ]);
 
@@ -835,70 +852,70 @@ export function postSsfTransmitterTransmitterIdEventRegisterIdentifierUnionToJSO
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId20$Outbound = {
-  format: string;
-  identifiers: Array<
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier1$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier2$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier3$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier4$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier5$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier6$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier7$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier8$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterIdentifier9$Outbound
-  >;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases$Outbound =
+  {
+    format: string;
+    identifiers: Array<
+      | PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount$Outbound
+      | PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid$Outbound
+      | PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail$Outbound
+      | PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub$Outbound
+      | PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID$Outbound
+      | PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque$Outbound
+      | PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber$Outbound
+      | PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID$Outbound
+      | PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI$Outbound
+    >;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId20$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId20$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId20
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases
   > = z.object({
     format:
       PostSsfTransmitterTransmitterIdEventRegisterFormatAliases$outboundSchema,
     identifiers: z.array(
       z.union([
         z.lazy(() =>
-          PostSsfTransmitterTransmitterIdEventRegisterIdentifier1$outboundSchema
+          PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount$outboundSchema
         ),
         z.lazy(() =>
-          PostSsfTransmitterTransmitterIdEventRegisterIdentifier2$outboundSchema
+          PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid$outboundSchema
         ),
         z.lazy(() =>
-          PostSsfTransmitterTransmitterIdEventRegisterIdentifier3$outboundSchema
+          PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail$outboundSchema
         ),
         z.lazy(() =>
-          PostSsfTransmitterTransmitterIdEventRegisterIdentifier4$outboundSchema
+          PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub$outboundSchema
         ),
         z.lazy(() =>
-          PostSsfTransmitterTransmitterIdEventRegisterIdentifier5$outboundSchema
+          PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID$outboundSchema
         ),
         z.lazy(() =>
-          PostSsfTransmitterTransmitterIdEventRegisterIdentifier6$outboundSchema
+          PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque$outboundSchema
         ),
         z.lazy(() =>
-          PostSsfTransmitterTransmitterIdEventRegisterIdentifier7$outboundSchema
+          PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber$outboundSchema
         ),
         z.lazy(() =>
-          PostSsfTransmitterTransmitterIdEventRegisterIdentifier8$outboundSchema
+          PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID$outboundSchema
         ),
         z.lazy(() =>
-          PostSsfTransmitterTransmitterIdEventRegisterIdentifier9$outboundSchema
+          PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI$outboundSchema
         ),
       ]),
     ),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId20ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId20:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId20,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdAliasesToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdAliases:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId20$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId20,
-    ),
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterSubIdAliases),
   );
 }
 
@@ -909,49 +926,50 @@ export const PostSsfTransmitterTransmitterIdEventRegisterFormatComplex$outboundS
   > = z.enum(PostSsfTransmitterTransmitterIdEventRegisterFormatComplex);
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId19$Outbound = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdUri2$Outbound = {
   format: "uri";
-  uri: any;
+  uri: string;
 };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId19$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdUri2$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId19$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId19
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdUri2$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdUri2
   > = z.object({
     format: z.literal("uri"),
-    uri: z.any(),
+    uri: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId19ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId19:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId19,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdURI2ToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdUri2:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdUri2,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId19$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId19,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdUri2$outboundSchema.parse(
+      postSsfTransmitterTransmitterIdEventRegisterSubIdUri2,
     ),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId18$Outbound = {
-  format: "saml_assertion_id";
-  issuer: any;
-  assertion_id: any;
-};
+export type PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2$Outbound =
+  {
+    format: "saml_assertion_id";
+    issuer: string;
+    assertion_id: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId18$outboundSchema:
+export const PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId18$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId18
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2$Outbound,
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2
   > = z.pipe(
     z.object({
       format: z.literal("saml_assertion_id"),
-      issuer: z.any(),
-      assertionId: z.any(),
+      issuer: z.string(),
+      assertionId: z.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -960,32 +978,32 @@ export const PostSsfTransmitterTransmitterIdEventRegisterSubId18$outboundSchema:
     }),
   );
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId18ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId18:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId18,
+export function postSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionID2ToJSON(
+  postSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2:
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId18$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId18,
-    ),
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2$outboundSchema
+      .parse(postSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId17$Outbound = {
-  format: "phone_number";
-  phone_number: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2$Outbound =
+  {
+    format: "phone_number";
+    phone_number: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId17$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId17$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId17
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2
   > = z.pipe(
     z.object({
       format: z.literal("phone_number"),
-      phoneNumber: z.any(),
+      phoneNumber: z.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -994,194 +1012,191 @@ export const PostSsfTransmitterTransmitterIdEventRegisterSubId17$outboundSchema:
     }),
   );
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId17ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId17:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId17,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2ToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId17$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId17,
-    ),
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId16$Outbound = {
-  format: "opaque";
-  id: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2$Outbound =
+  {
+    format: "opaque";
+    id: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId16$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId16$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId16
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2
   > = z.object({
     format: z.literal("opaque"),
-    id: z.any(),
+    id: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId16ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId16:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId16,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2ToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId16$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId16,
-    ),
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId15$Outbound = {
+export type PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2$Outbound = {
   format: "jwt_id";
-  iss: any;
-  jti: any;
+  iss: string;
+  jti: string;
 };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId15$outboundSchema:
+export const PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId15$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId15
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2$Outbound,
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2
   > = z.object({
     format: z.literal("jwt_id"),
-    iss: z.any(),
-    jti: z.any(),
+    iss: z.string(),
+    jti: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId15ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId15:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId15,
+export function postSsfTransmitterTransmitterIDEventRegisterSubIDJwtID2ToJSON(
+  postSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2:
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId15$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId15,
-    ),
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2$outboundSchema
+      .parse(postSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId14$Outbound = {
-  format: "iss_sub";
-  iss: any;
-  sub: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2$Outbound =
+  {
+    format: "iss_sub";
+    iss: string;
+    sub: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId14$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId14$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId14
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2
   > = z.object({
     format: z.literal("iss_sub"),
-    iss: z.any(),
-    sub: z.any(),
+    iss: z.string(),
+    sub: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId14ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId14:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId14,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2ToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId14$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId14,
-    ),
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId13$Outbound = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail2$Outbound = {
   format: "email";
-  email: any;
+  email: string;
 };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId13$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail2$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId13$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId13
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail2$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail2
   > = z.object({
     format: z.literal("email"),
-    email: z.any(),
+    email: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId13ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId13:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId13,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdEmail2ToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdEmail2:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail2,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId13$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId13,
-    ),
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail2$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterSubIdEmail2),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId12$Outbound = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdDid2$Outbound = {
   format: "did";
-  url: any;
+  url: string;
 };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId12$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdDid2$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId12$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId12
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdDid2$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdDid2
   > = z.object({
     format: z.literal("did"),
-    url: z.any(),
+    url: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId12ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId12:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId12,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdDid2ToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdDid2:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdDid2,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId12$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId12,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdDid2$outboundSchema.parse(
+      postSsfTransmitterTransmitterIdEventRegisterSubIdDid2,
     ),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId11$Outbound = {
-  format: "account";
-  uri: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount2$Outbound =
+  {
+    format: "account";
+    uri: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId11$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount2$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId11$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId11
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount2$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount2
   > = z.object({
     format: z.literal("account"),
-    uri: z.any(),
+    uri: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId11ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId11:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId11,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdAccount2ToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdAccount2:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount2,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId11$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId11,
-    ),
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount2$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterSubIdAccount2),
   );
 }
 
 /** @internal */
 export type PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion3$Outbound =
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId11$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId12$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId13$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId14$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId15$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId16$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId17$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId18$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId19$Outbound;
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount2$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdDid2$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail2$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2$Outbound
+  | PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2$Outbound
+  | PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdUri2$Outbound;
 
 /** @internal */
 export const PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion3$outboundSchema:
@@ -1190,31 +1205,31 @@ export const PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion3$outboundSch
     PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion3
   > = z.union([
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId11$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount2$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId12$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdDid2$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId13$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail2$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId14$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId15$outboundSchema
+      PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId16$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId17$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId18$outboundSchema
+      PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId19$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdUri2$outboundSchema
     ),
   ]);
 
@@ -1229,16 +1244,16 @@ export function postSsfTransmitterTransmitterIdEventRegisterSubIdUnion3ToJSON(
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId10$Outbound = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubId$Outbound = {
   format: string;
   [additionalProperties: string]: unknown;
 };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId10$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubId$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId10$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId10
+    PostSsfTransmitterTransmitterIdEventRegisterSubId$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubId
   > = z.pipe(
     z.object({
       format:
@@ -1248,31 +1263,31 @@ export const PostSsfTransmitterTransmitterIdEventRegisterSubId10$outboundSchema:
           z.string(),
           z.union([
             z.lazy(() =>
-              PostSsfTransmitterTransmitterIdEventRegisterSubId11$outboundSchema
+              PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount2$outboundSchema
             ),
             z.lazy(() =>
-              PostSsfTransmitterTransmitterIdEventRegisterSubId12$outboundSchema
+              PostSsfTransmitterTransmitterIdEventRegisterSubIdDid2$outboundSchema
             ),
             z.lazy(() =>
-              PostSsfTransmitterTransmitterIdEventRegisterSubId13$outboundSchema
+              PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail2$outboundSchema
             ),
             z.lazy(() =>
-              PostSsfTransmitterTransmitterIdEventRegisterSubId14$outboundSchema
+              PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2$outboundSchema
             ),
             z.lazy(() =>
-              PostSsfTransmitterTransmitterIdEventRegisterSubId15$outboundSchema
+              PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2$outboundSchema
             ),
             z.lazy(() =>
-              PostSsfTransmitterTransmitterIdEventRegisterSubId16$outboundSchema
+              PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2$outboundSchema
             ),
             z.lazy(() =>
-              PostSsfTransmitterTransmitterIdEventRegisterSubId17$outboundSchema
+              PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2$outboundSchema
             ),
             z.lazy(() =>
-              PostSsfTransmitterTransmitterIdEventRegisterSubId18$outboundSchema
+              PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2$outboundSchema
             ),
             z.lazy(() =>
-              PostSsfTransmitterTransmitterIdEventRegisterSubId19$outboundSchema
+              PostSsfTransmitterTransmitterIdEventRegisterSubIdUri2$outboundSchema
             ),
           ]),
         ),
@@ -1288,61 +1303,62 @@ export const PostSsfTransmitterTransmitterIdEventRegisterSubId10$outboundSchema:
     }),
   );
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId10ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId10:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId10,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubId:
+    PostSsfTransmitterTransmitterIdEventRegisterSubId,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId10$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId10,
+    PostSsfTransmitterTransmitterIdEventRegisterSubId$outboundSchema.parse(
+      postSsfTransmitterTransmitterIdEventRegisterSubId,
     ),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId9$Outbound = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1$Outbound = {
   format: "uri";
-  uri: any;
+  uri: string;
 };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId9$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId9$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId9
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1
   > = z.object({
     format: z.literal("uri"),
-    uri: z.any(),
+    uri: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId9ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId9:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId9,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdURI1ToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdUri1:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId9$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId9,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1$outboundSchema.parse(
+      postSsfTransmitterTransmitterIdEventRegisterSubIdUri1,
     ),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId8$Outbound = {
-  format: "saml_assertion_id";
-  issuer: any;
-  assertion_id: any;
-};
+export type PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1$Outbound =
+  {
+    format: "saml_assertion_id";
+    issuer: string;
+    assertion_id: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId8$outboundSchema:
+export const PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId8$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId8
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1$Outbound,
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1
   > = z.pipe(
     z.object({
       format: z.literal("saml_assertion_id"),
-      issuer: z.any(),
-      assertionId: z.any(),
+      issuer: z.string(),
+      assertionId: z.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -1351,32 +1367,32 @@ export const PostSsfTransmitterTransmitterIdEventRegisterSubId8$outboundSchema:
     }),
   );
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId8ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId8:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId8,
+export function postSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionID1ToJSON(
+  postSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1:
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId8$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId8,
-    ),
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1$outboundSchema
+      .parse(postSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId7$Outbound = {
-  format: "phone_number";
-  phone_number: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1$Outbound =
+  {
+    format: "phone_number";
+    phone_number: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId7$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId7$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId7
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1
   > = z.pipe(
     z.object({
       format: z.literal("phone_number"),
-      phoneNumber: z.any(),
+      phoneNumber: z.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -1385,194 +1401,191 @@ export const PostSsfTransmitterTransmitterIdEventRegisterSubId7$outboundSchema:
     }),
   );
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId7ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId7:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId7,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1ToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId7$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId7,
-    ),
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId6$Outbound = {
-  format: "opaque";
-  id: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1$Outbound =
+  {
+    format: "opaque";
+    id: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId6$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId6$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId6
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1
   > = z.object({
     format: z.literal("opaque"),
-    id: z.any(),
+    id: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId6ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId6:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId6,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1ToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId6$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId6,
-    ),
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId5$Outbound = {
+export type PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1$Outbound = {
   format: "jwt_id";
-  iss: any;
-  jti: any;
+  iss: string;
+  jti: string;
 };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId5$outboundSchema:
+export const PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId5$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId5
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1$Outbound,
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1
   > = z.object({
     format: z.literal("jwt_id"),
-    iss: z.any(),
-    jti: z.any(),
+    iss: z.string(),
+    jti: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId5ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId5:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId5,
+export function postSsfTransmitterTransmitterIDEventRegisterSubIDJwtID1ToJSON(
+  postSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1:
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId5$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId5,
-    ),
+    PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1$outboundSchema
+      .parse(postSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId4$Outbound = {
-  format: "iss_sub";
-  iss: any;
-  sub: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1$Outbound =
+  {
+    format: "iss_sub";
+    iss: string;
+    sub: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId4$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId4$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId4
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1
   > = z.object({
     format: z.literal("iss_sub"),
-    iss: z.any(),
-    sub: z.any(),
+    iss: z.string(),
+    sub: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId4ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId4:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId4,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1ToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId4$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId4,
-    ),
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId3$Outbound = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1$Outbound = {
   format: "email";
-  email: any;
+  email: string;
 };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId3$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId3$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId3
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1
   > = z.object({
     format: z.literal("email"),
-    email: z.any(),
+    email: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId3ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId3:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId3,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdEmail1ToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdEmail1:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId3$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId3,
-    ),
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterSubIdEmail1),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId2$Outbound = {
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1$Outbound = {
   format: "did";
-  url: any;
+  url: string;
 };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId2$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId2$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId2
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1
   > = z.object({
     format: z.literal("did"),
-    url: z.any(),
+    url: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId2ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId2:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId2,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdDid1ToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdDid1:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId2$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId2,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1$outboundSchema.parse(
+      postSsfTransmitterTransmitterIdEventRegisterSubIdDid1,
     ),
   );
 }
 
 /** @internal */
-export type PostSsfTransmitterTransmitterIdEventRegisterSubId1$Outbound = {
-  format: "account";
-  uri: any;
-};
+export type PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1$Outbound =
+  {
+    format: "account";
+    uri: string;
+  };
 
 /** @internal */
-export const PostSsfTransmitterTransmitterIdEventRegisterSubId1$outboundSchema:
+export const PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1$outboundSchema:
   z.ZodMiniType<
-    PostSsfTransmitterTransmitterIdEventRegisterSubId1$Outbound,
-    PostSsfTransmitterTransmitterIdEventRegisterSubId1
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1
   > = z.object({
     format: z.literal("account"),
-    uri: z.any(),
+    uri: z.string(),
   });
 
-export function postSsfTransmitterTransmitterIdEventRegisterSubId1ToJSON(
-  postSsfTransmitterTransmitterIdEventRegisterSubId1:
-    PostSsfTransmitterTransmitterIdEventRegisterSubId1,
+export function postSsfTransmitterTransmitterIdEventRegisterSubIdAccount1ToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterSubIdAccount1:
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1,
 ): string {
   return JSON.stringify(
-    PostSsfTransmitterTransmitterIdEventRegisterSubId1$outboundSchema.parse(
-      postSsfTransmitterTransmitterIdEventRegisterSubId1,
-    ),
+    PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdEventRegisterSubIdAccount1),
   );
 }
 
 /** @internal */
 export type PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion2$Outbound =
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId1$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId2$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId3$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId4$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId5$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId6$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId7$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId8$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId9$Outbound;
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1$Outbound
+  | PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1$Outbound
+  | PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1$Outbound;
 
 /** @internal */
 export const PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion2$outboundSchema:
@@ -1581,31 +1594,31 @@ export const PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion2$outboundSch
     PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion2
   > = z.union([
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId1$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId2$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId3$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId4$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId5$outboundSchema
+      PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId6$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId7$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId8$outboundSchema
+      PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId9$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1$outboundSchema
     ),
   ]);
 
@@ -1621,17 +1634,17 @@ export function postSsfTransmitterTransmitterIdEventRegisterSubIdUnion2ToJSON(
 
 /** @internal */
 export type PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion1$Outbound =
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId20$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId10$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId1$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId2$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId3$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId4$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId5$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId6$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId7$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId8$Outbound
-  | PostSsfTransmitterTransmitterIdEventRegisterSubId9$Outbound;
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubId$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1$Outbound
+  | PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1$Outbound
+  | PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1$Outbound
+  | PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1$Outbound;
 
 /** @internal */
 export const PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion1$outboundSchema:
@@ -1640,38 +1653,38 @@ export const PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion1$outboundSch
     PostSsfTransmitterTransmitterIdEventRegisterSubIdUnion1
   > = smartUnion([
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId20$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases$outboundSchema
     ),
     z.lazy(() =>
-      PostSsfTransmitterTransmitterIdEventRegisterSubId10$outboundSchema
+      PostSsfTransmitterTransmitterIdEventRegisterSubId$outboundSchema
     ),
     z.union([
       z.lazy(() =>
-        PostSsfTransmitterTransmitterIdEventRegisterSubId1$outboundSchema
+        PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1$outboundSchema
       ),
       z.lazy(() =>
-        PostSsfTransmitterTransmitterIdEventRegisterSubId2$outboundSchema
+        PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1$outboundSchema
       ),
       z.lazy(() =>
-        PostSsfTransmitterTransmitterIdEventRegisterSubId3$outboundSchema
+        PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1$outboundSchema
       ),
       z.lazy(() =>
-        PostSsfTransmitterTransmitterIdEventRegisterSubId4$outboundSchema
+        PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1$outboundSchema
       ),
       z.lazy(() =>
-        PostSsfTransmitterTransmitterIdEventRegisterSubId5$outboundSchema
+        PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1$outboundSchema
       ),
       z.lazy(() =>
-        PostSsfTransmitterTransmitterIdEventRegisterSubId6$outboundSchema
+        PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1$outboundSchema
       ),
       z.lazy(() =>
-        PostSsfTransmitterTransmitterIdEventRegisterSubId7$outboundSchema
+        PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1$outboundSchema
       ),
       z.lazy(() =>
-        PostSsfTransmitterTransmitterIdEventRegisterSubId8$outboundSchema
+        PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1$outboundSchema
       ),
       z.lazy(() =>
-        PostSsfTransmitterTransmitterIdEventRegisterSubId9$outboundSchema
+        PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1$outboundSchema
       ),
     ]),
   ]);
@@ -1687,22 +1700,45 @@ export function postSsfTransmitterTransmitterIdEventRegisterSubIdUnion1ToJSON(
 }
 
 /** @internal */
+export type PostSsfTransmitterTransmitterIdEventRegisterEvents$Outbound = {};
+
+/** @internal */
+export const PostSsfTransmitterTransmitterIdEventRegisterEvents$outboundSchema:
+  z.ZodMiniType<
+    PostSsfTransmitterTransmitterIdEventRegisterEvents$Outbound,
+    PostSsfTransmitterTransmitterIdEventRegisterEvents
+  > = z.object({});
+
+export function postSsfTransmitterTransmitterIdEventRegisterEventsToJSON(
+  postSsfTransmitterTransmitterIdEventRegisterEvents:
+    PostSsfTransmitterTransmitterIdEventRegisterEvents,
+): string {
+  return JSON.stringify(
+    PostSsfTransmitterTransmitterIdEventRegisterEvents$outboundSchema.parse(
+      postSsfTransmitterTransmitterIdEventRegisterEvents,
+    ),
+  );
+}
+
+/** @internal */
 export type PostSsfTransmitterTransmitterIdEventRegisterRequestBody$Outbound = {
   sub_id:
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId20$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId10$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId1$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId2$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId3$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId4$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId5$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId6$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId7$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId8$Outbound
-    | PostSsfTransmitterTransmitterIdEventRegisterSubId9$Outbound;
-  events: { [k: string]: any };
-  txn?: any | undefined;
-  toe?: any | undefined;
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases$Outbound
+    | PostSsfTransmitterTransmitterIdEventRegisterSubId$Outbound
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1$Outbound
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1$Outbound
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1$Outbound
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1$Outbound
+    | PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1$Outbound
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1$Outbound
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1$Outbound
+    | PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1$Outbound
+    | PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1$Outbound;
+  events: {
+    [k: string]: PostSsfTransmitterTransmitterIdEventRegisterEvents$Outbound;
+  };
+  txn?: string | undefined;
+  toe?: number | undefined;
 };
 
 /** @internal */
@@ -1714,44 +1750,49 @@ export const PostSsfTransmitterTransmitterIdEventRegisterRequestBody$outboundSch
     z.object({
       subId: smartUnion([
         z.lazy(() =>
-          PostSsfTransmitterTransmitterIdEventRegisterSubId20$outboundSchema
+          PostSsfTransmitterTransmitterIdEventRegisterSubIdAliases$outboundSchema
         ),
         z.lazy(() =>
-          PostSsfTransmitterTransmitterIdEventRegisterSubId10$outboundSchema
+          PostSsfTransmitterTransmitterIdEventRegisterSubId$outboundSchema
         ),
         z.union([
           z.lazy(() =>
-            PostSsfTransmitterTransmitterIdEventRegisterSubId1$outboundSchema
+            PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount1$outboundSchema
           ),
           z.lazy(() =>
-            PostSsfTransmitterTransmitterIdEventRegisterSubId2$outboundSchema
+            PostSsfTransmitterTransmitterIdEventRegisterSubIdDid1$outboundSchema
           ),
           z.lazy(() =>
-            PostSsfTransmitterTransmitterIdEventRegisterSubId3$outboundSchema
+            PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail1$outboundSchema
           ),
           z.lazy(() =>
-            PostSsfTransmitterTransmitterIdEventRegisterSubId4$outboundSchema
+            PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub1$outboundSchema
           ),
           z.lazy(() =>
-            PostSsfTransmitterTransmitterIdEventRegisterSubId5$outboundSchema
+            PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId1$outboundSchema
           ),
           z.lazy(() =>
-            PostSsfTransmitterTransmitterIdEventRegisterSubId6$outboundSchema
+            PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque1$outboundSchema
           ),
           z.lazy(() =>
-            PostSsfTransmitterTransmitterIdEventRegisterSubId7$outboundSchema
+            PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber1$outboundSchema
           ),
           z.lazy(() =>
-            PostSsfTransmitterTransmitterIdEventRegisterSubId8$outboundSchema
+            PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId1$outboundSchema
           ),
           z.lazy(() =>
-            PostSsfTransmitterTransmitterIdEventRegisterSubId9$outboundSchema
+            PostSsfTransmitterTransmitterIdEventRegisterSubIdUri1$outboundSchema
           ),
         ]),
       ]),
-      events: z.record(z.string(), z.any()),
-      txn: z.optional(z.any()),
-      toe: z.optional(z.any()),
+      events: z.record(
+        z.string(),
+        z.lazy(() =>
+          PostSsfTransmitterTransmitterIdEventRegisterEvents$outboundSchema
+        ),
+      ),
+      txn: z.optional(z.string()),
+      toe: z.optional(z.int()),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -1772,9 +1813,9 @@ export function postSsfTransmitterTransmitterIdEventRegisterRequestBodyToJSON(
 
 /** @internal */
 export type PostSsfTransmitterTransmitterIdEventRegisterRequest$Outbound = {
-  "x-fapi-interaction-id"?: any | undefined;
-  pretty: any;
-  transmitter_id: any;
+  "x-fapi-interaction-id"?: string | undefined;
+  pretty: boolean;
+  transmitter_id: string;
   body?:
     | PostSsfTransmitterTransmitterIdEventRegisterRequestBody$Outbound
     | undefined;
@@ -1787,9 +1828,9 @@ export const PostSsfTransmitterTransmitterIdEventRegisterRequest$outboundSchema:
     PostSsfTransmitterTransmitterIdEventRegisterRequest
   > = z.pipe(
     z.object({
-      xFapiInteractionId: z.optional(z.any()),
-      pretty: z.any(),
-      transmitterId: z.any(),
+      xFapiInteractionId: z.optional(z.string()),
+      pretty: z._default(z.boolean(), false),
+      transmitterId: z.string(),
       body: z.optional(z.lazy(() =>
         PostSsfTransmitterTransmitterIdEventRegisterRequestBody$outboundSchema
       )),
@@ -1831,8 +1872,8 @@ export const PostSsfTransmitterTransmitterIdEventRegisterNotFoundResult$inboundS
     status: types.optional(
       PostSsfTransmitterTransmitterIdEventRegisterNotFoundStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function postSsfTransmitterTransmitterIdEventRegisterNotFoundResultFromJSON(
@@ -1862,8 +1903,8 @@ export const PostSsfTransmitterTransmitterIdEventRegisterResult$inboundSchema:
       status: types.optional(
         PostSsfTransmitterTransmitterIdEventRegisterStatus$inboundSchema,
       ),
-      code: types.optional(z.any()),
-      message: types.optional(z.any()),
+      code: types.optional(types.string()),
+      message: types.optional(types.string()),
     });
 
 export function postSsfTransmitterTransmitterIdEventRegisterResultFromJSON(

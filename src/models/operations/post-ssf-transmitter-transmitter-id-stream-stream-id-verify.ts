@@ -17,26 +17,26 @@ export type PostSsfTransmitterTransmitterIdStreamStreamIdVerifyRequest = {
    *
    * @remarks
    */
-  xFapiInteractionId?: any | undefined;
+  xFapiInteractionId?: string | undefined;
   /**
    * This query parameter enables pretty-printing when the response content type is JSON. If `pretty=true` (case-insensitive), the response is formatted for readability. If `pretty` is omitted or set to any other value, pretty-printing is disabled.
    *
    * @remarks
    */
-  pretty?: any | undefined;
+  pretty?: boolean | undefined;
   /**
    * The transmitter ID.
    *
    * @remarks
    */
-  transmitterId: any;
+  transmitterId: string;
   /**
    * The stream ID.
    *
    * @remarks
    */
-  streamId: any;
-  state?: any | undefined;
+  streamId: string;
+  state?: string | undefined;
 };
 
 export const PostSsfTransmitterTransmitterIdStreamStreamIdVerifyNotFoundStatus =
@@ -61,8 +61,8 @@ export type PostSsfTransmitterTransmitterIdStreamStreamIdVerifyNotFoundResult =
     status?:
       | PostSsfTransmitterTransmitterIdStreamStreamIdVerifyNotFoundStatus
       | undefined;
-    code?: any | undefined;
-    message?: any | undefined;
+    code?: string | undefined;
+    message?: string | undefined;
   };
 
 export const PostSsfTransmitterTransmitterIdStreamStreamIdVerifyBadRequestStatus =
@@ -87,8 +87,8 @@ export type PostSsfTransmitterTransmitterIdStreamStreamIdVerifyBadRequestResult 
     status?:
       | PostSsfTransmitterTransmitterIdStreamStreamIdVerifyBadRequestStatus
       | undefined;
-    code?: any | undefined;
-    message?: any | undefined;
+    code?: string | undefined;
+    message?: string | undefined;
   };
 
 export const PostSsfTransmitterTransmitterIdStreamStreamIdVerifyStatus = {
@@ -109,8 +109,8 @@ export type PostSsfTransmitterTransmitterIdStreamStreamIdVerifyResult = {
   status?:
     | PostSsfTransmitterTransmitterIdStreamStreamIdVerifyStatus
     | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 /**
@@ -132,11 +132,11 @@ export type PostSsfTransmitterTransmitterIdStreamStreamIdVerifyResponse = {
 /** @internal */
 export type PostSsfTransmitterTransmitterIdStreamStreamIdVerifyRequest$Outbound =
   {
-    "x-fapi-interaction-id"?: any | undefined;
-    pretty: any;
-    transmitter_id: any;
-    stream_id: any;
-    state?: any | undefined;
+    "x-fapi-interaction-id"?: string | undefined;
+    pretty: boolean;
+    transmitter_id: string;
+    stream_id: string;
+    state?: string | undefined;
   };
 
 /** @internal */
@@ -146,11 +146,11 @@ export const PostSsfTransmitterTransmitterIdStreamStreamIdVerifyRequest$outbound
     PostSsfTransmitterTransmitterIdStreamStreamIdVerifyRequest
   > = z.pipe(
     z.object({
-      xFapiInteractionId: z.optional(z.any()),
-      pretty: z.any(),
-      transmitterId: z.any(),
-      streamId: z.any(),
-      state: z.optional(z.any()),
+      xFapiInteractionId: z.optional(z.string()),
+      pretty: z._default(z.boolean(), false),
+      transmitterId: z.string(),
+      streamId: z.string(),
+      state: z.optional(z.string()),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -189,8 +189,8 @@ export const PostSsfTransmitterTransmitterIdStreamStreamIdVerifyNotFoundResult$i
     status: types.optional(
       PostSsfTransmitterTransmitterIdStreamStreamIdVerifyNotFoundStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function postSsfTransmitterTransmitterIdStreamStreamIdVerifyNotFoundResultFromJSON(
@@ -226,8 +226,8 @@ export const PostSsfTransmitterTransmitterIdStreamStreamIdVerifyBadRequestResult
     status: types.optional(
       PostSsfTransmitterTransmitterIdStreamStreamIdVerifyBadRequestStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function postSsfTransmitterTransmitterIdStreamStreamIdVerifyBadRequestResultFromJSON(
@@ -263,8 +263,8 @@ export const PostSsfTransmitterTransmitterIdStreamStreamIdVerifyResult$inboundSc
     status: types.optional(
       PostSsfTransmitterTransmitterIdStreamStreamIdVerifyStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function postSsfTransmitterTransmitterIdStreamStreamIdVerifyResultFromJSON(

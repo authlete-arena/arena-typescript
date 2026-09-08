@@ -17,6 +17,7 @@ let value:
       request: {
         method: "<value>",
         uri: "https://late-stump.net/",
+        ipAddress: "192.168.0.1",
       },
     };
 ```

@@ -9,6 +9,7 @@ import * as openEnums from "../../types/enums.js";
 import { ClosedEnum, OpenEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import * as types from "../../types/primitives.js";
+import { smartUnion } from "../../types/smart-union.js";
 import { SDKValidationError } from "../errors/sdk-validation-error.js";
 
 export const Op = {
@@ -21,6 +22,16 @@ export const Op = {
 } as const;
 export type Op = ClosedEnum<typeof Op>;
 
+export type Value = {};
+
+export type ValueUnion =
+  | boolean
+  | number
+  | number
+  | string
+  | Array<any>
+  | Value;
+
 /**
  * JSON Patch's operation object defined in [RFC 6902: JavaScript Object Notation (JSON) Patch](https://www.rfc-editor.org/rfc/rfc6902.html).
  *
@@ -28,9 +39,17 @@ export type Op = ClosedEnum<typeof Op>;
  */
 export type Patch = {
   op: Op;
-  path: any;
-  value?: any | undefined;
-  from?: any | undefined;
+  path: string;
+  value?:
+    | boolean
+    | number
+    | number
+    | string
+    | Array<any>
+    | Value
+    | null
+    | undefined;
+  from?: string | undefined;
 };
 
 export type PatchSsfTransmitterTransmitterIdRequestBody = {
@@ -48,19 +67,19 @@ export type PatchSsfTransmitterTransmitterIdRequest = {
    *
    * @remarks
    */
-  xFapiInteractionId?: any | undefined;
+  xFapiInteractionId?: string | undefined;
   /**
    * This query parameter enables pretty-printing when the response content type is JSON. If `pretty=true` (case-insensitive), the response is formatted for readability. If `pretty` is omitted or set to any other value, pretty-printing is disabled.
    *
    * @remarks
    */
-  pretty?: any | undefined;
+  pretty?: boolean | undefined;
   /**
    * The transmitter ID.
    *
    * @remarks
    */
-  transmitterId: any;
+  transmitterId: string;
   body?: PatchSsfTransmitterTransmitterIdRequestBody | undefined;
 };
 
@@ -81,8 +100,8 @@ export type PatchSsfTransmitterTransmitterIdNotFoundStatus = OpenEnum<
 
 export type PatchSsfTransmitterTransmitterIdNotFoundResult = {
   status?: PatchSsfTransmitterTransmitterIdNotFoundStatus | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 export const PatchSsfTransmitterTransmitterIdBadRequestStatus = {
@@ -102,8 +121,8 @@ export type PatchSsfTransmitterTransmitterIdBadRequestStatus = OpenEnum<
 
 export type PatchSsfTransmitterTransmitterIdBadRequestResult = {
   status?: PatchSsfTransmitterTransmitterIdBadRequestStatus | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 export const PatchSsfTransmitterTransmitterIdStatus = {
@@ -123,8 +142,8 @@ export type PatchSsfTransmitterTransmitterIdStatus = OpenEnum<
 
 export type PatchSsfTransmitterTransmitterIdResult = {
   status?: PatchSsfTransmitterTransmitterIdStatus | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 /**
@@ -134,27 +153,27 @@ export type PatchSsfTransmitterTransmitterIdCreator = {
   /**
    * The issuer of the access token.
    */
-  iss?: any | undefined;
+  iss?: string | undefined;
   /**
    * The subject of the access token.
    */
-  sub?: any | undefined;
+  sub?: string | undefined;
   /**
    * The client ID of the access token.
    */
-  clientId?: any | undefined;
+  clientId?: string | undefined;
   /**
    * The identifier of the access token.
    */
-  jti?: any | undefined;
+  jti?: string | undefined;
   /**
    * The base64url-encoded SHA-256 hash of the access token.
    */
-  hash?: any | undefined;
+  hash?: string | undefined;
 };
 
 export type PatchSsfTransmitterTransmitterIdAuthorizationScheme = {
-  specUrn: any;
+  specUrn: string;
 };
 
 /**
@@ -206,61 +225,61 @@ export type PatchSsfTransmitterTransmitterIdMetadata = {
    *
    * @remarks
    */
-  specVersion?: any | undefined;
+  specVersion?: string | undefined;
   /**
    * REQUIRED. URL using the `https` scheme with no query or fragment component that the Transmitter asserts as its Issuer Identifier. This MUST be identical to the `iss` claim value in Security Event Tokens issued from this Transmitter.
    *
    * @remarks
    */
-  issuer: any;
+  issuer: string;
   /**
    * OPTIONAL. URL of the Transmitter's JSON Web Key Set [[RFC7517](https://www.rfc-editor.org/rfc/rfc7517.html)] document. This contains the signing key(s) the Receiver uses to validate signatures from the Transmitter. This value MUST be specified if the Transmitter intends to generate signed JWTs. If present, this URL MUST use HTTP over TLS [[RFC9110](https://www.rfc-editor.org/rfc/rfc9110.html)].
    *
    * @remarks
    */
-  jwksUri?: any | undefined;
+  jwksUri?: string | undefined;
   /**
    * RECOMMENDED. List of supported delivery method URIs.
    *
    * @remarks
    */
-  deliveryMethodsSupported?: Array<any> | undefined;
+  deliveryMethodsSupported?: Array<string> | undefined;
   /**
    * OPTIONAL. The URL of the Configuration Endpoint. If present, this URL MUST use HTTP over TLS [[RFC9110](https://www.rfc-editor.org/rfc/rfc9110.html)].
    *
    * @remarks
    */
-  configurationEndpoint?: any | undefined;
+  configurationEndpoint?: string | undefined;
   /**
    * OPTIONAL. The URL of the Status Endpoint. If present, this URL MUST use HTTP over TLS [[RFC9110](https://www.rfc-editor.org/rfc/rfc9110.html)].
    *
    * @remarks
    */
-  statusEndpoint?: any | undefined;
+  statusEndpoint?: string | undefined;
   /**
    * OPTIONAL. The URL of the Add Subject Endpoint. If present, this URL MUST use HTTP over TLS [[RFC9110](https://www.rfc-editor.org/rfc/rfc9110.html)].
    *
    * @remarks
    */
-  addSubjectEndpoint?: any | undefined;
+  addSubjectEndpoint?: string | undefined;
   /**
    * OPTIONAL. The URL of the Remove Subject Endpoint. If present, this URL MUST use HTTP over TLS [[RFC9110](https://www.rfc-editor.org/rfc/rfc9110.html)].
    *
    * @remarks
    */
-  removeSubjectEndpoint?: any | undefined;
+  removeSubjectEndpoint?: string | undefined;
   /**
    * OPTIONAL. The URL of the Verification Endpoint. If present, this URL MUST use HTTP over TLS [[RFC9110](https://www.rfc-editor.org/rfc/rfc9110.html)].
    *
    * @remarks
    */
-  verificationEndpoint?: any | undefined;
+  verificationEndpoint?: string | undefined;
   /**
    * OPTIONAL. An array of member names in a Complex Subject which, if present in a Subject Member in an event, MUST be interpreted by a Receiver.
    *
    * @remarks
    */
-  criticalSubjectMembers?: Array<any> | undefined;
+  criticalSubjectMembers?: Array<string> | undefined;
   /**
    * OPTIONAL. An array of JSON objects that specify the supported authorization scheme properties. To enable seamless discovery of configurations, the service provider SHOULD, with the appropriate security considerations, make the `authorization_schemes` attribute publicly accessible without prior authentication.
    *
@@ -315,30 +334,30 @@ export type PatchSsfTransmitterTransmitterIdIntrospectionConfiguration = {
   /**
    * The user ID, required for the Basic Authentication.
    */
-  userId?: any | undefined;
+  userId?: string | undefined;
   /**
    * The password, required for the Basic Authentication.
    */
-  password?: any | undefined;
+  password?: string | undefined;
   /**
    * The access token, required for the Bearer or DPoP Authentication.
    */
-  accessToken?: any | undefined;
+  accessToken?: string | undefined;
   /**
    * The identifier of the authorization server.
    */
-  issuer: any;
+  issuer: string;
 };
 
 export type PatchSsfTransmitterTransmitterIdSettings = {
   /**
    * The name of this Transmitter
    */
-  name?: any | undefined;
+  name?: string | undefined;
   /**
    * The description about this Transmitter
    */
-  description?: any | undefined;
+  description?: string | undefined;
   /**
    * This boolean flag indicates whether FAPI 2.0 compliance is required.
    *
@@ -351,7 +370,7 @@ export type PatchSsfTransmitterTransmitterIdSettings = {
    * ([RFC 8705](https://www.rfc-editor.org/rfc/rfc8705.html)) or DPoP
    * ([RFC 9449](https://www.rfc-editor.org/rfc/rfc9449.html)).
    */
-  fapi2Compliant: any;
+  fapi2Compliant: boolean;
   /**
    * This boolean flag indicates whether access tokens must be
    *
@@ -359,7 +378,7 @@ export type PatchSsfTransmitterTransmitterIdSettings = {
    * sender-constrained using the DPoP
    * ([RFC 9449](https://www.rfc-editor.org/rfc/rfc9449.html)) mechanism.
    */
-  dpopRequired: any;
+  dpopRequired: boolean;
   /**
    * This boolean flag indicates whether DPoP proof JWTs must include the
    *
@@ -384,7 +403,7 @@ export type PatchSsfTransmitterTransmitterIdSettings = {
    * See [RFC 9449](https://www.rfc-editor.org/rfc/rfc9449.html) for details
    * about the DPoP nonce.
    */
-  dpopNonceRequired: any;
+  dpopNonceRequired: boolean;
   /**
    * The maximum clock skew in seconds. This value is taken into account
    *
@@ -396,13 +415,13 @@ export type PatchSsfTransmitterTransmitterIdSettings = {
    * `fapi2_compliant` flag is set to `true`), the maximum clock skew is
    * adjusted to ensure that it falls within the range of 10 to 60 seconds.
    */
-  maxClockSkewSeconds?: any | undefined;
+  maxClockSkewSeconds?: number | undefined;
   /**
    * The list of authorization servers this Transmitter queries for access token information.
    *
    * @remarks
    */
-  authorizationServers?: Array<any> | undefined;
+  authorizationServers?: Array<string> | undefined;
   /**
    * The list of configurations for access token introspection.
    *
@@ -416,19 +435,19 @@ export type PatchSsfTransmitterTransmitterIdSettings = {
    *
    * @remarks
    */
-  eventsSupported?: Array<any> | undefined;
+  eventsSupported?: Array<string> | undefined;
   /**
    * The default value of `min_verification_interval` in a Stream configuration.
    *
    * @remarks
    */
-  minVerificationIntervalDefault?: any | undefined;
+  minVerificationIntervalDefault?: number | undefined;
   /**
    * The default value of `inactivity_timeout` in a Stream configuration.
    *
    * @remarks
    */
-  inactivityTimeoutDefault?: any | undefined;
+  inactivityTimeoutDefault?: number | undefined;
   /**
    * OPTIONAL. The URL of the Poll Endpoint.
    *
@@ -439,7 +458,7 @@ export type PatchSsfTransmitterTransmitterIdSettings = {
    * `endpoint_url`. If the property value contains `STREAM_ID`, it will be
    * replaced with the newly issued stream ID.
    */
-  pollEndpoint?: any | undefined;
+  pollEndpoint?: string | undefined;
 };
 
 export type PatchSsfTransmitterTransmitterIdTransmitter = {
@@ -448,13 +467,13 @@ export type PatchSsfTransmitterTransmitterIdTransmitter = {
    *
    * @remarks
    */
-  createdAt?: any | undefined;
+  createdAt?: Date | undefined;
   /**
    * The time at which the transmitter was updated, in the format of `YYYY-MM-DDThh:mm:ss`.
    *
    * @remarks
    */
-  updatedAt?: any | undefined;
+  updatedAt?: Date | undefined;
   /**
    * The creator of the transmitter.
    */
@@ -466,7 +485,7 @@ export type PatchSsfTransmitterTransmitterIdTransmitter = {
    * Strictly speaking, since the first 10 bits of the data are overwritten to ensure that the resulting string always starts with `tr`, the actual entropy is 230 bits. The `tr` here denotes Transmitter.
    * The purpose of this process is to enable someone encountering a 48-character base32hex-encoded string beginning with `tr` to infer that it might be a Transmitter ID. Conversely, a random string not starting with `tr` can be identified as not being a Transmitter ID.
    */
-  transmitterId?: any | undefined;
+  transmitterId?: string | undefined;
   /**
    * Transmitter Configuration Metadata defined in [OpenID Shared Signals Framework Specification 1.0](https://openid.net/specs/openid-sharedsignals-framework-1_0.html).
    *
@@ -493,20 +512,76 @@ export type PatchSsfTransmitterTransmitterIdResponse = {
 export const Op$outboundSchema: z.ZodMiniEnum<typeof Op> = z.enum(Op);
 
 /** @internal */
+export type Value$Outbound = {};
+
+/** @internal */
+export const Value$outboundSchema: z.ZodMiniType<Value$Outbound, Value> = z
+  .object({});
+
+export function valueToJSON(value: Value): string {
+  return JSON.stringify(Value$outboundSchema.parse(value));
+}
+
+/** @internal */
+export type ValueUnion$Outbound =
+  | boolean
+  | number
+  | number
+  | string
+  | Array<any>
+  | Value$Outbound;
+
+/** @internal */
+export const ValueUnion$outboundSchema: z.ZodMiniType<
+  ValueUnion$Outbound,
+  ValueUnion
+> = smartUnion([
+  z.boolean(),
+  z.int(),
+  z.number(),
+  z.string(),
+  z.array(z.any()),
+  z.lazy(() => Value$outboundSchema),
+]);
+
+export function valueUnionToJSON(valueUnion: ValueUnion): string {
+  return JSON.stringify(ValueUnion$outboundSchema.parse(valueUnion));
+}
+
+/** @internal */
 export type Patch$Outbound = {
   op: string;
-  path: any;
-  value?: any | undefined;
-  from?: any | undefined;
+  path: string;
+  value?:
+    | boolean
+    | number
+    | number
+    | string
+    | Array<any>
+    | Value$Outbound
+    | null
+    | undefined;
+  from?: string | undefined;
 };
 
 /** @internal */
 export const Patch$outboundSchema: z.ZodMiniType<Patch$Outbound, Patch> = z
   .object({
     op: Op$outboundSchema,
-    path: z.any(),
-    value: z.optional(z.any()),
-    from: z.optional(z.any()),
+    path: z.string(),
+    value: z.optional(
+      z.nullable(
+        smartUnion([
+          z.boolean(),
+          z.int(),
+          z.number(),
+          z.string(),
+          z.array(z.any()),
+          z.lazy(() => Value$outboundSchema),
+        ]),
+      ),
+    ),
+    from: z.optional(z.string()),
   });
 
 export function patchToJSON(patch: Patch): string {
@@ -540,9 +615,9 @@ export function patchSsfTransmitterTransmitterIdRequestBodyToJSON(
 
 /** @internal */
 export type PatchSsfTransmitterTransmitterIdRequest$Outbound = {
-  "x-fapi-interaction-id"?: any | undefined;
-  pretty: any;
-  transmitter_id: any;
+  "x-fapi-interaction-id"?: string | undefined;
+  pretty: boolean;
+  transmitter_id: string;
   body?: PatchSsfTransmitterTransmitterIdRequestBody$Outbound | undefined;
 };
 
@@ -553,9 +628,9 @@ export const PatchSsfTransmitterTransmitterIdRequest$outboundSchema:
     PatchSsfTransmitterTransmitterIdRequest
   > = z.pipe(
     z.object({
-      xFapiInteractionId: z.optional(z.any()),
-      pretty: z.any(),
-      transmitterId: z.any(),
+      xFapiInteractionId: z.optional(z.string()),
+      pretty: z._default(z.boolean(), false),
+      transmitterId: z.string(),
       body: z.optional(
         z.lazy(() =>
           PatchSsfTransmitterTransmitterIdRequestBody$outboundSchema
@@ -593,8 +668,8 @@ export const PatchSsfTransmitterTransmitterIdNotFoundResult$inboundSchema:
       status: types.optional(
         PatchSsfTransmitterTransmitterIdNotFoundStatus$inboundSchema,
       ),
-      code: types.optional(z.any()),
-      message: types.optional(z.any()),
+      code: types.optional(types.string()),
+      message: types.optional(types.string()),
     });
 
 export function patchSsfTransmitterTransmitterIdNotFoundResultFromJSON(
@@ -625,8 +700,8 @@ export const PatchSsfTransmitterTransmitterIdBadRequestResult$inboundSchema:
       status: types.optional(
         PatchSsfTransmitterTransmitterIdBadRequestStatus$inboundSchema,
       ),
-      code: types.optional(z.any()),
-      message: types.optional(z.any()),
+      code: types.optional(types.string()),
+      message: types.optional(types.string()),
     });
 
 export function patchSsfTransmitterTransmitterIdBadRequestResultFromJSON(
@@ -656,8 +731,8 @@ export const PatchSsfTransmitterTransmitterIdResult$inboundSchema:
     status: types.optional(
       PatchSsfTransmitterTransmitterIdStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function patchSsfTransmitterTransmitterIdResultFromJSON(
@@ -675,11 +750,11 @@ export function patchSsfTransmitterTransmitterIdResultFromJSON(
 export const PatchSsfTransmitterTransmitterIdCreator$inboundSchema:
   z.ZodMiniType<PatchSsfTransmitterTransmitterIdCreator, unknown> = z.pipe(
     z.object({
-      iss: types.optional(z.any()),
-      sub: types.optional(z.any()),
-      client_id: types.optional(z.any()),
-      jti: types.optional(z.any()),
-      hash: types.optional(z.any()),
+      iss: types.optional(types.string()),
+      sub: types.optional(types.string()),
+      client_id: types.optional(types.string()),
+      jti: types.optional(types.string()),
+      hash: types.optional(types.string()),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -709,7 +784,7 @@ export const PatchSsfTransmitterTransmitterIdAuthorizationScheme$inboundSchema:
   z.ZodMiniType<PatchSsfTransmitterTransmitterIdAuthorizationScheme, unknown> =
     z.pipe(
       z.object({
-        spec_urn: z.any(),
+        spec_urn: types.string(),
       }),
       z.transform((v) => {
         return remap$(v, {
@@ -743,16 +818,16 @@ export const PatchSsfTransmitterTransmitterIdDefaultSubjects$inboundSchema:
 export const PatchSsfTransmitterTransmitterIdMetadata$inboundSchema:
   z.ZodMiniType<PatchSsfTransmitterTransmitterIdMetadata, unknown> = z.pipe(
     z.object({
-      spec_version: types.optional(z.any()),
-      issuer: z.any(),
-      jwks_uri: types.optional(z.any()),
-      delivery_methods_supported: types.optional(z.array(z.any())),
-      configuration_endpoint: types.optional(z.any()),
-      status_endpoint: types.optional(z.any()),
-      add_subject_endpoint: types.optional(z.any()),
-      remove_subject_endpoint: types.optional(z.any()),
-      verification_endpoint: types.optional(z.any()),
-      critical_subject_members: types.optional(z.array(z.any())),
+      spec_version: types.optional(types.string()),
+      issuer: types.string(),
+      jwks_uri: types.optional(types.string()),
+      delivery_methods_supported: types.optional(z.array(types.string())),
+      configuration_endpoint: types.optional(types.string()),
+      status_endpoint: types.optional(types.string()),
+      add_subject_endpoint: types.optional(types.string()),
+      remove_subject_endpoint: types.optional(types.string()),
+      verification_endpoint: types.optional(types.string()),
+      critical_subject_members: types.optional(z.array(types.string())),
       authorization_schemes: types.optional(z.array(z.lazy(() =>
         PatchSsfTransmitterTransmitterIdAuthorizationScheme$inboundSchema
       ))),
@@ -809,10 +884,10 @@ export const PatchSsfTransmitterTransmitterIdIntrospectionConfiguration$inboundS
       scheme: types.optional(
         PatchSsfTransmitterTransmitterIdScheme$inboundSchema,
       ),
-      user_id: types.optional(z.any()),
-      password: types.optional(z.any()),
-      access_token: types.optional(z.any()),
-      issuer: z.any(),
+      user_id: types.optional(types.string()),
+      password: types.optional(types.string()),
+      access_token: types.optional(types.string()),
+      issuer: types.string(),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -841,20 +916,20 @@ export function patchSsfTransmitterTransmitterIdIntrospectionConfigurationFromJS
 export const PatchSsfTransmitterTransmitterIdSettings$inboundSchema:
   z.ZodMiniType<PatchSsfTransmitterTransmitterIdSettings, unknown> = z.pipe(
     z.object({
-      name: types.optional(z.any()),
-      description: types.optional(z.any()),
-      fapi2_compliant: z.any(),
-      dpop_required: z.any(),
-      dpop_nonce_required: z.any(),
-      max_clock_skew_seconds: types.optional(z.any()),
-      authorization_servers: types.optional(z.array(z.any())),
+      name: types.optional(types.string()),
+      description: types.optional(types.string()),
+      fapi2_compliant: z._default(types.boolean(), false),
+      dpop_required: z._default(types.boolean(), false),
+      dpop_nonce_required: z._default(types.boolean(), false),
+      max_clock_skew_seconds: types.optional(types.number()),
+      authorization_servers: types.optional(z.array(types.string())),
       introspection_configurations: types.optional(z.array(z.lazy(() =>
         PatchSsfTransmitterTransmitterIdIntrospectionConfiguration$inboundSchema
       ))),
-      events_supported: types.optional(z.array(z.any())),
-      min_verification_interval_default: types.optional(z.any()),
-      inactivity_timeout_default: types.optional(z.any()),
-      poll_endpoint: types.optional(z.any()),
+      events_supported: types.optional(z.array(types.string())),
+      min_verification_interval_default: types.optional(types.number()),
+      inactivity_timeout_default: types.optional(types.number()),
+      poll_endpoint: types.optional(types.string()),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -892,12 +967,12 @@ export function patchSsfTransmitterTransmitterIdSettingsFromJSON(
 export const PatchSsfTransmitterTransmitterIdTransmitter$inboundSchema:
   z.ZodMiniType<PatchSsfTransmitterTransmitterIdTransmitter, unknown> = z.pipe(
     z.object({
-      created_at: types.optional(z.any()),
-      updated_at: types.optional(z.any()),
+      created_at: types.optional(types.date()),
+      updated_at: types.optional(types.date()),
       creator: types.optional(z.lazy(() =>
         PatchSsfTransmitterTransmitterIdCreator$inboundSchema
       )),
-      transmitter_id: types.optional(z.any()),
+      transmitter_id: types.optional(types.string()),
       metadata: z.lazy(() =>
         PatchSsfTransmitterTransmitterIdMetadata$inboundSchema
       ),

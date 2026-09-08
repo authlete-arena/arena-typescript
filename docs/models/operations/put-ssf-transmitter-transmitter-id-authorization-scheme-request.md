@@ -14,4 +14,4 @@ let value: PutSsfTransmitterTransmitterIdAuthorizationSchemeRequest = {
 
 | Field              | Type               | Required           | Description        | Example            |
 | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| `specUrn`          | *any*              | :heavy_check_mark: | N/A                | urn:ietf:rfc:6749  |
+| `specUrn`          | *string*           | :heavy_check_mark: | N/A                | urn:ietf:rfc:6749  |

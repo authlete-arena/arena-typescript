@@ -11,7 +11,7 @@ import { PostSsfTransmitterTransmitterIdDelegateStreamStatusUpdateResponseBody }
 let value:
   PostSsfTransmitterTransmitterIdDelegateStreamStatusUpdateResponseBody = {
     response: {
-      status: "<value>",
+      status: 410302,
     },
   };
 ```

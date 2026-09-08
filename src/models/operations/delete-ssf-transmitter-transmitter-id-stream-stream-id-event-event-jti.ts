@@ -18,31 +18,31 @@ export type DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiRequest 
      *
      * @remarks
      */
-    xFapiInteractionId?: any | undefined;
+    xFapiInteractionId?: string | undefined;
     /**
      * The transmitter ID.
      *
      * @remarks
      */
-    transmitterId: any;
+    transmitterId: string;
     /**
      * The stream ID.
      *
      * @remarks
      */
-    streamId: any;
+    streamId: string;
     /**
      * The JTI of the event.
      *
      * @remarks
      */
-    eventJti: any;
+    eventJti: string;
     /**
      * This query parameter enables pretty-printing when the response content type is JSON. If `pretty=true` (case-insensitive), the response is formatted for readability. If `pretty` is omitted or set to any other value, pretty-printing is disabled.
      *
      * @remarks
      */
-    pretty?: any | undefined;
+    pretty?: boolean | undefined;
   };
 
 export const DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoundStatus =
@@ -67,8 +67,8 @@ export type DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFound
     status?:
       | DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoundStatus
       | undefined;
-    code?: any | undefined;
-    message?: any | undefined;
+    code?: string | undefined;
+    message?: string | undefined;
   };
 
 export const DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiStatus =
@@ -93,8 +93,8 @@ export type DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiResult =
     status?:
       | DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiStatus
       | undefined;
-    code?: any | undefined;
-    message?: any | undefined;
+    code?: string | undefined;
+    message?: string | undefined;
   };
 
 /**
@@ -117,11 +117,11 @@ export type DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiResponse
 /** @internal */
 export type DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiRequest$Outbound =
   {
-    "x-fapi-interaction-id"?: any | undefined;
-    transmitter_id: any;
-    stream_id: any;
-    event_jti: any;
-    pretty: any;
+    "x-fapi-interaction-id"?: string | undefined;
+    transmitter_id: string;
+    stream_id: string;
+    event_jti: string;
+    pretty: boolean;
   };
 
 /** @internal */
@@ -131,11 +131,11 @@ export const DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiRequest
     DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiRequest
   > = z.pipe(
     z.object({
-      xFapiInteractionId: z.optional(z.any()),
-      transmitterId: z.any(),
-      streamId: z.any(),
-      eventJti: z.any(),
-      pretty: z.any(),
+      xFapiInteractionId: z.optional(z.string()),
+      transmitterId: z.string(),
+      streamId: z.string(),
+      eventJti: z.string(),
+      pretty: z._default(z.boolean(), false),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -177,8 +177,8 @@ export const DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoun
     status: types.optional(
       DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoundStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function deleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiNotFoundResultFromJSON(
@@ -214,8 +214,8 @@ export const DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiResult$
     status: types.optional(
       DeleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function deleteSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiResultFromJSON(

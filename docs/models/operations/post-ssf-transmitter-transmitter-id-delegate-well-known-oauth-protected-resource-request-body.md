@@ -19,6 +19,7 @@ let value:
       request: {
         method: "<value>",
         uri: "https://witty-institute.org/",
+        ipAddress: "192.168.0.1",
       },
     };
 ```

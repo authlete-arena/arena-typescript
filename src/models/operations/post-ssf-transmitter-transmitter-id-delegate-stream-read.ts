@@ -9,7 +9,100 @@ import * as openEnums from "../../types/enums.js";
 import { OpenEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import * as types from "../../types/primitives.js";
+import { smartUnion } from "../../types/smart-union.js";
 import { SDKValidationError } from "../errors/sdk-validation-error.js";
+
+export type PostSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition =
+  {};
+
+/**
+ * The condition that the access token's scope must satisfy.
+ *
+ * @remarks
+ *
+ * The condition can range from a simple single string to more complex
+ * structures that combine operators such as `and`, `or`, and `matches`.
+ *
+ * When the condition is a single string, the access token must include
+ * a scope with the specified name:
+ *
+ * ```
+ * "scope1"
+ * ```
+ *
+ * When the condition is a list of strings, the access token must include
+ * all of the scopes listed:
+ *
+ * ```
+ * ["scope1", "scope2"]
+ * ```
+ *
+ * A logical AND can be represented using a JSON object with the `and`
+ * property with a list of conditions as its value:
+ *
+ * ```
+ * {"and": ["scope1", "scope2"]}
+ * ```
+ *
+ * Likewise, a logical OR can be represented using a JSON object with the
+ * `or` property with a list of conditions as its value:
+ *
+ * ```
+ * {"or": ["scope1", "scope2"]}
+ * ```
+ *
+ * More complex conditions can be constructed by combining the `and` and
+ * `or` operators:
+ *
+ * ```
+ * {
+ *   "or": [
+ *     {"and": ["scope1", "scope2"]},
+ *     {"and": ["scope3", "scope4"]}
+ *   ]
+ * }
+ * ```
+ *
+ * The `matches` operator can be used to require that the access token
+ * include a scope matching the specified regular expression:
+ *
+ * ```
+ * {"matches": "^.*e1$"}
+ * ```
+ *
+ * The following is a complex example that combines all of the mechanisms
+ * introduced so far.
+ *
+ * ```
+ * {
+ *   "or": [
+ *     {
+ *       "and": ["scope1", "scope3"]
+ *     }
+ *   ],
+ *   {
+ *     "or": [
+ *       "scope4",
+ *       ["scope2", "scope3"],
+ *       {
+ *         "matches": "^.*e1$"
+ *       }
+ *     ]
+ *   }
+ * }
+ * ```
+ *
+ * If the access token only has the scopes `scope1` and `scope2`, the
+ * above scope condition evaluates to true and access to the resource
+ * is granted. (This is because the regular expression `^.*e1$` in the
+ * condition matches `scope1`, causing the overall condition to evaluate
+ * to true.)
+ */
+export type PostSsfTransmitterTransmitterIdDelegateStreamReadScopeConditionUnion =
+  | boolean
+  | string
+  | Array<any>
+  | PostSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition;
 
 export type PostSsfTransmitterTransmitterIdDelegateStreamReadOptions = {
   /**
@@ -17,7 +110,7 @@ export type PostSsfTransmitterTransmitterIdDelegateStreamReadOptions = {
    *
    * @remarks
    */
-  pretty?: any | undefined;
+  pretty?: boolean | undefined;
   /**
    * The condition that the access token's scope must satisfy.
    *
@@ -101,7 +194,13 @@ export type PostSsfTransmitterTransmitterIdDelegateStreamReadOptions = {
    * condition matches `scope1`, causing the overall condition to evaluate
    * to true.)
    */
-  scopeCondition?: any | undefined;
+  scopeCondition?:
+    | boolean
+    | string
+    | Array<any>
+    | PostSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition
+    | null
+    | undefined;
 };
 
 /**
@@ -118,14 +217,14 @@ export type DelegateStreamsPostSsfTransmitterTransmitterIdDelegateStreamReadRequ
      * Be aware that HTTP method names are case sensitive; although standardized ones ([IANA: HTTP Method Registry](https://www.iana.org/assignments/http-methods/http-methods.xhtml)) are defined in all-uppercase US-ASCII letters. See [Section 9](https://www.rfc-editor.org/rfc/rfc9110.html#section-9 "9. Methods") of [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html "RFC 9110: HTTP Semantics") for details.
      * The case sensitivity affects the validation of DPoP proof, which includes the HTTP method as the value of the `htm` claim ([Section 4.2](https://www.rfc-editor.org/rfc/rfc9449.html#section-4.2 "4.2. DPoP Proof JWT Syntax") of [RFC 9449](https://www.rfc-editor.org/rfc/rfc9449.html "RFC 9449: OAuth 2.0 Demonstrating Proof of Possession (DPoP)")).
      */
-    method: any;
+    method: string;
     /**
      * The target URI, an absolute URL including the query component, if any.
      *
      * @remarks
      * See [Section 7.1](https://www.rfc-editor.org/rfc/rfc9110.html#section-7.1 "7.1. Determining the Target Resource") of [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html "RFC 9110: HTTP Semantics") for details.
      */
-    uri: any;
+    uri: string;
     /**
      * HTTP headers.
      *
@@ -140,13 +239,13 @@ export type DelegateStreamsPostSsfTransmitterTransmitterIdDelegateStreamReadRequ
      *   - `Signature-Input`
      *   - `x-fapi-interaction-id`
      */
-    headers?: Array<Array<any>> | undefined;
+    headers?: Array<Array<string>> | undefined;
     /**
      * The message body.
      *
      * @remarks
      */
-    body?: any | undefined;
+    body?: string | undefined;
     /**
      * The client's X.509 certificate used in the mutual-TLS connection between the internet-facing endpoint and the endpoint accessor.
      *
@@ -160,13 +259,13 @@ export type DelegateStreamsPostSsfTransmitterTransmitterIdDelegateStreamReadRequ
      *
      * Support for Byte Sequence assumes cases where the value of the `Client-Cert` HTTP header ([RFC 9440](https://www.rfc-editor.org/rfc/rfc9440.html "RFC 9440: Client-Cert HTTP Header Field")) is passed through without any modification.
      */
-    certificate?: any | undefined;
+    certificate?: string | undefined;
     /**
      * The client's IP address.
      *
      * @remarks
      */
-    ipAddress?: any | undefined;
+    ipAddress?: string | undefined;
   };
 
 /**
@@ -193,19 +292,19 @@ export type PostSsfTransmitterTransmitterIdDelegateStreamReadRequestRequest = {
    *
    * @remarks
    */
-  xFapiInteractionId?: any | undefined;
+  xFapiInteractionId?: string | undefined;
   /**
    * This query parameter enables pretty-printing when the response content type is JSON. If `pretty=true` (case-insensitive), the response is formatted for readability. If `pretty` is omitted or set to any other value, pretty-printing is disabled.
    *
    * @remarks
    */
-  pretty?: any | undefined;
+  pretty?: boolean | undefined;
   /**
    * The transmitter ID.
    *
    * @remarks
    */
-  transmitterId: any;
+  transmitterId: string;
   body?:
     | PostSsfTransmitterTransmitterIdDelegateStreamReadRequestBody
     | undefined;
@@ -231,8 +330,8 @@ export type PostSsfTransmitterTransmitterIdDelegateStreamReadNotFoundResult = {
   status?:
     | PostSsfTransmitterTransmitterIdDelegateStreamReadNotFoundStatus
     | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 export const PostSsfTransmitterTransmitterIdDelegateStreamReadStatus = {
@@ -252,8 +351,8 @@ export type PostSsfTransmitterTransmitterIdDelegateStreamReadStatus = OpenEnum<
 
 export type PostSsfTransmitterTransmitterIdDelegateStreamReadResult = {
   status?: PostSsfTransmitterTransmitterIdDelegateStreamReadStatus | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 /**
@@ -268,26 +367,26 @@ export type DelegateStreamsPostSsfTransmitterTransmitterIdDelegateStreamReadResp
      *
      * @remarks
      */
-    status: any;
+    status: number;
     /**
      * HTTP headers that should be included in the HTTP response.
      *
      * @remarks
      * Each element of this `headers` array is an array containing two strings: an HTTP header name and its value.
      */
-    headers?: Array<Array<any>> | undefined;
+    headers?: Array<Array<string>> | undefined;
     /**
      * The content type of the HTTP response. This parameter is set when the forwarded response contains a message body.
      *
      * @remarks
      */
-    contentType?: any | undefined;
+    contentType?: string | undefined;
     /**
      * The message body of the HTTP response.
      *
      * @remarks
      */
-    body?: any | undefined;
+    body?: string | undefined;
   };
 
 /**
@@ -313,10 +412,70 @@ export type PostSsfTransmitterTransmitterIdDelegateStreamReadResponseResponse =
   };
 
 /** @internal */
+export type PostSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition$Outbound =
+  {};
+
+/** @internal */
+export const PostSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition$outboundSchema:
+  z.ZodMiniType<
+    PostSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition$Outbound,
+    PostSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition
+  > = z.object({});
+
+export function postSsfTransmitterTransmitterIdDelegateStreamReadScopeConditionToJSON(
+  postSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition:
+    PostSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition,
+): string {
+  return JSON.stringify(
+    PostSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition$outboundSchema
+      .parse(postSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition),
+  );
+}
+
+/** @internal */
+export type PostSsfTransmitterTransmitterIdDelegateStreamReadScopeConditionUnion$Outbound =
+  | boolean
+  | string
+  | Array<any>
+  | PostSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition$Outbound;
+
+/** @internal */
+export const PostSsfTransmitterTransmitterIdDelegateStreamReadScopeConditionUnion$outboundSchema:
+  z.ZodMiniType<
+    PostSsfTransmitterTransmitterIdDelegateStreamReadScopeConditionUnion$Outbound,
+    PostSsfTransmitterTransmitterIdDelegateStreamReadScopeConditionUnion
+  > = smartUnion([
+    z.boolean(),
+    z.string(),
+    z.array(z.any()),
+    z.lazy(() =>
+      PostSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition$outboundSchema
+    ),
+  ]);
+
+export function postSsfTransmitterTransmitterIdDelegateStreamReadScopeConditionUnionToJSON(
+  postSsfTransmitterTransmitterIdDelegateStreamReadScopeConditionUnion:
+    PostSsfTransmitterTransmitterIdDelegateStreamReadScopeConditionUnion,
+): string {
+  return JSON.stringify(
+    PostSsfTransmitterTransmitterIdDelegateStreamReadScopeConditionUnion$outboundSchema
+      .parse(
+        postSsfTransmitterTransmitterIdDelegateStreamReadScopeConditionUnion,
+      ),
+  );
+}
+
+/** @internal */
 export type PostSsfTransmitterTransmitterIdDelegateStreamReadOptions$Outbound =
   {
-    pretty: any;
-    scope_condition?: any | undefined;
+    pretty: boolean;
+    scope_condition?:
+      | boolean
+      | string
+      | Array<any>
+      | PostSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition$Outbound
+      | null
+      | undefined;
   };
 
 /** @internal */
@@ -326,8 +485,19 @@ export const PostSsfTransmitterTransmitterIdDelegateStreamReadOptions$outboundSc
     PostSsfTransmitterTransmitterIdDelegateStreamReadOptions
   > = z.pipe(
     z.object({
-      pretty: z.any(),
-      scopeCondition: z.optional(z.any()),
+      pretty: z._default(z.boolean(), false),
+      scopeCondition: z.optional(
+        z.nullable(
+          smartUnion([
+            z.boolean(),
+            z.string(),
+            z.array(z.any()),
+            z.lazy(() =>
+              PostSsfTransmitterTransmitterIdDelegateStreamReadScopeCondition$outboundSchema
+            ),
+          ]),
+        ),
+      ),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -349,12 +519,12 @@ export function postSsfTransmitterTransmitterIdDelegateStreamReadOptionsToJSON(
 /** @internal */
 export type DelegateStreamsPostSsfTransmitterTransmitterIdDelegateStreamReadRequest$Outbound =
   {
-    method: any;
-    uri: any;
-    headers?: Array<Array<any>> | undefined;
-    body?: any | undefined;
-    certificate?: any | undefined;
-    ip_address?: any | undefined;
+    method: string;
+    uri: string;
+    headers?: Array<Array<string>> | undefined;
+    body?: string | undefined;
+    certificate?: string | undefined;
+    ip_address?: string | undefined;
   };
 
 /** @internal */
@@ -364,12 +534,12 @@ export const DelegateStreamsPostSsfTransmitterTransmitterIdDelegateStreamReadReq
     DelegateStreamsPostSsfTransmitterTransmitterIdDelegateStreamReadRequest
   > = z.pipe(
     z.object({
-      method: z.any(),
-      uri: z.any(),
-      headers: z.optional(z.array(z.array(z.any()))),
-      body: z.optional(z.any()),
-      certificate: z.optional(z.any()),
-      ipAddress: z.optional(z.any()),
+      method: z.string(),
+      uri: z.string(),
+      headers: z.optional(z.array(z.array(z.string()))),
+      body: z.optional(z.string()),
+      certificate: z.optional(z.string()),
+      ipAddress: z.optional(z.string()),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -429,9 +599,9 @@ export function postSsfTransmitterTransmitterIdDelegateStreamReadRequestBodyToJS
 /** @internal */
 export type PostSsfTransmitterTransmitterIdDelegateStreamReadRequestRequest$Outbound =
   {
-    "x-fapi-interaction-id"?: any | undefined;
-    pretty: any;
-    transmitter_id: any;
+    "x-fapi-interaction-id"?: string | undefined;
+    pretty: boolean;
+    transmitter_id: string;
     body?:
       | PostSsfTransmitterTransmitterIdDelegateStreamReadRequestBody$Outbound
       | undefined;
@@ -444,9 +614,9 @@ export const PostSsfTransmitterTransmitterIdDelegateStreamReadRequestRequest$out
     PostSsfTransmitterTransmitterIdDelegateStreamReadRequestRequest
   > = z.pipe(
     z.object({
-      xFapiInteractionId: z.optional(z.any()),
-      pretty: z.any(),
-      transmitterId: z.any(),
+      xFapiInteractionId: z.optional(z.string()),
+      pretty: z._default(z.boolean(), false),
+      transmitterId: z.string(),
       body: z.optional(z.lazy(() =>
         PostSsfTransmitterTransmitterIdDelegateStreamReadRequestBody$outboundSchema
       )),
@@ -487,8 +657,8 @@ export const PostSsfTransmitterTransmitterIdDelegateStreamReadNotFoundResult$inb
     status: types.optional(
       PostSsfTransmitterTransmitterIdDelegateStreamReadNotFoundStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function postSsfTransmitterTransmitterIdDelegateStreamReadNotFoundResultFromJSON(
@@ -524,8 +694,8 @@ export const PostSsfTransmitterTransmitterIdDelegateStreamReadResult$inboundSche
     status: types.optional(
       PostSsfTransmitterTransmitterIdDelegateStreamReadStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function postSsfTransmitterTransmitterIdDelegateStreamReadResultFromJSON(
@@ -549,10 +719,10 @@ export const DelegateStreamsPostSsfTransmitterTransmitterIdDelegateStreamReadRes
     DelegateStreamsPostSsfTransmitterTransmitterIdDelegateStreamReadResponse,
     unknown
   > = z.object({
-    status: z.any(),
-    headers: types.optional(z.array(z.array(z.any()))),
-    contentType: types.optional(z.any()),
-    body: types.optional(z.any()),
+    status: types.number(),
+    headers: types.optional(z.array(z.array(types.string()))),
+    contentType: types.optional(types.string()),
+    body: types.optional(types.string()),
   });
 
 export function delegateStreamsPostSsfTransmitterTransmitterIdDelegateStreamReadResponseFromJSON(

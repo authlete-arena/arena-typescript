@@ -16,6 +16,7 @@ let value:
     request: {
       method: "<value>",
       uri: "https://phony-deck.biz",
+      ipAddress: "192.168.0.1",
     },
   };
 ```

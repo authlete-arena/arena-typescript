@@ -15,6 +15,7 @@ let value: PostSsfTransmitterTransmitterIdDelegateStreamReplaceRequestBody = {
   request: {
     method: "<value>",
     uri: "https://massive-meal.com",
+    ipAddress: "192.168.0.1",
   },
 };
 ```

@@ -17,13 +17,13 @@ export type GetProbeReadinessRequest = {
    *
    * @remarks
    */
-  xFapiInteractionId?: any | undefined;
+  xFapiInteractionId?: string | undefined;
   /**
    * This query parameter enables pretty-printing when the response content type is JSON. If `pretty=true` (case-insensitive), the response is formatted for readability. If `pretty` is omitted or set to any other value, pretty-printing is disabled.
    *
    * @remarks
    */
-  pretty?: any | undefined;
+  pretty?: boolean | undefined;
 };
 
 export const GetProbeReadinessStatus = {
@@ -41,8 +41,8 @@ export type GetProbeReadinessStatus = OpenEnum<typeof GetProbeReadinessStatus>;
 
 export type GetProbeReadinessResult = {
   status?: GetProbeReadinessStatus | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 /**
@@ -61,8 +61,8 @@ export type GetProbeReadinessResponse = {
 
 /** @internal */
 export type GetProbeReadinessRequest$Outbound = {
-  "x-fapi-interaction-id"?: any | undefined;
-  pretty: any;
+  "x-fapi-interaction-id"?: string | undefined;
+  pretty: boolean;
 };
 
 /** @internal */
@@ -71,8 +71,8 @@ export const GetProbeReadinessRequest$outboundSchema: z.ZodMiniType<
   GetProbeReadinessRequest
 > = z.pipe(
   z.object({
-    xFapiInteractionId: z.optional(z.any()),
-    pretty: z.any(),
+    xFapiInteractionId: z.optional(z.string()),
+    pretty: z._default(z.boolean(), false),
   }),
   z.transform((v) => {
     return remap$(v, {
@@ -101,8 +101,8 @@ export const GetProbeReadinessResult$inboundSchema: z.ZodMiniType<
   unknown
 > = z.object({
   status: types.optional(GetProbeReadinessStatus$inboundSchema),
-  code: types.optional(z.any()),
-  message: types.optional(z.any()),
+  code: types.optional(types.string()),
+  message: types.optional(types.string()),
 });
 
 export function getProbeReadinessResultFromJSON(

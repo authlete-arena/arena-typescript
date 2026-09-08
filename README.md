@@ -13,7 +13,7 @@ Developer-friendly & type-safe Typescript SDK specifically catered to leverage *
 <!-- Start Summary [summary] -->
 ## Summary
 
-
+Arena Core Server: Web APIs to aid developers to implement the standard specifications related to Shared Signals.
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->

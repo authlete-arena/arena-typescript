@@ -3,96 +3,105 @@
 
 ## Supported Types
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId1 = {
-    format: "account",
-    uri: "https://dense-lifestyle.name/",
-  };
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdAccount1 =
+    {
+      format: "account",
+      uri: "https://watery-manner.net/",
+    };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId2 = {
-    format: "did",
-    url: "https://unpleasant-wear.info/",
-  };
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdDid1 =
+    {
+      format: "did",
+      url: "https://juvenile-futon.org/",
+    };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId3 = {
-    format: "email",
-    email: "Edwina62@gmail.com",
-  };
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdEmail1 =
+    {
+      format: "email",
+      email: "Alison47@yahoo.com",
+    };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId4 = {
-    format: "iss_sub",
-    iss: "<value>",
-    sub: "<value>",
-  };
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdIssSub1 =
+    {
+      format: "iss_sub",
+      iss: "<value>",
+      sub: "<value>",
+    };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5`
+### `operations.GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId1`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId5 = {
-    format: "jwt_id",
-    iss: "<value>",
-    jti: "<value>",
-  };
+  operations.GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDJwtId1 =
+    {
+      format: "jwt_id",
+      iss: "<value>",
+      jti: "<value>",
+    };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId6 = {
-    format: "opaque",
-    id: "<id>",
-  };
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdOpaque1 =
+    {
+      format: "opaque",
+      id: "<id>",
+    };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId7 = {
-    format: "phone_number",
-    phoneNumber: "269.270.3175",
-  };
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdPhoneNumber1 =
+    {
+      format: "phone_number",
+      phoneNumber: "1-961-568-9786",
+    };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8`
+### `operations.GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId1`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId8 = {
-    format: "saml_assertion_id",
-    issuer: "diners_club",
-    assertionId: "<id>",
-  };
+  operations.GetSsfTransmitterTransmitterIDStreamStreamIDEventEventJtiSubIDSamlAssertionId1 =
+    {
+      format: "saml_assertion_id",
+      issuer: "american_express",
+      assertionId: "<id>",
+    };
 ```
 
-### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9`
+### `operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri1`
 
 ```typescript
 const value:
-  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubId9 = {
-    format: "uri",
-    uri: "https://gleaming-folklore.name",
-  };
+  operations.GetSsfTransmitterTransmitterIdStreamStreamIdEventEventJtiSubIdUri1 =
+    {
+      format: "uri",
+      uri: "https://elegant-technologist.info",
+    };
 ```
 

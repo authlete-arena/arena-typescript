@@ -3,96 +3,98 @@
 
 ## Supported Types
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier1`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount`
 
 ```typescript
 const value:
-  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier1 = {
+  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifierAccount = {
     format: "account",
-    uri: "https://formal-case.org",
+    uri: "https://stained-iridescence.biz/",
   };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier2`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid`
 
 ```typescript
 const value:
-  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier2 = {
+  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifierDid = {
     format: "did",
-    url: "https://precious-warming.biz",
+    url: "https://murky-hunger.biz",
   };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier3`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail`
 
 ```typescript
 const value:
-  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier3 = {
+  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifierEmail = {
     format: "email",
-    email: "Emmet_Johns37@gmail.com",
+    email: "Bart_Hoeger@hotmail.com",
   };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier4`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub`
 
 ```typescript
 const value:
-  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier4 = {
+  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifierIssSub = {
     format: "iss_sub",
     iss: "<value>",
     sub: "<value>",
   };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier5`
+### `operations.PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID`
 
 ```typescript
 const value:
-  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier5 = {
+  operations.PostSsfTransmitterTransmitterIDEventRegisterIdentifierJwtID = {
     format: "jwt_id",
     iss: "<value>",
     jti: "<value>",
   };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier6`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque`
 
 ```typescript
 const value:
-  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier6 = {
+  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifierOpaque = {
     format: "opaque",
     id: "<id>",
   };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier7`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber`
 
 ```typescript
 const value:
-  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier7 = {
-    format: "phone_number",
-    phoneNumber: "546-338-1968 x96600",
-  };
+  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifierPhoneNumber =
+    {
+      format: "phone_number",
+      phoneNumber: "366-993-3796 x44191",
+    };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier8`
+### `operations.PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID`
 
 ```typescript
 const value:
-  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier8 = {
-    format: "saml_assertion_id",
-    issuer: "jcb",
-    assertionId: "<id>",
-  };
+  operations.PostSsfTransmitterTransmitterIDEventRegisterIdentifierSamlAssertionID =
+    {
+      format: "saml_assertion_id",
+      issuer: "american_express",
+      assertionId: "<id>",
+    };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier9`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI`
 
 ```typescript
 const value:
-  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifier9 = {
+  operations.PostSsfTransmitterTransmitterIdEventRegisterIdentifierURI = {
     format: "uri",
-    uri: "https://vibrant-unit.net",
+    uri: "https://naughty-receptor.net/",
   };
 ```
 

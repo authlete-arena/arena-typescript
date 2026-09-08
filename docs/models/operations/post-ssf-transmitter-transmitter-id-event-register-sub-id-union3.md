@@ -3,87 +3,97 @@
 
 ## Supported Types
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId11`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount2`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId11 = {
-  format: "account",
-  uri: "https://corny-developing.biz",
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdAccount2 = {
+    format: "account",
+    uri: "https://spotless-corporation.org",
+  };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId12`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdDid2`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId12 = {
-  format: "did",
-  url: "https://heartfelt-begonia.biz",
-};
+const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdDid2 =
+  {
+    format: "did",
+    url: "https://pale-fraudster.info/",
+  };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId13`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail2`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId13 = {
-  format: "email",
-  email: "Estevan_Roberts@hotmail.com",
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdEmail2 = {
+    format: "email",
+    email: "Roderick_Labadie@yahoo.com",
+  };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId14`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId14 = {
-  format: "iss_sub",
-  iss: "<value>",
-  sub: "<value>",
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdIssSub2 = {
+    format: "iss_sub",
+    iss: "<value>",
+    sub: "<value>",
+  };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId15`
+### `operations.PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId15 = {
-  format: "jwt_id",
-  iss: "<value>",
-  jti: "<value>",
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIDEventRegisterSubIDJwtId2 = {
+    format: "jwt_id",
+    iss: "<value>",
+    jti: "<value>",
+  };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId16`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId16 = {
-  format: "opaque",
-  id: "<id>",
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdOpaque2 = {
+    format: "opaque",
+    id: "<id>",
+  };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId17`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId17 = {
-  format: "phone_number",
-  phoneNumber: "574.245.7511 x74862",
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdPhoneNumber2 = {
+    format: "phone_number",
+    phoneNumber: "623.304.9418",
+  };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId18`
+### `operations.PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId18 = {
-  format: "saml_assertion_id",
-  issuer: "jcb",
-  assertionId: "<id>",
-};
+const value:
+  operations.PostSsfTransmitterTransmitterIDEventRegisterSubIDSamlAssertionId2 =
+    {
+      format: "saml_assertion_id",
+      issuer: "jcb",
+      assertionId: "<id>",
+    };
 ```
 
-### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubId19`
+### `operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdUri2`
 
 ```typescript
-const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubId19 = {
-  format: "uri",
-  uri: "https://feline-brook.biz/",
-};
+const value: operations.PostSsfTransmitterTransmitterIdEventRegisterSubIdUri2 =
+  {
+    format: "uri",
+    uri: "https://secret-swim.org",
+  };
 ```
 

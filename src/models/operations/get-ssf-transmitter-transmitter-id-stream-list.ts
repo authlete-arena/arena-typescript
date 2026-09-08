@@ -36,19 +36,19 @@ export type GetSsfTransmitterTransmitterIdStreamListRequest = {
    *
    * @remarks
    */
-  xFapiInteractionId?: any | undefined;
+  xFapiInteractionId?: string | undefined;
   /**
    * This query parameter enables pretty-printing when the response content type is JSON. If `pretty=true` (case-insensitive), the response is formatted for readability. If `pretty` is omitted or set to any other value, pretty-printing is disabled.
    *
    * @remarks
    */
-  pretty?: any | undefined;
+  pretty?: boolean | undefined;
   /**
    * The transmitter ID.
    *
    * @remarks
    */
-  transmitterId: any;
+  transmitterId: string;
   /**
    * This query parameter specifies the starting position of the search. By
    *
@@ -58,7 +58,7 @@ export type GetSsfTransmitterTransmitterIdStreamListRequest = {
    * resume the search from where the previous API call left off. For details,
    * see the description of this API.
    */
-  cursor?: any | undefined;
+  cursor?: string | undefined;
   /**
    * This query parameter specifies, as a search criterion, the ID of the
    *
@@ -66,7 +66,7 @@ export type GetSsfTransmitterTransmitterIdStreamListRequest = {
    * client application associated with the access token that was used to
    * create the stream.
    */
-  clientId?: any | undefined;
+  clientId?: string | undefined;
   /**
    * This query parameter specifies the lower bound of the stream creation
    *
@@ -84,7 +84,7 @@ export type GetSsfTransmitterTransmitterIdStreamListRequest = {
    * - `YYYY-MM-DDThh:mm:ssZ`
    * - `YYYY-MM-DDThh:mm:ss[+-]hh:mm`
    */
-  createdAtGe?: any | undefined;
+  createdAtGe?: string | undefined;
   /**
    * This query parameter specifies the upper bound of the stream creation
    *
@@ -102,7 +102,7 @@ export type GetSsfTransmitterTransmitterIdStreamListRequest = {
    * - `YYYY-MM-DDThh:mm:ssZ`
    * - `YYYY-MM-DDThh:mm:ss[+-]hh:mm`
    */
-  createdAtLt?: any | undefined;
+  createdAtLt?: string | undefined;
   /**
    * This query parameter specifies the stream status as a search criterion.
    *
@@ -117,7 +117,7 @@ export type GetSsfTransmitterTransmitterIdStreamListRequest = {
    * in the search results. If omitted, the default value is `50`. Valid
    * values range from `1` to `200`, inclusive.
    */
-  limit?: any | undefined;
+  limit?: number | undefined;
 };
 
 export const GetSsfTransmitterTransmitterIdStreamListNotFoundStatus = {
@@ -137,8 +137,8 @@ export type GetSsfTransmitterTransmitterIdStreamListNotFoundStatus = OpenEnum<
 
 export type GetSsfTransmitterTransmitterIdStreamListNotFoundResult = {
   status?: GetSsfTransmitterTransmitterIdStreamListNotFoundStatus | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 export const GetSsfTransmitterTransmitterIdStreamListResultStatus = {
@@ -158,8 +158,8 @@ export type GetSsfTransmitterTransmitterIdStreamListResultStatus = OpenEnum<
 
 export type GetSsfTransmitterTransmitterIdStreamListResult = {
   status?: GetSsfTransmitterTransmitterIdStreamListResultStatus | undefined;
-  code?: any | undefined;
-  message?: any | undefined;
+  code?: string | undefined;
+  message?: string | undefined;
 };
 
 /**
@@ -185,19 +185,19 @@ export type GetSsfTransmitterTransmitterIdStreamListStream = {
    *
    * @remarks
    */
-  id?: any | undefined;
+  id?: number | undefined;
   /**
    * This is the stream ID that was automatically assigned when the stream was created.
    *
    * @remarks
    */
-  streamId?: any | undefined;
+  streamId?: string | undefined;
   /**
    * This is the date and time when the stream was created. The format is `YYYY-MM-DDThh:mm:ss`.
    *
    * @remarks
    */
-  createdAt?: any | undefined;
+  createdAt?: Date | undefined;
   /**
    * This is the status of the stream. The value is one of `enabled`, `paused`, or `disabled`.
    *
@@ -209,7 +209,7 @@ export type GetSsfTransmitterTransmitterIdStreamListStream = {
    *
    * @remarks
    */
-  description?: any | undefined;
+  description?: string | undefined;
 };
 
 /**
@@ -218,7 +218,7 @@ export type GetSsfTransmitterTransmitterIdStreamListStream = {
 export type GetSsfTransmitterTransmitterIdStreamListResponseBody = {
   result?: GetSsfTransmitterTransmitterIdStreamListResult | undefined;
   streams?: Array<GetSsfTransmitterTransmitterIdStreamListStream> | undefined;
-  nextCursor?: any | undefined;
+  nextCursor?: string | undefined;
 };
 
 export type GetSsfTransmitterTransmitterIdStreamListResponse = {
@@ -233,15 +233,15 @@ export const QueryParamStatus$outboundSchema: z.ZodMiniEnum<
 
 /** @internal */
 export type GetSsfTransmitterTransmitterIdStreamListRequest$Outbound = {
-  "x-fapi-interaction-id"?: any | undefined;
-  pretty: any;
-  transmitter_id: any;
-  cursor?: any | undefined;
-  client_id?: any | undefined;
-  created_at_ge?: any | undefined;
-  created_at_lt?: any | undefined;
+  "x-fapi-interaction-id"?: string | undefined;
+  pretty: boolean;
+  transmitter_id: string;
+  cursor?: string | undefined;
+  client_id?: string | undefined;
+  created_at_ge?: string | undefined;
+  created_at_lt?: string | undefined;
   status?: string | undefined;
-  limit: any;
+  limit: number;
 };
 
 /** @internal */
@@ -251,15 +251,15 @@ export const GetSsfTransmitterTransmitterIdStreamListRequest$outboundSchema:
     GetSsfTransmitterTransmitterIdStreamListRequest
   > = z.pipe(
     z.object({
-      xFapiInteractionId: z.optional(z.any()),
-      pretty: z.any(),
-      transmitterId: z.any(),
-      cursor: z.optional(z.any()),
-      clientId: z.optional(z.any()),
-      createdAtGe: z.optional(z.any()),
-      createdAtLt: z.optional(z.any()),
+      xFapiInteractionId: z.optional(z.string()),
+      pretty: z._default(z.boolean(), false),
+      transmitterId: z.string(),
+      cursor: z.optional(z.string()),
+      clientId: z.optional(z.string()),
+      createdAtGe: z.optional(z.string()),
+      createdAtLt: z.optional(z.string()),
       status: z.optional(QueryParamStatus$outboundSchema),
-      limit: z.any(),
+      limit: z._default(z.int(), 50),
     }),
     z.transform((v) => {
       return remap$(v, {
@@ -301,8 +301,8 @@ export const GetSsfTransmitterTransmitterIdStreamListNotFoundResult$inboundSchem
     status: types.optional(
       GetSsfTransmitterTransmitterIdStreamListNotFoundStatus$inboundSchema,
     ),
-    code: types.optional(z.any()),
-    message: types.optional(z.any()),
+    code: types.optional(types.string()),
+    message: types.optional(types.string()),
   });
 
 export function getSsfTransmitterTransmitterIdStreamListNotFoundResultFromJSON(
@@ -334,8 +334,8 @@ export const GetSsfTransmitterTransmitterIdStreamListResult$inboundSchema:
       status: types.optional(
         GetSsfTransmitterTransmitterIdStreamListResultStatus$inboundSchema,
       ),
-      code: types.optional(z.any()),
-      message: types.optional(z.any()),
+      code: types.optional(types.string()),
+      message: types.optional(types.string()),
     });
 
 export function getSsfTransmitterTransmitterIdStreamListResultFromJSON(
@@ -363,11 +363,11 @@ export const GetSsfTransmitterTransmitterIdStreamListStream$inboundSchema:
   z.ZodMiniType<GetSsfTransmitterTransmitterIdStreamListStream, unknown> = z
     .pipe(
       z.object({
-        id: types.optional(z.any()),
-        stream_id: types.optional(z.any()),
-        created_at: types.optional(z.any()),
+        id: types.optional(types.number()),
+        stream_id: types.optional(types.string()),
+        created_at: types.optional(types.date()),
         status: types.optional(StreamStatus$inboundSchema),
-        description: types.optional(z.any()),
+        description: types.optional(types.string()),
       }),
       z.transform((v) => {
         return remap$(v, {
@@ -404,7 +404,7 @@ export const GetSsfTransmitterTransmitterIdStreamListResponseBody$inboundSchema:
         streams: types.optional(z.array(z.lazy(() =>
           GetSsfTransmitterTransmitterIdStreamListStream$inboundSchema
         ))),
-        next_cursor: types.optional(z.any()),
+        next_cursor: types.optional(types.string()),
       }),
       z.transform((v) => {
         return remap$(v, {
